@@ -1,5 +1,5 @@
-source 'https://rubygems.org'
-gem 'jekyll'
-gem 'jekyll-feed'
-gem 'jekyll-paginate'
-gem 'jekyll-minifier'
+source "https://rubygems.org"
+
+gem "jekyll", "~> 3.1"
+gem "jekyll-sitemap"
+gem "pygments.rb"

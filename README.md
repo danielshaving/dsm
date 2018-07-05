@@ -1,25 +1,78 @@
-## Danielshaving's Blog
+# Jekyll-Bootstrap
 
-Danielshaving is keeping updating a blog is really an interesting part my personal technical reviews. Hope you can enjoy the journey as you surf through.
+The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
 
-By now, this blog is hosing on Google Firebase with a free SSL. You can visit the most updated site by [https://www.flinhong.com](https://flinhong.com).
+## Usage
 
-## Blog Status
+For all usage and documentation please see: <http://jekyllbootstrap.com>
 
-This blog is running with Travis docker, please find the building status below.
+## Version
 
-[![Build Status](https://travis-ci.org/flinhong/flinhong.github.io.svg?branch=jekyll)](https://travis-ci.org/flinhong/flinhong.github.io)
+0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).
 
-Since I'm going to update my site, this living site you visited at [flinhong.github.io](https://flinhong.github.io) will no longer update. But you can use it if you like, steps as below.
+**NOTE:** 0.3.0 introduces a new theme which is not backwards compatible in the sense it won't _look_ like the old version.
+However, the actual API has not changed at all.
+You might want to run 0.3.0 in a branch to make sure you are ok with the theme design changes.
 
-If you have any questions, you can [leave me a message](https://flinhong.github.io/contact/#message) for discussion 😉.
+## Milestones
 
-## Theme Usage
+[0.4.0](https://github.com/plusjade/jekyll-bootstrap/milestones/v%200.4.0) - next release [ETA 03/29/2015]
 
-For using of this theme, please fork the original Jekyll sources under [Jekyll branch](https://github.com/flinhong/flinhong.github.io/tree/jekyll).
+### GOALS
 
-Of course, the documentary for this theme is not well developed. So, [drop me a line](https://flinhong.github.io/contact/#message) for discussion if any.
+* No open PRs against master branch.
+* Squash some bugs.
+* Add some new features (low-hanging fruit).
+* Establish social media presence.
 
-By the way, *jekyll-minifier* was used to compress the html, css, and js files. It will slow down the building process and also cannot be accepted by GitHub Pages. If you don't need this, just remove it from `_config.yml` file.
 
-And if possible, please leave a place for linking back to my site or my [GitHub profile](https://github.com/flinhong). 😉
+### Bugs
+
+|Bug |Description
+|------|---------------
+|[#86](https://github.com/plusjade/jekyll-bootstrap/issues/86)  |&#x2611; Facebook Comments
+|[#113](https://github.com/plusjade/jekyll-bootstrap/issues/113)|&#x2611; ASSET_PATH w/ page & post
+|[#144](https://github.com/plusjade/jekyll-bootstrap/issues/144)|&#x2610; BASE_PATH w/ FQDN
+|[#227](https://github.com/plusjade/jekyll-bootstrap/issues/227)|&#x2611; Redundant JB/setup
+
+### Features
+
+|Bug |Description
+|------|---------------
+|[#98](https://github.com/plusjade/jekyll-bootstrap/issues/98)  |&#x2611; GIST Integration
+|[#244](https://github.com/plusjade/jekyll-bootstrap/issues/244)|&#x2611; JB/file_exists Helper
+|[#42](https://github.com/plusjade/jekyll-bootstrap/issues/42)  |&#x2611; Sort collections of Pages / Posts
+|[#84](https://github.com/plusjade/jekyll-bootstrap/issues/84)  |&#x2610; Detecting production mode
+
+### TODOS
+
+Review existing pull requests against plusjake/jekyll-bootstrap:master. Merge or close each.
+
+* Create twitter account. Add link / icon on jekyllbootstrap.com.
+* Create blog posts under plusjade/gh-pages, expose on jekyllbootstrap.com, feed to twitter account.
+* Announce state of project, announce roadmap(s), announce new versions as they’re released.
+
+## Contributing
+
+
+To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
+This is very important as it allows me to accept your pull request without having to publish a public version release.
+
+Small, atomic Features, bugs, etc.
+Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.
+Please rebase as often as possible when working.
+Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
+
+For Big Features or major API extensions/edits:
+This is the one case where I'll accept pull-requests based off the master branch.
+This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
+Translation : it might take a bit longer so please be patient! (but sincerely thank you).
+
+**Jekyll-Bootstrap Documentation Website.**
+
+The documentation website at <http://jekyllbootstrap.com> is maintained at https://github.com/plusjade/jekyllbootstrap.com
+
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
