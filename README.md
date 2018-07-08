@@ -3,7 +3,7 @@ This is my personal blog to share my interested technical reviews specially on t
 
 I am a full-stack developer and dedicated in algorithms, I am passionate to share:
 
-##Useful Self-Study Small Projects
+## Useful Self-Study Small Projects
 
 I knew the solution and was using it effectively, but it took me years to see it for what it was.
 
@@ -15,7 +15,7 @@ I was using this methodology to teach myself machine learning on the side. I eve
 
 Yes, you can be highly effective and deliver tons of value in business with the tools of applied machine learning, without getting a Ph.D.!
 
-##Learn from my Missteps
+## Learn from my Missteps
 
 It was difficult when my interest in machine learning was kindled in the late 1990s and early 2000s.
 
