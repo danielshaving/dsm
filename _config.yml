@@ -1,24 +1,39 @@
-title: "Jekyll-Theme-MDUI"
-description: "A Jekyll theme based on MDUI"
-url: 
-baseurl: ""
-author: "KeJun"
-paginate: 5
-paginate_path: "/blog/page:num/"
+# Site settings
+title: Emerald | A simple Jekyll blog
+description: "A minimal blog template, build with Jekyll."
+url: "http://www.jacoporabolini.com/emerald"
+author:
+  name: "Jacopo Rabolini"
+  email: "hello@jacoporabolini.com"
+  url: "http://www.jacoporabolini.com"
 
-plugins:
-  - jekyll-sitemap
+# Build settings
+baseurl: /dsm # Change this to your relative path (ex: /blog/), or leave just a /
+indexurl: /dsm/index.html
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
+gems:
   - jekyll-paginate
-  - jekyll-feed
 
-exclude:
-  - package.json
-  - node_modules
-  - gulpfile.js
-  - Gemfile
-  - Gemfile.lock
-  - jekyll-theme-mdui.gemspec
-  - LICENSE.txt
-  - README.md
-  - vendor
-  - docs
+# Custom variables
+version: "1.1.0"
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
