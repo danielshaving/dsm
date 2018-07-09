@@ -1,13 +1,19 @@
 ---
 layout: default
 ---
-    {% if site.data.site.uiux.meng == true %}
-    {% if site.data.meng.head_card.switch == true %}
-            {% assign num = site.data.meng.head_card.offset_level %}
-            {% for i in (1..num) %}
-                <div class="head_card-offset"></div>
-            {% endfor %}
-    {% endif %}
-    {% endif %}
-{% include content/page_content.html %}
-{% include content/component/imgboxed.html %}
+
+<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished" class="post-meta__date date">{{page.date | date: "%F"}}</time> &#8226; <span class="post-meta__tags tags">{{page.tags | join:' '}}</span>
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <section class="post">
+    {{ content }}
+  </section>
+</article>
+
+{% include read-more.html %}
+{% include comments.html %}
