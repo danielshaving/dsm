@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/living/2011/02/13/goodbey-yy-fuck-yy.html</loc>
-<lastmod>2011-02-13T06:26:16+01:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/technology/2016/04/14/ubuntu-installs-apache-masql-php-and-phpmyadmin.html</loc>
 <lastmod>2016-04-14T04:24:49+02:00</lastmod>
 </url>
@@ -37,6 +33,10 @@
 <lastmod>2017-07-24T18:00:00+02:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/living/2018/02/13/goodbey-yy-fuck-yy.html</loc>
+<lastmod>2018-02-13T06:26:16+01:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/category/Living.html</loc>
 </url>
 <url>
@@ -52,22 +52,15 @@
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/meta/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/meta/log.html</loc>
-</url>
-<url>
 <loc>http://localhost:4000/tags/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/category/technology.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/blog/page2/</loc>
+<loc>http://localhost:4000/CHANGELOG.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/media/post/2015-01-01-hello-2015-1.pdf</loc>
-<lastmod>2018-06-11T09:10:48+02:00</lastmod>
+<loc>http://localhost:4000/blog/page2/</loc>
 </url>
 </urlset>

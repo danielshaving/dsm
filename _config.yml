@@ -1,8 +1,8 @@
-title: "Dsmach"
+title: "Jekyll-Theme-MDUI"
 description: "A Jekyll theme based on MDUI"
-url:
+url: 
 baseurl: ""
-author: "danielshaving"
+author: "KeJun"
 paginate: 5
 paginate_path: "/blog/page:num/"
 

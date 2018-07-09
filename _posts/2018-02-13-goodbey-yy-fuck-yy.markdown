@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "再见 YY，你好 Discord"
-date: 2011-02-13 13:26:16 +0800
+date: 2018-02-13 13:26:16 +0800
 categories: Living
 tags: discord game yy
 img: https://i.loli.net/2018/02/13/5a8299ad7dff9.png
