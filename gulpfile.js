@@ -1,43 +1,51 @@
-var gulp = require('gulp');
+const child = require('child_process');
+const browserSync = require('browser-sync').create();
 
-gulp.task('copy', function() {
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const gutil = require('gulp-util');
 
-  // Start Bootstrap Clean Blog SCSS
-  gulp.src(['node_modules/startbootstrap-clean-blog/scss/**/*'])
-    .pipe(gulp.dest('assets/vendor/startbootstrap-clean-blog/scss'))
+const siteRoot = '_site';
 
-  // Start Bootstrap Clean Blog JS
-  gulp.src([
-      'node_modules/startbootstrap-clean-blog/js/clean-blog.min.js',
-      'node_modules/startbootstrap-clean-blog/js/jqBootstrapValidation.js'
-    ])
-    .pipe(gulp.dest('assets/vendor/startbootstrap-clean-blog/js'))
+gulp.task('jekyll', () => {
+  const jekyll = child.exec('bundle exec jekyll b -w');
 
-  // Bootstrap
-  gulp.src([
-      'node_modules/bootstrap/dist/**/*',
-      '!**/npm.js',
-      '!**/bootstrap-theme.*',
-      '!**/*.map'
-    ])
-    .pipe(gulp.dest('assets/vendor/bootstrap'))
+  const jekyllLogger = (buffer) => {
+    buffer = buffer.toString();
+    buffer = buffer.split(/\n/)
+    buffer.forEach(function(message){
+      if (message!=""){
+        gutil.log('Jekyll: ' + message)
+      }
+    })
+  };
 
-  // jQuery
-  gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-    .pipe(gulp.dest('assets/vendor/jquery'))
+  jekyll.stdout.on('data', jekyllLogger);
+  jekyll.stderr.on('data', jekyllLogger);
+});
 
-  // Font Awesome
-  gulp.src([
-      'node_modules/font-awesome/**',
-      '!node_modules/font-awesome/**/*.map',
-      '!node_modules/font-awesome/.npmignore',
-      '!node_modules/font-awesome/*.txt',
-      '!node_modules/font-awesome/*.md',
-      '!node_modules/font-awesome/*.json'
-    ])
-    .pipe(gulp.dest('assets/vendor/font-awesome'))
+gulp.task('serve', () => {
+  browserSync.init({
+    files: [siteRoot + '/**'],
+    port: 4000,
+    server: {
+      baseDir: siteRoot
+    }
+  });
+});
 
+gulp.task('docs',() =>{
+  const docs = child.exec('docsify serve docs');
+  const docsifyLog = (buffer) => {
+    buffer = buffer.toString();
+    buffer = buffer.split(/\n/)
+    buffer.forEach(function(message){
+      if (message!=""){
+        gutil.log('Docsify: ' + message)
+      }
+    });
+  }
+
+  docs.stdout.on('data', docsifyLog);
 })
-
-// Default task
-gulp.task('default', ['copy']);
+gulp.task('default', ['jekyll', 'serve', 'docs']);
