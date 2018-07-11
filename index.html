@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
+<style>
+.card-header-avatar{
+		margin-right: 12px;
+}
+
+</style>
+
 <!-- Posts -->
 <ul id="posts">
 
@@ -8,8 +15,13 @@ layout: default
 
 	  <li class="post">
 	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
-	  	<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
-	  	<p>{{ post.content | strip_html | truncatewords:50 }}</p>
+<div style="display:inline">
+			<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}
+      <a class="card-header-title" href="/dsm/about">&nbsp;&nbsp;&nbsp;{{site.author.name}}</a></time>
+</div>
+
+			<!-- <img class="card-header-avatar" src="{{site.author.avatar}}" /> -->
+			<p class="content">{{ post.content | strip_html | truncatewords:50 }}</p>
 	  </li>
 
     {% endfor %}

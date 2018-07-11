@@ -1,11 +1,12 @@
 # Site settings
-title: Emerald | A simple Jekyll blog
-description: "A minimal blog template, build with Jekyll."
+title: Dsm | A simple blog of ml technical sharings
+description: "A simple blog of ml technical sharings"
 url: "http://www.jacoporabolini.com/emerald"
 author:
-  name: "Jacopo Rabolini"
-  email: "hello@jacoporabolini.com"
-  url: "http://www.jacoporabolini.com"
+  name: "Daniel Liu"
+  email: "danielshaving@gmail.com"
+  url: "http://www.danielshaving.com"
+  avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png"
 
 # Build settings
 baseurl: /dsm # Change this to your relative path (ex: /blog/), or leave just a /
