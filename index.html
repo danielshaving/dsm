@@ -6,18 +6,26 @@ layout: default
 		margin-right: 12px;
 }
 
+
+
 </style>
 
 <!-- Posts -->
 <ul id="posts">
-
+<div class="post-div">
 	{% for post in paginator.posts %}
 
 	  <li class="post">
 	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
+      <!-- <a class="post-categories" href="{{ "/category" | prepend: site.baseurl }}/{{post.categories}}.html">{{post.categories}}</a> -->
 <div style="display:inline">
-			<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}
-      <a class="card-header-title" href="/dsm/about">&nbsp;&nbsp;&nbsp;{{site.author.name}}</a></time>
+			<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> Posted on {{ post.date | date_to_string }}&nbsp;&nbsp;by
+      <a class="card-header-title" href="/dsm/about">&nbsp;{{site.author.name}}</a><span>&nbsp;&nbsp;in&nbsp;</span>
+			<a class="card-header-title" href="{{ "/category" | prepend: site.baseurl }}/{{post.categories}}.html">{{post.categories}}</a>
+
+		</time>
+
+
 </div>
 
 			<!-- <img class="card-header-avatar" src="{{site.author.avatar}}" /> -->
@@ -25,5 +33,5 @@ layout: default
 	  </li>
 
     {% endfor %}
-
+</div>
 </ul>

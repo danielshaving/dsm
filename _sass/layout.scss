@@ -150,6 +150,7 @@
 #posts {
   li {
     list-style-type: none;
+
   }
 }
 
@@ -158,6 +159,11 @@
   @media (min-width: 940px) {
       margin-bottom: 1.3334em;
     }
+}
+
+.post-div{
+
+  box-shadow: 3px,3px,3px,$text-color;
 }
 
 .post+.post:before {
@@ -186,13 +192,29 @@
 
 .card-header-title{
 
-  color: lighten($main-color, 2%);
+  color: lighten($main-color, 1%);
   line-height: 1.5em; /* 24px/16px */
   margin-bottom: 1.5em; /* 24px/16px */
   font-weight: 200;
 	display: inline;
 	margin-top: 0;
 	border-top: 0;
+}
+
+.post-categories{
+    float: right;
+		font-family: cursive;
+    font-style: italic;
+		text-align: right;
+		margin-top: 0;
+		padding-top: 0;
+    border-top: 0;
+		color: white;
+		color: $text-color;
+    text-shadow: 3px 4px 3px grey;
+		font-weight: inherit;
+		display: inline;
+
 }
 
 img {

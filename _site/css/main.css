@@ -87,12 +87,16 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 #post-page { margin-bottom: 1.5em; }
 @media (min-width: 940px) { #post-page { margin-bottom: 1.3334em; } }
 
+.post-div { box-shadow: 3px, 3px, 3px, #222222; }
+
 .post + .post:before { display: block; content: ''; width: 5rem; height: 1px; margin: 23px auto; background-color: #d5d5d5; }
 
 .by-line { display: inline; color: #626262; line-height: 0.3em; /* 24px/16px */ margin-bottom: 0em; /* 24px/16px */ font-weight: 200; }
 @media (min-width: 940px) { .by-line { display: block; color: #626262; line-height: 1.3334em; /* 24px/18px */ margin-bottom: 1.3334em; /* 24px/18px */ font-weight: 200; } }
 
-.card-header-title { color: #009440; line-height: 1.5em; /* 24px/16px */ margin-bottom: 1.5em; /* 24px/16px */ font-weight: 200; display: inline; margin-top: 0; border-top: 0; }
+.card-header-title { color: #008f3e; line-height: 1.5em; /* 24px/16px */ margin-bottom: 1.5em; /* 24px/16px */ font-weight: 200; display: inline; margin-top: 0; border-top: 0; }
+
+.post-categories { float: right; font-family: cursive; font-style: italic; text-align: right; margin-top: 0; padding-top: 0; border-top: 0; color: white; color: #222222; text-shadow: 3px 4px 3px grey; font-weight: inherit; display: inline; }
 
 img { max-width: 100%; display: block; margin: 0 auto; margin-bottom: 24px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; }
 
