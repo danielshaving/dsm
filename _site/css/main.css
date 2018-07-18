@@ -6,12 +6,12 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img { margin: 0; padding: 0; 
 
 /*- Base color -*/
 /*- Base settings -*/
-html { background-color: #FDFDFD; font-size: 16px; line-height: 1.5; color: #222222; }
+html { background-color: #FFFFFF; font-size: 16px; line-height: 1.5; color: #222222; }
 @media (min-width: 940px) { html { font-size: 18px; } }
 
 /*- Link -*/
-a { color: #008A3C; text-decoration: none; font-weight: 700; }
-a:hover, a:focus { color: #007131; }
+a { color: #659cd5; text-decoration: none; font-weight: 700; }
+a:hover, a:focus { color: #518fd0; }
 
 /*- Typography -*/
 body { font-family: 'Source Sans Pro', sans-serif; letter-spacing: 0.01em; }
@@ -25,7 +25,7 @@ h2 { font-size: 1.5em; /* 24px/16px */ line-height: 1em; /* 24px/24px */ padding
 
 h3, h4, h5, h6 { font-size: 1.125em; /* 18px/16px */ line-height: 1.3334em; /* 24px/18px */ padding: 0.66667em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
 
-blockquote { font-style: italic; margin: 1.5em; /* 24px/18px */ -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; background-color: #f0f0f0; padding: 0 1.5em; /* 24px/18px */ }
+blockquote { font-style: italic; margin: 1.5em; /* 24px/18px */ -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; background-color: #f2f2f2; padding: 0 1.5em; /* 24px/18px */ }
 blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 
 /*- Typography for big screen, based on 18px font-size -*/
@@ -33,18 +33,18 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
   h1 { font-size: 2.6667em; /* 48px/18px */ line-height: 1em; /* 48px/48px */ padding: 0.25em 0; /* 12px/48px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
   h2 { font-size: 2em; /* 36px/18px */ line-height: 1.3334em; /* 48px/36px */ padding: 0.66667em 0 0 0; /* 12px/36px * 2, pnly top (Use padding instead of margin to maintain proximity with paragraph) */ }
   h3, h4, h5, h6 { font-size: 1.3334em; /* 24px/18px */ line-height: 1em; /* 24px/24px */ padding: 0.5em 0; /* 12px/24px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
-  blockquote { font-style: italic; margin: 1.3334em; /* 24px/18px */ -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; background-color: #f0f0f0; padding: 0 1.33334em; /* 24px/18px */ }
+  blockquote { font-style: italic; margin: 1.3334em; /* 24px/18px */ -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; background-color: #f2f2f2; padding: 0 1.33334em; /* 24px/18px */ }
   blockquote p, blockquote ul, blockquote ol { padding: 1.33334em 0; /* 24px/18px */ } }
 /* -- General Layout -- */
 /* Navigation */
-#nav a, #nav-left a { display: block; color: #FDFDFD; padding: 0.33334em 0; font-size: 1.5em; font-weight: 400; }
+#nav a, #nav-left a { display: block; color: #FFFFFF; padding: 0.33334em 0; font-size: 1.5em; font-weight: 400; }
 @media (min-width: 940px) { #nav a, #nav-left a { font-size: 1em; } }
-#nav a:hover, #nav-left a:hover { background-color: #00a447; }
+#nav a:hover, #nav-left a:hover { background-color: #79a9da; }
 #nav span, #nav-left span { font-weight: 200; }
 
-#nav { width: 14rem; position: fixed; background-color: #008A3C; top: 0; bottom: 0; right: -14rem; color: #FDFDFD; opacity: 0.95; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; -ms-transition: all 0.3s ease-in; transition: all 0.3s ease-in; z-index: 1; padding: 72px 0; text-align: center; }
+#nav { width: 14rem; position: fixed; background-color: #659cd5; top: 0; bottom: 0; right: -14rem; color: #FFFFFF; opacity: 0.95; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; -ms-transition: all 0.3s ease-in; transition: all 0.3s ease-in; z-index: 1; padding: 72px 0; text-align: center; }
 
-#nav-left { width: 14rem; position: fixed; background-color: #008A3C; top: 0; bottom: 0; left: -14rem; color: #FDFDFD; opacity: 0.95; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; -ms-transition: all 0.3s ease-in; transition: all 0.3s ease-in; z-index: 1; padding: 72px 0; text-align: center; }
+#nav-left { width: 14rem; position: fixed; background-color: #659cd5; top: 0; bottom: 0; left: -14rem; color: #FFFFFF; opacity: 0.95; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; -ms-transition: all 0.3s ease-in; transition: all 0.3s ease-in; z-index: 1; padding: 72px 0; text-align: center; }
 
 /* Toggle class to open menu */
 #nav.menu-open { -webkit-transform: translateX(-14rem); -moz-transform: translateX(-14rem); -ms-transform: translateX(-14rem); transform: translateX(-14rem); width: 100%; }
@@ -54,7 +54,7 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 @media (min-width: 940px) { #nav-left.menu-open-left { width: 30%; } }
 
 /* Separator after menu */
-#nav-list:after { display: block; content: ''; width: 5rem; height: 1px; margin: 23px auto; background-color: #FDFDFD; }
+#nav-list:after { display: block; content: ''; width: 5rem; height: 1px; margin: 23px auto; background-color: #FFFFFF; }
 
 /* Icon menu */
 #nav-menu { display: block; position: fixed; top: 35px; right: 25px; z-index: 10; height: 24px; }
@@ -66,8 +66,8 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 #menu:before { top: -8px; }
 #menu:after { top: 4px; }
 #menu.btn-close { background: none; }
-#menu.btn-close:before { top: 0; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); background-color: #FDFDFD; }
-#menu.btn-close:after { top: -4px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); background-color: #FDFDFD; }
+#menu.btn-close:before { top: 0; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); background-color: #FFFFFF; }
+#menu.btn-close:after { top: -4px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); background-color: #FFFFFF; }
 
 /* Main content */
 .fixed { position: fixed; width: 100%; }
@@ -87,6 +87,18 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 #post-page { margin-bottom: 1.5em; }
 @media (min-width: 940px) { #post-page { margin-bottom: 1.3334em; } }
 
+.PageNavigation { font-size: 0.8em; display: block; width: auto; overflow: hidden; padding-top: 2em; border-top-style: groove; border-top-color: #659cd5 40%; }
+
+.PageNavigation a { display: block; width: 50%; float: left; margin: 1em 0; color: #222222; background: linear-gradient(90deg, #FFFFFF, aed7ff, #FFFFFF); }
+
+.PageNavigation a:hover { color: #659cd5; opacity: 40%; text-shadow: 2px 2px 2px #222222; }
+
+.PageNavigation .next { text-align: left; }
+
+.PageNavigation .prev { text-align: right; }
+
+#disqus_thread { margin: 0.5em; padding: 1.33em; margin-top: 4.2em; border-top-style: ridge; border-top-color: #659cd5; background: linear-gradient(70deg, #FFFFFF, #9babbb, #659cd5, #9babbb, #FFFFFF); }
+
 .post-div { box-shadow: 3px, 3px, 3px, #222222; }
 
 .post + .post:before { display: block; content: ''; width: 5rem; height: 1px; margin: 23px auto; background-color: #d5d5d5; }
@@ -94,7 +106,7 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 .by-line { display: inline; color: #626262; line-height: 0.3em; /* 24px/16px */ margin-bottom: 0em; /* 24px/16px */ font-weight: 200; }
 @media (min-width: 940px) { .by-line { display: block; color: #626262; line-height: 1.3334em; /* 24px/18px */ margin-bottom: 1.3334em; /* 24px/18px */ font-weight: 200; } }
 
-.card-header-title { color: #008f3e; line-height: 1.5em; /* 24px/16px */ margin-bottom: 1.5em; /* 24px/16px */ font-weight: 200; display: inline; margin-top: 0; border-top: 0; }
+.card-header-title { color: #699fd6; line-height: 1.5em; /* 24px/16px */ margin-bottom: 1.5em; /* 24px/16px */ font-weight: 200; display: inline; margin-top: 0; border-top: 0; }
 
 .post-categories { float: right; font-family: cursive; font-style: italic; text-align: right; margin-top: 0; padding-top: 0; border-top: 0; color: white; color: #222222; text-shadow: 3px 4px 3px grey; font-weight: inherit; display: inline; }
 
@@ -113,16 +125,16 @@ code { color: #7b7b7b; background-color: white; }
 
 /* Paginator */
 .pagination { text-align: center; margin: 2.666668em; }
-.pagination span { background-color: #f0f0f0; color: #222222; }
-.pagination a:hover { background-color: #00a447; }
+.pagination span { background-color: #f2f2f2; color: #222222; }
+.pagination a:hover { background-color: #79a9da; }
 
-.page-item { background-color: #008A3C; color: #FDFDFD; padding: 4px 8px; font-weight: 400; padding: 0.5em 1em; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; }
+.page-item { background-color: #659cd5; color: #FFFFFF; padding: 4px 8px; font-weight: 400; padding: 0.5em 1em; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; }
 
 /* Footer */
-footer { background-color: #008A3C; color: #FDFDFD; text-align: center; padding: 0.6667em 0; }
+footer { background-color: #659cd5; color: #FFFFFF; text-align: center; padding: 0.6667em 0; }
 
 /* A Github stylesheet to highlight code snippet https://github.com/mojombo/tpw/blob/master/css/syntax.css */
-.lineno { color: #bdbdbd; margin-right: 1em; }
+.lineno { color: #bfbfbf; margin-right: 1em; }
 
 .highlight .c { color: #999988; font-style: italic; }
 

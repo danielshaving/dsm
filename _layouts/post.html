@@ -2,12 +2,43 @@
 layout: default
 ---
 <article id="post-page">
-	<h2>{{ page.title }}</h2>		
-	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
+	<h2>{{ page.title }}</h2>
+	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}
+		<a class="card-header-title" href="/dsm/about">&nbsp;{{site.author.name}}</a><span>&nbsp;&nbsp;in&nbsp;</span>
+		<a class="card-header-title" href="{{ "/category" | prepend: site.baseurl }}/{{page.categories}}.html">{{page.categories}}</a>
+	</time>
 	<div class="content">
 
 		{{ content }}
-		
-	</div>
+
+
+
 </article>
 
+<div class="PageNavigation">
+
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url | prepend: site.baseurl}}">&laquo;--- {{page.next.title}} </a>
+  {% else %} <a class="next" href="{{page.next.url | prepend: site.baseurl}}">&nbsp;</a>
+	{% endif %}
+	{% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url | prepend: site.baseurl}}"> {{page.previous.title}} ---&raquo;</a>
+  {% else %} <a class="prev" href="{{page.previous.url | prepend: site.baseurl}}"> &nbsp;</a>
+	{% endif %}
+
+
+</div>
+
+
+
+<div id="disqus_thread">
+</div>
+
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://danielshaving.disqus.com/embed.js';
+// s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>

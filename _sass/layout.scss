@@ -1,6 +1,12 @@
 /* -- General Layout -- */
 
 /* Navigation */
+// .site-nav {
+//     line-height: 56px;
+//     display: inline-block;
+//
+// }
+
 
 #nav, #nav-left {
   a {
@@ -159,6 +165,57 @@
   @media (min-width: 940px) {
       margin-bottom: 1.3334em;
     }
+}
+
+.PageNavigation {
+  font-size: 1em;
+  display: block;
+  width: auto;
+  overflow: hidden;
+  padding-top: 2em;
+  border-top-style: groove;
+  border-top-color: $main-color 40%;
+
+
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+  color:$text-color;
+  background: linear-gradient(90deg,$background-color,aed7ff,$background-color);
+}
+
+.PageNavigation a:hover{
+
+  color: $main-color;
+  opacity:  40%;
+  text-shadow: 1px 1px 1px $text-color;
+}
+
+.PageNavigation .next {
+  text-align: left;
+}
+
+.PageNavigation .prev {
+  text-align: right;
+}
+
+
+
+#disqus_thread{
+  margin: 0.5em;
+  padding: 1.33em;
+  margin-top: 4.2em;
+  border-top-style: ridge;
+  border-top-color: $main-color;
+
+
+  background: linear-gradient(70deg,$background-color,#9babbb,$main-color,#9babbb,$background-color);
+
+
 }
 
 .post-div{
