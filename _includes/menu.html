@@ -3,7 +3,7 @@
 
 		{% for link in site.links %}
 		<a href="{% unless link.external %}{{ site.url }}{% endunless %}{{link.url | prepend: site.baseurl }}">{{ link.name }}</a>
-				{% endfor %}
+		{% endfor %}
 
 	</div>
 
