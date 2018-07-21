@@ -7,7 +7,7 @@ layout: default
 	<h2>{{ page.title }}</h2>
 	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}
 		<a class="card-header-title" href="/dsm/about">&nbsp;{{site.author.name}}</a><span>&nbsp;&nbsp;in&nbsp;</span>
-		<a class="card-header-title" href="{{ "/category" | prepend: site.baseurl }}/{{page.categories}}.html">{{page.categories}}</a>
+		<a class="card-header-title" href="{{ "/category" | prepend: site.baseurl }}/{{page.categories}}.html">{{page.categories[0]}}</a>
 	</time>
 	<div class="content">
 
