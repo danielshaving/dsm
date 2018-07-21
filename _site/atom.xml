@@ -4,7 +4,11 @@
  <title>Dsm | A simple blog of ml technical sharings</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
+<<<<<<< HEAD
  <updated>2018-07-21T22:37:09+02:00</updated>
+=======
+ <updated>2018-07-21T21:46:51+02:00</updated>
+>>>>>>> 420e4d4687aa665f0d696f5741de11ef36c2a615
  <author>
    <name>Daniel Liu</name>
    <uri>http://www.danielshaving.com</uri>
