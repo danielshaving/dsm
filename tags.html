@@ -1,0 +1,105 @@
+---
+layout: default
+---
+
+
+
+<div class="main-content archive-page clearfix">
+  {% capture site_tags %}{% for tag in site.categories %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags_list = site_tags | split:',' | sort %}
+
+<!-- make tags -->
+
+{% for item in (0..tags_list.size)%}{%unless forloop.last %}
+{% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+	<a href="#{{ this_word }}">{{ this_word }} <span>({{ site.categories[this_word].size }})</span></a>
+
+{% endunless %}{% endfor %}
+
+
+
+
+
+ <div class="main-content archive-page" >
+
+ {% for item in (0..tags_list.size) %}{% unless forloop.last %}
+ 	{% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+      <div id="{{ this_word }}" class="post-lists" id="{{ this_word }}">
+     <div class="categorys-item">
+          <div class="categorys-title">
+   {{ this_word }} : {{ site.categories[this_word].size }}
+    </div>
+     {% for post in site.categories[this_word] %}{% if post.title != null %}
+     			<div class="post-list-item" >
+ 					<div class="post-list-item-container">
+ 						<div class="item-label">
+ 							<div class="item-title" >
+ 								<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">{{ post.title }}</a>
+ 							</div>
+ 							<div class="item-meta clearfix">
+ 								<div class="item-meta-date">
+									<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> Posted on {{ post.date | date_to_string }}&nbsp;&nbsp;by
+						      <a class="card-header-title" href="/dsm/about">&nbsp;{{site.author.name}}</a><span>&nbsp;&nbsp;in&nbsp;</span>
+									<a class="card-header-title" href="#{{ this_word }}">
+                    {%for categories_list in post.categories%}
+                      {%if forloop.last%}
+                      {{categories_list}}
+                      {%else%} {{categories_list | append : ","}} {%endif%}
+                      {%endfor%}
+									</a>
+                  </time>
+                <p class="content">{{ post.content | strip_html | truncatewords:20 }}</p>
+ 							</div>
+ 						</div>
+ 					</div>
+         </div>
+           {% endif %}{% endfor %}
+    	</div>
+ 	</div>
+
+ {% endunless %}{% endfor %}
+
+
+
+    <!-- <h3 class="post-title" itemprop="name headline">标签分类的博文--点击自动查找相应`Tags`</h3>
+											 <div class="post-data">
+			 						  <div class="post-tags">
+  {% for item in (0..site.tags.size)  %}{% unless forloop.last %}
+    {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+			<a href="#{{ this_word }}">{{ this_word }} <span>({{ site.tags[this_word].size }})个</span>
+								</a>
+		{% endunless %}{% endfor %}
+		</div>
+	</div>
+	</div>
+
+<div class="main-content archive-page" >
+
+{% for item in (0..site.tags.size) %}{% unless forloop.last %}
+	{% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+     <div id="{{ this_word }}" class="post-lists" id="{{ this_word }}">
+    <div class="categorys-item">
+         <div class="categorys-title">
+  {{ this_word }} : {{ site.tags[this_word].size }}
+   </div>
+    {% for post in site.tags[this_word] %}{% if post.title != null %}
+    			<div class="post-list-item" >
+					<div class="post-list-item-container">
+						<div class="item-label">
+							<div class="item-title" >
+								<a href="{{ site.url }}{{ post.url }}" data-hover="{{ post.title }}">{{ post.title }}</a>
+							</div>
+							<div class="item-meta clearfix">
+								<div class="item-meta-date">
+								<a href="/archives#{{ post.date | date: "%Y"}}" data-hover="{{ post.date | date: "%F %H:%M:%S "}}">	{{ post.date | date: "%F %H:%M:%S "}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#{{ post.date | date: "%Y"}}" data-hover="{{ post.category }}">{{ post.category }}</a>
+								</div>
+							</div>
+						</div>
+					</div>
+        </div>
+          {% endif %}{% endfor %}
+   	</div>
+	</div>
+
+{% endunless %}{% endfor %} -->
+</div>

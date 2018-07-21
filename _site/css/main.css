@@ -85,13 +85,13 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 #posts li { list-style-type: none; }
 
 #post-page { margin-bottom: 1.5em; }
-@media (min-width: 940px) { #post-page { margin-bottom: 1.3334em; } }
+@media (min-width: 940px) { #post-page { margin-bottom: 2.3334em; } }
 
-.PageNavigation { font-size: 0.8em; display: block; width: auto; overflow: hidden; padding-top: 2em; border-top-style: groove; border-top-color: #659cd5 40%; }
+.PageNavigation { font-size: 1em; display: block; width: auto; overflow: hidden; padding-top: 1em; margin-top: 1em; padding-bottom: 0; margin-bottom: 0; border-top-style: none; font-weight: lighter; }
 
-.PageNavigation a { display: block; width: 50%; float: left; margin: 1em 0; color: #222222; background: linear-gradient(90deg, #FFFFFF, aed7ff, #FFFFFF); }
+.PageNavigation a { display: block; width: 50%; float: left; margin: 1em 0; color: #222222; background: linear-gradient(90deg, #FFFFFF, aed7ff, #FFFFFF); font-weight: lighter; }
 
-.PageNavigation a:hover { color: #659cd5; opacity: 40%; text-shadow: 2px 2px 2px #222222; }
+.PageNavigation a:hover { color: #659cd5; opacity: 40%; text-shadow: 1px 1px 1px #222222; font-weight: lighter; }
 
 .PageNavigation .next { text-align: left; }
 
@@ -131,7 +131,16 @@ code { color: #7b7b7b; background-color: white; }
 .page-item { background-color: #659cd5; color: #FFFFFF; padding: 4px 8px; font-weight: 400; padding: 0.5em 1em; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; }
 
 /* Footer */
-footer { background-color: #659cd5; color: #FFFFFF; text-align: center; padding: 0.6667em 0; }
+footer { background-color: #659cd5; color: #FFFFFF; text-align: center; padding: 0; }
+
+.feed { color: #FFFFFF; border-bottom: 0; padding-bottom: 0; margin-bottom: 0; font-weight: normal; }
+
+.socialmedia svg { fill: #FFFFFF; padding: 0; margin: 1em; width: 24px; height: 24px; }
+
+/*btn*/
+.btn-default { color: #FFFFFF; background-color: #b6b6b7; border-color: #ccc; border: 1px solid; border-radius: 6px; border-style: groove; padding: 0.3em; font-weight: lighter; }
+
+.btn-default a:hover { background-color: #333; }
 
 /* A Github stylesheet to highlight code snippet https://github.com/mojombo/tpw/blob/master/css/syntax.css */
 .lineno { color: #bfbfbf; margin-right: 1em; }

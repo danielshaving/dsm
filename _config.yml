@@ -11,6 +11,7 @@ author:
 # Build settings
 baseurl: /dsm # Change this to your relative path (ex: /blog/), or leave just a /
 indexurl: /dsm/index.html
+tagurl: /tags.html
 markdown: kramdown
 source: .
 destination: ./_site
@@ -39,7 +40,32 @@ custom_header: false
 custom_nav_footer: false
 reverse: false
 
+# Social Media
+# Remove the item if you don't need it
+github_username: danielshaving
+facebook_username: danielshaving
+twitter_username: twitter_username
+instagram_username: instagram_username
+linkedin_username: liuxia
+medium_username: medium_username
+
 #sitemap
 
 gem:
   - jekyll-sitemap
+
+#menulinks
+
+links:
+    - name:         Home
+      url:          /index
+      external:     false
+    - name:         About
+      url:          /about
+      external:     false
+    - name:         Archives
+      url:          /archives
+      external:     false
+    - name:         Tags
+      url:          /tags
+      external:     false

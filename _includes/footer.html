@@ -1,1 +1,69 @@
-<footer><span>@2018 - Danielshaving</span></footer>
+<footer>
+  <p>
+    {% if site.github_username %}
+    <a class="socialmedia"itemprop="github" href="https://github.com/{{ site.github_username }}" title="Github">
+      <svg><use xlink:href="#icon-github"></use></svg>
+    </a>
+    {% endif %}
+    {% if site.facebook_username %}
+    <a class="socialmedia" itemprop="facebook" href="https://www.facebook.com/{{ site.facebook_username }}" title="Facebook">
+      <svg><use xlink:href="#icon-facebook"></use></svg>
+    </a>
+    {% endif %}
+    {% if site.twitter_username %}
+    <a class="socialmedia" itemprop="twitter" href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">
+      <svg><use xlink:href="#icon-twitter"></use></svg>
+    </a>
+    {% endif %}
+    {% if site.medium_username %}
+    <a class="socialmedia" itemprop="medium" href="https://medium.com/@{{ site.medium_username }}" title="Twitter">
+      <svg><use xlink:href="#icon-medium"></use></svg>
+    </a>
+    {% endif %}
+    {% if site.instagram_username %}
+    <a class="socialmedia" itemprop="instagram" href="https://www.instagram.com/{{ site.instagram_username }}" title="Instagram">
+      <svg><use xlink:href="#icon-instagram"></use></svg>
+    </a>
+    {% endif %}
+    {% if site.linkedin_username %}
+    <a class="socialmedia" itemprop="linkedin" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn">
+      <svg><use xlink:href="#icon-linkedin"></use></svg>
+    </a>
+    {% endif %}
+  </p>
+
+
+  <!-- <div class="footer-meta">
+
+            <div class="meta-item meta-posts">
+                <h3 class="meta-title">置顶文章</h3>
+
+    {% for post in site.posts limit:15 %}
+
+      <span class="feed"><a href="{{ post.url }}" title="访问 {{ post.title }}" data-hover="{{ post.title }}">{{ post.title }}</a></span>
+
+    {% endfor %}
+
+            </div>
+            <div class="meta-item meta-comments">
+                <h3 class="meta-title">最新文章</h3>
+  {% for post in site.posts limit:14 %}
+      {% if post.book %}
+  <li><a href="{{ post.url }}" title="访问 {{ post.title }}" data-hover="{{ post.title }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    </div>
+    </div> -->
+<div class="feed">
+    {% for page in site.pages %}
+        <!-- {% if post.book %} -->
+    <span><a href="{{ page.url }}" title="访问 {{ page.title }}" data-hover="{{ page.title }}">{{ page.title }}</a></span>
+
+        <!-- {% endif %} -->
+    {% endfor %}
+
+  <div class="feed">Total Articles：{{paginator.total_posts}}</div>
+  <span><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed.xml" title="Atom/RSS feed">Danielshaving Blog RSS</a> &nbsp; &nbsp;&nbsp;&nbsp;@2018 - Danielshaving by Liu Xia</span>
+
+</footer>

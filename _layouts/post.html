@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% include svg-icons.html %}
+
 <article id="post-page">
 	<h2>{{ page.title }}</h2>
 	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}
@@ -14,6 +16,15 @@ layout: default
 
 
 </article>
+
+<div class="tags">
+		{% if page.categories != null %}
+		<b>Tags: </b>
+   {% for tag in page.categories %}
+		<a href="{{ site.tagurl | prepend: site.baseurl }}" class="btn-default">{{tag}}</a>
+    {% endfor %}
+		{% endif %}
+</div>
 
 <div class="PageNavigation">
 
@@ -31,14 +42,5 @@ layout: default
 
 
 
-<div id="disqus_thread">
-</div>
 
-<script>
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://danielshaving.disqus.com/embed.js';
-// s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
+{% include disqus.html %}

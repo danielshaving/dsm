@@ -163,7 +163,7 @@
 #post-page {
   margin-bottom: 1.5em;
   @media (min-width: 940px) {
-      margin-bottom: 1.3334em;
+      margin-bottom: 2.3334em;
     }
 }
 
@@ -172,9 +172,13 @@
   display: block;
   width: auto;
   overflow: hidden;
-  padding-top: 2em;
-  border-top-style: groove;
-  border-top-color: $main-color 40%;
+  padding-top: 1em;
+  margin-top: 1em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-top-style: none;
+  // border-top-color: $main-color 40%;
+  font-weight: lighter;
 
 
 }
@@ -186,6 +190,7 @@
   margin: 1em 0;
   color:$text-color;
   background: linear-gradient(90deg,$background-color,aed7ff,$background-color);
+  font-weight: lighter;
 }
 
 .PageNavigation a:hover{
@@ -193,6 +198,7 @@
   color: $main-color;
   opacity:  40%;
   text-shadow: 1px 1px 1px $text-color;
+  font-weight: lighter;
 }
 
 .PageNavigation .next {
@@ -341,5 +347,42 @@ footer {
   background-color: $main-color;
   color: $background-color;
   text-align: center;
-  padding: 0.6667em 0;
+  padding: 0;
+}
+
+.feed{
+  color: $background-color;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.socialmedia svg{
+  fill: $background-color;
+  padding: 0;
+  margin:1em;
+  width:24px;
+  height:24px;
+
+}
+
+/*btn*/
+
+
+.btn-default {
+    color: $background-color;
+    background-color: #b6b6b7;
+    border-color: #ccc;
+    border: 1px solid;
+    border-radius: 6px;
+    border-style: groove;
+    padding: 0.3em;
+    font-weight: lighter;
+
+}
+
+.btn-default a:hover{
+    background-color: #333;
+
 }

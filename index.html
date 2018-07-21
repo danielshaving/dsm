@@ -21,7 +21,7 @@ layout: default
 <div style="display:inline">
 			<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> Posted on {{ post.date | date_to_string }}&nbsp;&nbsp;by
       <a class="card-header-title" href="/dsm/about">&nbsp;{{site.author.name}}</a><span>&nbsp;&nbsp;in&nbsp;</span>
-			<a class="card-header-title" href="{{ "/category" | prepend: site.baseurl }}/{{post.categories}}.html">{{post.categories}}</a>
+			<a class="card-header-title" href="{{ site.tagurl | prepend: site.baseurl }}">{{post.categories[0]}}</a>
 
 		</time>
 

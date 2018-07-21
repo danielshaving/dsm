@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dsm | A simple blog of ml technical sharings</title>
+    <description>A simple blog of ml technical sharings</description>
+    <link>http://localhost:4000/dsm/</link>
+    <atom:link href="http://localhost:4000/dsm/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 21 Jul 2018 18:38:35 +0200</pubDate>
+    <lastBuildDate>Sat, 21 Jul 2018 18:38:35 +0200</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>This is an example</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/dsm/img/img-test.png&quot; alt=&quot;Test&quot; title=&quot;Test&quot; /&gt; Lorem ipsum dolor sit amet, &lt;a href=&quot;http://www.example.com&quot;&gt;consectetur adipisicing&lt;/a&gt; elit. Id, aliquam magni et officiis nemo nihil aliquid placeat alias. Eum voluptates ducimus, nobis ex illum laboriosam quidem corrupti impedit ratione in voluptatum amet beatae facilis temporibus voluptate praesentium voluptatibus! At ab, iusto error amet eveniet debitis ipsa recusandae possimus minima sunt itaque, nulla ducimus officia, consequatur ipsum laudantium magnam hic fuga vero incidunt nostrum. Commodi, perspiciatis ut nostrum fugit nulla cumque voluptate harum nemo accusamus?&lt;/p&gt; &lt;h2 id=&quot;this-is-a-h2&quot;&gt;This is a h2&lt;/h2&gt; &lt;h3 id=&quot;h3-h4-h5-and-h6-have-the-same-style&quot;&gt;h3, h4, h5 and h6 have the same style.&lt;/h3&gt; &lt;p&gt;Lorem ipsum dolor sit amet,...</description>
+        <pubDate>Thu, 19 Mar 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/typography</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/typography</guid>
+        
+        
+        <category>machine_learning</category>
+        
+        <category>math</category>
+        
+      </item>
+    
+      <item>
+        <title>Code Syntax</title>
+        <description>&lt;p&gt;To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the &lt;a href=&quot;http://jekyllrb.com/docs/templates/#code-snippet-highlighting&quot;&gt;Jekyll documentation&lt;/a&gt;. In this way the code will be included into a &lt;code class=&quot;highlighter-rouge&quot;&gt;.highlight&lt;/code&gt; CSS class and will be highlight according to the &lt;a href=&quot;https://github.com/mojombo/tpw/blob/master/css/syntax.css&quot;&gt;syntax.scss&lt;/a&gt; file. This is the standard style adopted by &lt;strong&gt;Github&lt;/strong&gt; to highlight the code.&lt;/p&gt; &lt;p&gt;This is a CSS example:&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1 2 3 4 5 6 7 8 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span...</description>
+        <pubDate>Sun, 01 Mar 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/code-syntax</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/code-syntax</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Example 8</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/example-9</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/example-9</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Example 8</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/example-8</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/example-8</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Example 7</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/example-7</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/example-7</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Example 6</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/example-6</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/example-6</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Example 5</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/example-5</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/example-5</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Example 4</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/example-4</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/example-4</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Example 3</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/example-3</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/example-3</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Example 2</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/example-2</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/example-2</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Example 8</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/example-10</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/example-10</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Example 1</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/example-1</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/example-1</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Hello World</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis consectetur voluptate deserunt officia minima placeat tempore illum asperiores quo assumenda praesentium? Facilis libero error ratione doloribus debitis delectus asperiores minima ab velit quam. Natus ea, vero totam recusandae autem, corporis minima, animi eos perferendis omnis ut asperiores magni tempore. Repellendus aliquam saepe perspiciatis laborum, excepturi sit libero dignissimos debitis eaque itaque quos, accusantium sed amet tempora temporibus perferendis possimus, quisquam minus fuga! Laudantium, tenetur, consectetur! Quas itaque hic consequatur accusamus consectetur, quia odio eos amet quasi pariatur! Ratione, similique.&lt;/p&gt;...</description>
+        <pubDate>Tue, 10 Feb 2015 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/hello-world2</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/hello-world2</guid>
+        
+        
+        <category>ls</category>
+        
+      </item>
+    
+      <item>
+        <title>Hello World</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis consectetur voluptate deserunt officia minima placeat tempore illum asperiores quo assumenda praesentium? Facilis libero error ratione doloribus debitis delectus asperiores minima ab velit quam. Natus ea, vero totam recusandae autem, corporis minima, animi eos perferendis omnis ut asperiores magni tempore. Repellendus aliquam saepe perspiciatis laborum, excepturi sit libero dignissimos debitis eaque itaque quos, accusantium sed amet tempora temporibus perferendis possimus, quisquam minus fuga! Laudantium, tenetur, consectetur! Quas itaque hic consequatur accusamus consectetur, quia odio eos amet quasi pariatur! Ratione, similique.&lt;/p&gt;...</description>
+        <pubDate>Fri, 10 Feb 2012 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/dsm/hello-world</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/hello-world</guid>
+        
+        
+        <category>ls</category>
+        
+        <category>ppo</category>
+        
+      </item>
+    
+  </channel>
+</rss>
