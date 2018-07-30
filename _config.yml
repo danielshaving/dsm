@@ -11,6 +11,7 @@ author:
 # Build settings
 baseurl: /dsm # Change this to your relative path (ex: /blog/), or leave just a /
 indexurl: /dsm/index.html
+cvurl: /dsm/danielcv/DanielCV.html
 tagurl: /tags.html
 markdown: kramdown
 source: .
