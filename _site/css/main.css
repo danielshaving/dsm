@@ -142,6 +142,8 @@ footer { background-color: #659cd5; color: #FFFFFF; text-align: center; padding:
 
 .btn-default a:hover { background-color: #333; }
 
+.avatar { fill: #fff; width: 50px; height: auto; margin-top: 20px; }
+
 /* A Github stylesheet to highlight code snippet https://github.com/mojombo/tpw/blob/master/css/syntax.css */
 .lineno { color: #bfbfbf; margin-right: 1em; }
 
