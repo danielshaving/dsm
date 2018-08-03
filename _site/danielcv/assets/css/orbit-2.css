@@ -42,7 +42,7 @@ p {
 }
 
 .wrapper {
-  background: #5c8adf;
+  background: #2852a0;
   max-width: 960px;
   margin: 0 auto;
   margin-top: 20px;
@@ -53,7 +53,7 @@ p {
 }
 
 .sidebar-wrapper {
-  background: #5c8adf;
+  background: #2852a0;
   position: absolute;
   left: 0;
   width: 280px;
@@ -69,7 +69,7 @@ p {
 .sidebar-wrapper .profile-container {
   padding: 30px;
   padding-bottom: 50px;
-  background: linear-gradient(to bottom, #2956aa, #2956aa 70%, #5c8adf);
+  background: linear-gradient(to bottom, #031e52, #031e52 60%, #2852a0);
   text-align: center;
   color: #fff;
 }
@@ -117,16 +117,36 @@ p {
 
 .sidebar-wrapper .container-block-title {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
 }
 
 .sidebar-wrapper .degree {
   font-size: 14px;
   margin-top: 0;
   margin-bottom: 5px;
+  font-style: italic;
+  color: #c4c2c2;
+}
+
+.sidebar-wrapper .school {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+
+}
+
+.sidebar-wrapper .logo-avatar{
+  fill: #fff;
+  height: 40px;
+  weight: auto;
+  margin-left: 20px;
+
 }
 
 .sidebar-wrapper .education-container .item {
@@ -189,7 +209,7 @@ p {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 500;
-  color: #5c8adf;
+  color: #2852a0;
   position: relative;
   margin-top: 0;
   margin-bottom: 20px;
@@ -209,7 +229,7 @@ p {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background: #5c8adf;
+  background: #2852a0;
   text-align: center;
   font-size: 16px;
   position: relative;
@@ -236,7 +256,7 @@ p {
 }
 
 .main-wrapper .job-title {
-  color: #5c8adf;
+  color: #2852a0;
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 0;
@@ -287,7 +307,7 @@ p {
 
 .skillset .level-bar {
   height: 12px;
-  background: #5c8adf;
+  background: #2852a0;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -299,7 +319,7 @@ p {
 }
 
 .skillset .theme-progress-bar {
-  background: #5c8adf;
+  background: #2852a0;
 }
 
 .footer {
@@ -316,6 +336,8 @@ p {
 .footer .fa-heart {
   color: #fb866a;
 }
+
+
 
 @media (max-width: 767.98px) {
   .sidebar-wrapper {
