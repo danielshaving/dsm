@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<section id="contact">
+    <div>
+        <div>
+            <div>
+                <h2 style="text-transform: uppercase;">contact with me</h2>
+                <h3 class="section-subheading"> Please send me messages, I will do my best to answer your request as soon as possible. </h3>
+            </div>
+        </div>
+        <div>
+            <div>
+                <form name="sentMessage" id="contactForm" action="https://formspree.io/danielshaving@gmail.com" method="POST" novalidate>
+                    <div>
+                        <div>
+                            <div class="control-group form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name."WW>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group form-group">
+                                <input type="email" class="form-control" name="_replyto" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group form-group">
+                                <input type="tel" class="form-control" name="phone" placeholder="Your Phone" id="phone" required data-validation-required-message="Please enter your phone number (optional).">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="control-group form-group">
+                                <textarea class="form-control" name="message" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div style="text-align:center">
+                            <button type="submit" value="Send" class="btn-contact">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

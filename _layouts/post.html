@@ -41,6 +41,27 @@ layout: default
 </div>
 
 
+{%for item in (0..page.categories.size)%}{%unless forlast%}
+		{% capture this_word %}{{ page.categories[item] }}{% endcapture %}
+	 	{% for post in site.categories[this_word] %}
+			{% if post.title != null %}
+
+						<div class="item-title" >
+							<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">{{ post.title }}</a>
+						</div>
+
+			{%endif%}
+
+		{%endfor%}
+{%endunless%}
+{%endfor%}
+
+<div>
+
+
+</div>
+
+
 
 
 {% include disqus.html %}

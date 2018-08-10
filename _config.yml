@@ -71,3 +71,6 @@ links:
     - name:         Tags
       url:          /tags
       external:     false
+    - name:         Contact
+      url:          /contact
+      external:     false
