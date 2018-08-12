@@ -65,6 +65,7 @@ layout: default
 								<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">{{ post.title }}</a>
 							</div>
 						{% assign is_posted = is_posted | push: post.title %}
+
 						<!-- {% assign post_count = post_count | plus : 1 %} -->
 
          {% endif %}
