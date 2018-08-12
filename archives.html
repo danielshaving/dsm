@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+
+
+<div class="verticalLine">
+
 <div class="main-content archive-page clearfix">
 {% for post in site.posts %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
@@ -15,17 +19,17 @@ layout: default
     {% endif %}
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					{{ post.category }}
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" title="visit {{ post.title }}">{{ post.title }}</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									{{ post.date | date: "%F %H:%M:%S "}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#{{ post.category }}"  data-hover="{{ post.category }}">{{ post.category }} </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.date | date: "%F %H:%M:%S "}}&nbsp;&nbsp; <a class="content" href="{{ site.tagurl | prepend: site.baseurl }}"  data-hover="{{ post.category }}">{{ post.categories[0] }} </a><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -49,3 +53,5 @@ layout: default
         {% endif %}
     {% endif %}
 {% endfor %}
+
+</div>

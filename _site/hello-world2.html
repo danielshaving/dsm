@@ -17,13 +17,47 @@
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
    <script>
-     function isHidden(Div){
+     function isHidden(Div,Show_and_Hide_Button){
        var vDiv = document.getElementsByName(Div);
 			 var i;
 			 for (i = 0; i < vDiv.length; i ++ ){
 			 vDiv[i].style.display = (vDiv[i].style.display == 'none')?'block':'none';
+  		 }
 
-		 }
+		 	 var Show_and_Hide_Button_Elements = document.getElementById(Show_and_Hide_Button);
+
+
+     // Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
+			 // Show_and_Hide_Button_Elements.value = '100';
+       if (Show_and_Hide_Button_Elements.innerHTML.indexOf('MORE') != -1){
+			 Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
+			 Show_and_Hide_Button_Elements.style.borderTop = "none";
+			 Show_and_Hide_Button_Elements.style.borderBottom = "0.5px dashed";
+			 Show_and_Hide_Button_Elements.style.borderBottom.width = "thin";
+			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
+			 Show_and_Hide_Button_Elements.marginTop = "10px";
+			 Show_and_Hide_Button_Elements.style.textAlign = "left";
+
+		   }
+
+
+       // Show_and_Hide_Button_Elements.style.color = "blue";
+
+			 else
+
+			 {Show_and_Hide_Button_Elements.innerHTML = "&darr;&darr;MORE&darr;&darr;";
+
+			 Show_and_Hide_Button_Elements.style.borderTop = "0.5px dashed";
+			 Show_and_Hide_Button_Elements.style.borderTop.width = "thin";
+			 Show_and_Hide_Button_Elements.style.borderBottom = "none";
+			 Show_and_Hide_Button_Elements.marginTop = "25px";
+			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
+			 Show_and_Hide_Button_Elements.style.textAlign = "right";
+		 	 // Show_and_Hide_Button_Elements.style.fontSize = "17px";
+
+       }
+
+			 console.log( "handler1" );
 
 
      }
@@ -165,13 +199,47 @@
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
    <script>
-     function isHidden(Div){
+     function isHidden(Div,Show_and_Hide_Button){
        var vDiv = document.getElementsByName(Div);
 			 var i;
 			 for (i = 0; i < vDiv.length; i ++ ){
 			 vDiv[i].style.display = (vDiv[i].style.display == 'none')?'block':'none';
+  		 }
 
-		 }
+		 	 var Show_and_Hide_Button_Elements = document.getElementById(Show_and_Hide_Button);
+
+
+     // Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
+			 // Show_and_Hide_Button_Elements.value = '100';
+       if (Show_and_Hide_Button_Elements.innerHTML.indexOf('MORE') != -1){
+			 Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
+			 Show_and_Hide_Button_Elements.style.borderTop = "none";
+			 Show_and_Hide_Button_Elements.style.borderBottom = "0.5px dashed";
+			 Show_and_Hide_Button_Elements.style.borderBottom.width = "thin";
+			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
+			 Show_and_Hide_Button_Elements.marginTop = "10px";
+			 Show_and_Hide_Button_Elements.style.textAlign = "left";
+
+		   }
+
+
+       // Show_and_Hide_Button_Elements.style.color = "blue";
+
+			 else
+
+			 {Show_and_Hide_Button_Elements.innerHTML = "&darr;&darr;MORE&darr;&darr;";
+
+			 Show_and_Hide_Button_Elements.style.borderTop = "0.5px dashed";
+			 Show_and_Hide_Button_Elements.style.borderTop.width = "thin";
+			 Show_and_Hide_Button_Elements.style.borderBottom = "none";
+			 Show_and_Hide_Button_Elements.marginTop = "25px";
+			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
+			 Show_and_Hide_Button_Elements.style.textAlign = "right";
+		 	 // Show_and_Hide_Button_Elements.style.fontSize = "17px";
+
+       }
+
+			 console.log( "handler1" );
 
 
      }
@@ -241,7 +309,7 @@
 			
 			 
 			   
-							<div class="item-title" >
+							<div class="item-title">
 								<a href="/dsm/example-9" data-hover="Example 8">Example 8</a>
 							</div>
 					 	 
@@ -254,7 +322,7 @@
 			
 			 
 			   
-							<div class="item-title" >
+							<div class="item-title">
 								<a href="/dsm/example-4" data-hover="Example 4">Example 4</a>
 							</div>
 					 	 
@@ -267,7 +335,7 @@
 			
 			 
 			   
-							<div class="item-title" >
+							<div class="item-title">
 								<a href="/dsm/example-2" data-hover="Example 2">Example 2</a>
 							</div>
 					 	 
@@ -284,7 +352,7 @@
 			
 			 
 			   
-							<div class="item-title" >
+							<div class="item-title">
 								<a href="/dsm/example-1" data-hover="Example 1">Example 1</a>
 							</div>
 					 	 
@@ -297,23 +365,25 @@
 			
 			 
 			   
-							<div class="item-title" >
+							<div class="item-title" name="hiddendiv" style="display:none">
 								<a href="/dsm/hello-world2" data-hover="Hello World 2">Hello World 2</a>
 							</div>
-					 	 
-						 
+						
 
-				 
+						<!--  -->
+
+         
 		   
 			
 		
 			
 			 
 			   
-							<div name="hiddendiv" style="display:none">
+							<div class="item-title" name="hiddendiv" style="display:none">
 								<a href="/dsm/hello-world" data-hover="Hello World">Hello World</a>
 							</div>
 						
+
 						<!--  -->
 
          
@@ -331,10 +401,11 @@
 			
 			 
 			   
-							<div name="hiddendiv" style="display:none">
+							<div class="item-title" name="hiddendiv" style="display:none">
 								<a href="/dsm/example-6" data-hover="Example 6">Example 6</a>
 							</div>
 						
+
 						<!--  -->
 
          
@@ -352,10 +423,11 @@
 			
 			 
 			   
-							<div name="hiddendiv" style="display:none">
+							<div class="item-title" name="hiddendiv" style="display:none">
 								<a href="/dsm/code-syntax" data-hover="Code Syntax">Code Syntax</a>
 							</div>
 						
+
 						<!--  -->
 
          
@@ -365,10 +437,11 @@
 			
 			 
 			   
-							<div name="hiddendiv" style="display:none">
+							<div class="item-title" name="hiddendiv" style="display:none">
 								<a href="/dsm/example-5" data-hover="Example 5">Example 5</a>
 							</div>
 						
+
 						<!--  -->
 
          
@@ -378,10 +451,11 @@
 			
 			 
 			   
-							<div name="hiddendiv" style="display:none">
+							<div class="item-title" name="hiddendiv" style="display:none">
 								<a href="/dsm/example-3" data-hover="Example 3">Example 3</a>
 							</div>
 						
+
 						<!--  -->
 
          
@@ -399,10 +473,11 @@
 			
 			 
 			   
-							<div name="hiddendiv" style="display:none">
+							<div class="item-title" name="hiddendiv" style="display:none">
 								<a href="/dsm/typography" data-hover="This is an example">This is an example</a>
 							</div>
 						
+
 						<!--  -->
 
          
@@ -412,10 +487,11 @@
 			
 			 
 			   
-							<div name="hiddendiv" style="display:none">
+							<div class="item-title" name="hiddendiv" style="display:none">
 								<a href="/dsm/example-7" data-hover="Example 7">Example 7</a>
 							</div>
 						
+
 						<!--  -->
 
          
@@ -438,7 +514,22 @@
 
 
 
-<button style="cursor:hand" onclick="isHidden('hiddendiv')"><b>diaocha:</b></button>
+<div class = "item-title" >
+<a style="border-top: 0.5px dashed; border-width: thin; text-align: right;" id="show_more_show_Less" type="button" onclick="isHidden('hiddendiv','show_more_show_Less')" ><i>&darr;&darr;MORE&darr;&darr;</i></a>
+</div>
+
+
+<!-- <input type="button" value="ADD" onclick="change(this)"/>
+
+
+<script>
+function change(elem) // no ';' here
+{
+
+    if (elem.value=="Close Curtain") elem.value = "Open Curtain";
+    else elem.value = "Close Curtain";
+}
+</script> -->
 
 
 

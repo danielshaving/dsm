@@ -53,15 +53,15 @@ layout: default
 	 	{% for post in site.categories[this_word] %}
 			{% if post.title != null %}
 			 {% unless is_posted contains post.title %}
-			   {% if post_count <= 4 %}
-							<div class="item-title" >
+			   {% if post_count <= 3 %}
+							<div class="item-title">
 								<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">{{ post.title }}</a>
 							</div>
 					 	 {% assign is_posted = is_posted | push: post.title %}
 						 {% assign post_count = post_count | plus : 1 %}
 
 				 {% else %}
-							<div name="hiddendiv" style="display:none">
+							<div class="item-title" name="hiddendiv" style="display:none">
 								<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">{{ post.title }}</a>
 							</div>
 						{% assign is_posted = is_posted | push: post.title %}
@@ -75,9 +75,24 @@ layout: default
 {%endunless%}
 {%endfor%}
 
-{% if post_count > 5%}
-<button style="cursor:hand" onclick="isHidden('hiddendiv')"><b>diaocha:</b></button>
+{% if post_count > 4%}
+<div class = "item-title" >
+<a style="border-top: 0.5px dashed; border-width: thin; text-align: right;" id="show_more_show_Less" type="button" onclick="isHidden('hiddendiv','show_more_show_Less')" ><i>&darr;&darr;MORE&darr;&darr;</i></a>
+</div>
 {% endif %}
+
+<!-- <input type="button" value="ADD" onclick="change(this)"/>
+
+
+<script>
+function change(elem) // no ';' here
+{
+
+    if (elem.value=="Close Curtain") elem.value = "Open Curtain";
+    else elem.value = "Close Curtain";
+}
+</script> -->
+
 
 
 {% include disqus.html %}

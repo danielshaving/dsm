@@ -17,13 +17,47 @@
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
    <script>
-     function isHidden(Div){
+     function isHidden(Div,Show_and_Hide_Button){
        var vDiv = document.getElementsByName(Div);
 			 var i;
 			 for (i = 0; i < vDiv.length; i ++ ){
 			 vDiv[i].style.display = (vDiv[i].style.display == 'none')?'block':'none';
+  		 }
 
-		 }
+		 	 var Show_and_Hide_Button_Elements = document.getElementById(Show_and_Hide_Button);
+
+
+     // Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
+			 // Show_and_Hide_Button_Elements.value = '100';
+       if (Show_and_Hide_Button_Elements.innerHTML.indexOf('MORE') != -1){
+			 Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
+			 Show_and_Hide_Button_Elements.style.borderTop = "none";
+			 Show_and_Hide_Button_Elements.style.borderBottom = "0.5px dashed";
+			 Show_and_Hide_Button_Elements.style.borderBottom.width = "thin";
+			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
+			 Show_and_Hide_Button_Elements.marginTop = "10px";
+			 Show_and_Hide_Button_Elements.style.textAlign = "left";
+
+		   }
+
+
+       // Show_and_Hide_Button_Elements.style.color = "blue";
+
+			 else
+
+			 {Show_and_Hide_Button_Elements.innerHTML = "&darr;&darr;MORE&darr;&darr;";
+
+			 Show_and_Hide_Button_Elements.style.borderTop = "0.5px dashed";
+			 Show_and_Hide_Button_Elements.style.borderTop.width = "thin";
+			 Show_and_Hide_Button_Elements.style.borderBottom = "none";
+			 Show_and_Hide_Button_Elements.marginTop = "25px";
+			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
+			 Show_and_Hide_Button_Elements.style.textAlign = "right";
+		 	 // Show_and_Hide_Button_Elements.style.fontSize = "17px";
+
+       }
+
+			 console.log( "handler1" );
 
 
      }
@@ -147,7 +181,9 @@
 
 		<main>
 
-			<div class="main-content archive-page clearfix">
+			<div class="verticalLine">
+
+<div class="main-content archive-page clearfix">
 
     
     
@@ -161,17 +197,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/typography" title="visit This is an example">This is an example</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-03-19 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-03-19 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">machine_learning </a><a href="/dsm/typography" data-hover="This is an example">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -186,17 +222,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/code-syntax" title="visit Code Syntax">Code Syntax</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-03-01 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-03-01 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">aaa </a><a href="/dsm/code-syntax" data-hover="Code Syntax">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -211,17 +247,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/example-9" title="visit Example 8">Example 8</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-15 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-15 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">ls </a><a href="/dsm/example-9" data-hover="Example 8">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -236,17 +272,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/example-8" title="visit Example 8">Example 8</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-15 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-15 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">ppp </a><a href="/dsm/example-8" data-hover="Example 8">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -261,17 +297,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/example-7" title="visit Example 7">Example 7</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-15 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-15 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">math </a><a href="/dsm/example-7" data-hover="Example 7">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -286,17 +322,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/example-6" title="visit Example 6">Example 6</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-15 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-15 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">ppp </a><a href="/dsm/example-6" data-hover="Example 6">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -311,17 +347,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/example-5" title="visit Example 5">Example 5</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-15 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-15 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">aaa </a><a href="/dsm/example-5" data-hover="Example 5">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -336,17 +372,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/example-4" title="visit Example 4">Example 4</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-15 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-15 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">ls </a><a href="/dsm/example-4" data-hover="Example 4">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -361,17 +397,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/example-3" title="visit Example 3">Example 3</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-15 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-15 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">aaa </a><a href="/dsm/example-3" data-hover="Example 3">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -386,17 +422,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/example-2" title="visit Example 2">Example 2</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-15 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-15 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">ls </a><a href="/dsm/example-2" data-hover="Example 2">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -411,17 +447,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/example-10" title="visit Example 8">Example 8</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-15 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-15 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">ls </a><a href="/dsm/example-10" data-hover="Example 8">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -436,17 +472,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/example-1" title="visit Example 1">Example 1</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-15 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-15 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">ls </a><a href="/dsm/example-1" data-hover="Example 1">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -461,17 +497,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/hello-world2" title="visit Hello World 2">Hello World 2</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2015-02-10 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015-02-10 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">ls </a><a href="/dsm/hello-world2" data-hover="Hello World 2">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -496,17 +532,17 @@
     
 			<div class="post-list-item">
 					<div class="post-list-item-container">
-					<div class="liberxue-title">
+					<div class="item-title">
 					
 				</div>
-						<div class="item-label">
+						<div>
 							<div class="item-title">
 								<a href="/dsm/hello-world" title="visit Hello World">Hello World</a>
-							</div>
+              </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									2012-02-10 00:00:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tags#"  data-hover=""> </a>
-								</div>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2012-02-10 00:00:00 &nbsp;&nbsp; <a class="content" href="/dsm/tags.html"  data-hover="">ls </a><a href="/dsm/hello-world" data-hover="Hello World">【more】</a>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -518,6 +554,8 @@
    	</div>
     
 
+
+</div>
 
 
 	  </main>

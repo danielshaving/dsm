@@ -17,13 +17,47 @@
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
    <script>
-     function isHidden(Div){
+     function isHidden(Div,Show_and_Hide_Button){
        var vDiv = document.getElementsByName(Div);
 			 var i;
 			 for (i = 0; i < vDiv.length; i ++ ){
 			 vDiv[i].style.display = (vDiv[i].style.display == 'none')?'block':'none';
+  		 }
 
-		 }
+		 	 var Show_and_Hide_Button_Elements = document.getElementById(Show_and_Hide_Button);
+
+
+     // Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
+			 // Show_and_Hide_Button_Elements.value = '100';
+       if (Show_and_Hide_Button_Elements.innerHTML.indexOf('MORE') != -1){
+			 Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
+			 Show_and_Hide_Button_Elements.style.borderTop = "none";
+			 Show_and_Hide_Button_Elements.style.borderBottom = "0.5px dashed";
+			 Show_and_Hide_Button_Elements.style.borderBottom.width = "thin";
+			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
+			 Show_and_Hide_Button_Elements.marginTop = "10px";
+			 Show_and_Hide_Button_Elements.style.textAlign = "left";
+
+		   }
+
+
+       // Show_and_Hide_Button_Elements.style.color = "blue";
+
+			 else
+
+			 {Show_and_Hide_Button_Elements.innerHTML = "&darr;&darr;MORE&darr;&darr;";
+
+			 Show_and_Hide_Button_Elements.style.borderTop = "0.5px dashed";
+			 Show_and_Hide_Button_Elements.style.borderTop.width = "thin";
+			 Show_and_Hide_Button_Elements.style.borderBottom = "none";
+			 Show_and_Hide_Button_Elements.marginTop = "25px";
+			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
+			 Show_and_Hide_Button_Elements.style.textAlign = "right";
+		 	 // Show_and_Hide_Button_Elements.style.fontSize = "17px";
+
+       }
+
+			 console.log( "handler1" );
 
 
      }
@@ -155,27 +189,27 @@
 
 
 
-	<a href="#aaa">aaa <span>(4)</span></a>
+	<a class="btn-default-in-Tags" href="#aaa"><span>aaa <b>(4)</b></span></a>
 
 
 
-	<a href="#ls">ls <span>(7)</span></a>
+	<a class="btn-default-in-Tags" href="#ls"><span>ls <b>(7)</b></span></a>
 
 
 
-	<a href="#machine_learning">machine_learning <span>(1)</span></a>
+	<a class="btn-default-in-Tags" href="#machine_learning"><span>machine_learning <b>(1)</b></span></a>
 
 
 
-	<a href="#math">math <span>(4)</span></a>
+	<a class="btn-default-in-Tags" href="#math"><span>math <b>(4)</b></span></a>
 
 
 
-	<a href="#ppo">ppo <span>(3)</span></a>
+	<a class="btn-default-in-Tags" href="#ppo"><span>ppo <b>(3)</b></span></a>
 
 
 
-	<a href="#ppp">ppp <span>(3)</span></a>
+	<a class="btn-default-in-Tags" href="#ppp"><span>ppp <b>(3)</b></span></a>
 
 
 
@@ -190,7 +224,7 @@
       <div id="aaa" class="post-lists" id="aaa">
      <div class="categorys-item">
           <div class="categorys-title">
-   aaa : 4
+   <a href="#aaa">aaa : 4</a>
     </div>
      
      			<div class="post-list-item" >
@@ -213,7 +247,7 @@
                       
 									</a>
                   </time>
-                <p class="content">To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the... <a href="/dsm/code-syntax" data-hover="Code Syntax">【more】</a></p>
+                <div>To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the... <a href="/dsm/code-syntax" data-hover="Code Syntax">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -238,7 +272,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-5" data-hover="Example 5">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-5" data-hover="Example 5">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -263,7 +297,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-3" data-hover="Example 3">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-3" data-hover="Example 3">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -294,7 +328,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world2" data-hover="Hello World 2">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world2" data-hover="Hello World 2">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -309,7 +343,7 @@
       <div id="ls" class="post-lists" id="ls">
      <div class="categorys-item">
           <div class="categorys-title">
-   ls : 7
+   <a href="#ls">ls : 7</a>
     </div>
      
      			<div class="post-list-item" >
@@ -330,7 +364,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-9" data-hover="Example 8">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-9" data-hover="Example 8">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -357,7 +391,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-4" data-hover="Example 4">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-4" data-hover="Example 4">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -382,7 +416,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-2" data-hover="Example 2">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-2" data-hover="Example 2">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -407,7 +441,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-10" data-hover="Example 8">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-10" data-hover="Example 8">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -432,7 +466,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-1" data-hover="Example 1">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-1" data-hover="Example 1">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -463,7 +497,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world2" data-hover="Hello World 2">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world2" data-hover="Hello World 2">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -490,7 +524,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world" data-hover="Hello World">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world" data-hover="Hello World">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -505,7 +539,7 @@
       <div id="machine_learning" class="post-lists" id="machine_learning">
      <div class="categorys-item">
           <div class="categorys-title">
-   machine_learning : 1
+   <a href="#machine_learning">machine_learning : 1</a>
     </div>
      
      			<div class="post-list-item" >
@@ -528,7 +562,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, aliquam magni et officiis nemo nihil aliquid placeat alias. Eum voluptates... <a href="/dsm/typography" data-hover="This is an example">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, aliquam magni et officiis nemo nihil aliquid placeat alias. Eum voluptates... <a href="/dsm/typography" data-hover="This is an example">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -543,7 +577,7 @@
       <div id="math" class="post-lists" id="math">
      <div class="categorys-item">
           <div class="categorys-title">
-   math : 4
+   <a href="#math">math : 4</a>
     </div>
      
      			<div class="post-list-item" >
@@ -566,7 +600,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, aliquam magni et officiis nemo nihil aliquid placeat alias. Eum voluptates... <a href="/dsm/typography" data-hover="This is an example">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, aliquam magni et officiis nemo nihil aliquid placeat alias. Eum voluptates... <a href="/dsm/typography" data-hover="This is an example">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -591,7 +625,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-7" data-hover="Example 7">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-7" data-hover="Example 7">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -618,7 +652,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-4" data-hover="Example 4">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-4" data-hover="Example 4">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -649,7 +683,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world2" data-hover="Hello World 2">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world2" data-hover="Hello World 2">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -664,7 +698,7 @@
       <div id="ppo" class="post-lists" id="ppo">
      <div class="categorys-item">
           <div class="categorys-title">
-   ppo : 3
+   <a href="#ppo">ppo : 3</a>
     </div>
      
      			<div class="post-list-item" >
@@ -687,7 +721,7 @@
                       
 									</a>
                   </time>
-                <p class="content">To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the... <a href="/dsm/code-syntax" data-hover="Code Syntax">【more】</a></p>
+                <div>To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the... <a href="/dsm/code-syntax" data-hover="Code Syntax">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -714,7 +748,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-8" data-hover="Example 8">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-8" data-hover="Example 8">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -741,7 +775,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world" data-hover="Hello World">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world" data-hover="Hello World">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -756,7 +790,7 @@
       <div id="ppp" class="post-lists" id="ppp">
      <div class="categorys-item">
           <div class="categorys-title">
-   ppp : 3
+   <a href="#ppp">ppp : 3</a>
     </div>
      
      			<div class="post-list-item" >
@@ -779,7 +813,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-8" data-hover="Example 8">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-8" data-hover="Example 8">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -804,7 +838,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-6" data-hover="Example 6">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni... <a href="/dsm/example-6" data-hover="Example 6">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -835,7 +869,7 @@
                       
 									</a>
                   </time>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world2" data-hover="Hello World 2">【more】</a></p>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis... <a href="/dsm/hello-world2" data-hover="Hello World 2">【more】</a></div>
  							</div>
  						</div>
  					</div>
