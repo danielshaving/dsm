@@ -29,6 +29,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      is_posted: false # automatically set is_post=true for all posts
 
 # Plugins
 gems:

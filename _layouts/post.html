@@ -2,6 +2,7 @@
 layout: default
 ---
 {% include svg-icons.html %}
+{% include head.html %}
 
 <article id="post-page">
 	<h2>{{ page.title }}</h2>
@@ -41,27 +42,41 @@ layout: default
 </div>
 
 
+
+
+{% assign is_posted = "" | split: ',' %}
+{% assign post_count = 0 %}
+
+
 {%for item in (0..page.categories.size)%}{%unless forlast%}
 		{% capture this_word %}{{ page.categories[item] }}{% endcapture %}
 	 	{% for post in site.categories[this_word] %}
 			{% if post.title != null %}
+			 {% unless is_posted contains post.title %}
+			   {% if post_count <= 4 %}
+							<div class="item-title" >
+								<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">{{ post.title }}</a>
+							</div>
+					 	 {% assign is_posted = is_posted | push: post.title %}
+						 {% assign post_count = post_count | plus : 1 %}
 
-						<div class="item-title" >
-							<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">{{ post.title }}</a>
-						</div>
+				 {% else %}
+							<div name="hiddendiv" style="display:none">
+								<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">{{ post.title }}</a>
+							</div>
+						{% assign is_posted = is_posted | push: post.title %}
+						<!-- {% assign post_count = post_count | plus : 1 %} -->
 
+         {% endif %}
+		   {% endunless %}
 			{%endif%}
-
 		{%endfor%}
 {%endunless%}
 {%endfor%}
 
-<div>
-
-
-</div>
-
-
+{% if post_count > 5%}
+<button style="cursor:hand" onclick="isHidden('hiddendiv')"><b>diaocha:</b></button>
+{% endif %}
 
 
 {% include disqus.html %}
