@@ -12,7 +12,7 @@ layout: default
     {% if forloop.first %}
   	<div class="categorys-item">
 	<div class="categorys-title" id="{{ this_year }}">
-			{{ this_year }}
+			<a href="#{{ this_year }}">{{ this_year }}</a>
 		</div>
    <div class="post-lists">
 	<div class="post-lists-body">
@@ -28,7 +28,7 @@ layout: default
               </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.date | date: "%F %H:%M:%S "}}&nbsp;&nbsp; <a class="content" href="{{ site.tagurl | prepend: site.baseurl }}"  data-hover="{{ post.category }}">{{ post.categories[0] }} </a><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">【more】</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.date | date: "%F %H:%M:%S "}}&nbsp;&nbsp; <a class="content" href="{{ site.tagurl | prepend: site.baseurl | append: '#' | append: post.categories[0] }}"  data-hover="{{ post.categories }}">{{ post.categories[0] }} </a><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">【more】</a>
                 </div>
 							</div>
 						</div>
@@ -46,7 +46,7 @@ layout: default
   	</div>
      	<div class="categorys-item">
 			 	<div class="categorys-title" id="{{ next_year }}">
-			{{next_year}}
+			<a href="#{{ next_year }}">{{next_year}}</a>
 		</div>
         <div class="post-lists">
 			<div class="post-lists-body">

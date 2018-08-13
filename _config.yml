@@ -12,6 +12,7 @@ author:
 baseurl: /dsm # Change this to your relative path (ex: /blog/), or leave just a /
 indexurl: /dsm/index.html
 cvurl: /dsm/danielcv/DanielCV.html
+imgurl: /dsm/img/
 tagurl: /tags.html
 markdown: kramdown
 source: .

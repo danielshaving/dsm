@@ -22,7 +22,7 @@ layout: default
 		{% if page.categories != null %}
 		<b>Tags: </b>
    {% for tag in page.categories %}
-		<a href="{{ site.tagurl | prepend: site.baseurl }}" class="btn-default">{{tag}}</a>
+		<a href="{{ site.tagurl | prepend: site.baseurl | append: '#' | append: tag}}" class="btn-default">{{tag}}</a>
     {% endfor %}
 		{% endif %}
 </div>

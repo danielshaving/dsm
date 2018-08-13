@@ -1,12 +1,15 @@
 <header id="header">
 	<a href="{{ site.indexurl }}">
 		<img src="{{ "/img/dsm.jpg" | prepend : site.baseurl }}" alt="dsm Logo">
-	  <h3 style="font-style:italic">Danielshaving</h3>
+	  <h3 style="font-style:italic;">Danielshaving</h3>
+		<div style="margin: 45px"></div>
 	</a>
 
 <div>
 	{% for link in site.links %}
-	<a href="{{link.url | prepend: site.baseurl }}">{{ link.name }}</a>
+
+	<a class="svg-head" href="{{link.url | prepend: site.baseurl }}"><img id='head-img' src="{{link.name | prepend: site.imgurl | append : '.svg'}}"/></a>
+
 	{% endfor %}
 </div>
 

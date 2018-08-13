@@ -1,3 +1,10 @@
 /*- Custom style -*/
+.svg-head {margin-left: 2em; margin-right: 2em;}
+.svg-head #head-img {height: 60px; width: auto;}
 
+@media(max-width:650px){
+.svg-head #head-img {height: 40px; width: auto;}
+
+.svg-head {margin-left: 10px; margin-right: 10px;}
+}
 // -- Put custom style under this point -- //
