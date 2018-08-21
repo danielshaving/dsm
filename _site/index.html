@@ -209,7 +209,7 @@
 	
 
 	  <li class="post">
-	  	<h2><a href="/dsm/typography">This is an example</a></h2>
+	  	<h2><a href="/dsm/typography">插入排序</a></h2>
       <!-- <a class="post-categories" href="/dsm/category/machine_learningmath.html">machine_learningmath</a> -->
 <div style="display:inline">
 			<time datetime="2015-03-19T00:00:00+01:00" class="by-line"> Posted on 19 Mar 2015&nbsp;&nbsp;by
@@ -222,7 +222,7 @@
 </div>
 
 			<!-- <img class="card-header-avatar" src="https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" /> -->
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, aliquam magni et officiis nemo nihil aliquid placeat alias. Eum voluptates ducimus, nobis ex illum laboriosam quidem corrupti impedit ratione in voluptatum amet beatae facilis temporibus voluptate praesentium voluptatibus! At ab, iusto error amet eveniet debitis ipsa recusandae possimus minima sunt...</p>
+			<p class="content">首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格： 对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。 知识点小记 使用sizeof(nums)/sizeof(nums[0])获得数组的长度； 数组作为参数有两种方法，一种是以数组名本身，一种是以指针； 如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小； 简单插入排序 直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。 实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。 设数组为a[0…n-1]。 初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1 将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。 i++，并重复第二步直到i==n-1。 简单插入排序方法实现： //insert sort void insertSort(int nums[], int n){ for(int i=1;i&lt;n;i++){ int temp = nums[i]; int j=i-1; while(nums[j]&gt;temp &amp;&amp; j&gt;=0){ nums[j+1] = nums[j]; j--; } nums[j+1] = temp; } } 下面是一个完整的例子： #include &lt;iostream&gt; using namespace std; void...</p>
 	  </li>
 
     
@@ -433,7 +433,7 @@
 
     
 
-      <span class="feed"><a href="/typography" title="访问 This is an example" data-hover="This is an example">This is an example</a></span>
+      <span class="feed"><a href="/typography" title="访问 插入排序" data-hover="插入排序">插入排序</a></span>
 
     
 

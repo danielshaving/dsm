@@ -558,9 +558,9 @@ section#contact .text-danger {
 
 // ----------------------------------
 
-.item-title a{font-size:20px;word-break:break-all;margin-top: 10px; margin-left: 10px; color:$text-color;line-height: 30px;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2; }
+.item-title a{font-size:20px;word-break:break-all;margin-top: 10px; margin-left: 10px; color:grey;line-height: 30px;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2; }
 .item-title a:hover{
-    font-size:20px;word-break:break-all;color:$highlight-color;line-height: 30px;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2;
+    font-size:20px;word-break:break-all;color:red;line-height: 30px;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2;
 }
 
 

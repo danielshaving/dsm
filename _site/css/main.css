@@ -170,9 +170,9 @@ section#contact .text-danger { color: #e74c3c; }
 @media (max-width: 650px) { .btn-default-in-Tags { font-size: 17px; padding: 2.5px; border: 1px solid; } }
 .avatar { fill: #fff; width: 50px; height: auto; margin-top: 20px; }
 
-.item-title a { font-size: 20px; word-break: break-all; margin-top: 10px; margin-left: 10px; color: #222222; line-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.item-title a { font-size: 20px; word-break: break-all; margin-top: 10px; margin-left: 10px; color: grey; line-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 
-.item-title a:hover { font-size: 20px; word-break: break-all; color: #0073aa; line-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.item-title a:hover { font-size: 20px; word-break: break-all; color: red; line-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 
 .item-title a::before { color: #659cd5; content: attr(data-hover); position: absolute; outline: 0; white-space: nowrap; opacity: 0; text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); -webkit-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg); -moz-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg); transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg); -webkit-transition: -webkit-transform 0.3s, opacity 0.3s; -moz-transition: -moz-transform 0.3s, opacity 0.3s; transition: transform 0.3s, opacity 0.3s; }
 
