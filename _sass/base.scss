@@ -18,6 +18,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
 
 /*- Base color -*/
 
+
+
 $main-color: #659cd5;
 $background-color: #FFFFFF;
 $text-color: #222222;
@@ -25,6 +27,27 @@ $highlight-color: #0073aa;
 $grey-background-color: #eef1f3;
 
 /*- Base settings -*/
+header {
+	width: 100%;
+	height: auto;
+  background: #000000 url(/dsm/img/header.png) 100% 100% no-repeat;
+  background-size: cover;
+  margin-bottom: 40px;
+
+}
+
+header .header-span{
+
+// color: #c8736b;
+font-size: 2.1em;
+font-family: Trebuchet MS;
+background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
+text-shadow: 5px -5px black, 4px -4px white;
+font-weight: bold;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text
+
+}
 
 html {
 	background-color: $background-color;

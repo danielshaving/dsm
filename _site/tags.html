@@ -13,63 +13,15 @@
 	<link rel="stylesheet" href="/dsm/css/main.css">
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic%7CSignika:700,300,400,600' rel='stylesheet' type='text/css'>
 	<link rel="icon" type="image/jpg" href='/dsm/img/dsm.jpg'>
+	<link rel="stylesheet" href="/dsm/css/highlight/styles/gruvbox-dark.css">
+	<script src="/dsm/css/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
 
 	<!-- RSS -->
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
-   <script>
-     function isHidden(Div,Show_and_Hide_Button){
-       var vDiv = document.getElementsByName(Div);
-			 var i;
-			 for (i = 0; i < vDiv.length; i ++ ){
-			 vDiv[i].style.display = (vDiv[i].style.display == 'none')?'block':'none';
-  		 }
-
-		 	 var Show_and_Hide_Button_Elements = document.getElementById(Show_and_Hide_Button);
-
-
-     // Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
-			 // Show_and_Hide_Button_Elements.value = '100';
-       if (Show_and_Hide_Button_Elements.innerHTML.indexOf('MORE') != -1){
-			 Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
-			 Show_and_Hide_Button_Elements.style.borderTop = "none";
-			 Show_and_Hide_Button_Elements.style.borderBottom = "0.5px dashed";
-			 Show_and_Hide_Button_Elements.style.borderBottom.width = "thin";
-			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
-			 Show_and_Hide_Button_Elements.marginTop = "10px";
-			 Show_and_Hide_Button_Elements.style.textAlign = "left";
-
-		   }
-
-
-       // Show_and_Hide_Button_Elements.style.color = "blue";
-
-			 else
-
-			 {Show_and_Hide_Button_Elements.innerHTML = "&darr;&darr;MORE&darr;&darr;";
-
-			 Show_and_Hide_Button_Elements.style.borderTop = "0.5px dashed";
-			 Show_and_Hide_Button_Elements.style.borderTop.width = "thin";
-			 Show_and_Hide_Button_Elements.style.borderBottom = "none";
-			 Show_and_Hide_Button_Elements.marginTop = "25px";
-			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
-			 Show_and_Hide_Button_Elements.style.textAlign = "right";
-		 	 // Show_and_Hide_Button_Elements.style.fontSize = "17px";
-
-       }
-
-			 console.log( "handler1" );
-
-
-     }
-
-
-		 // function gnid(Div){
-			//  var vDiv = document.getElementsByName(Div);
-     //   vDiv.style.background = #032321;
-		 //
-		 // }
-   </script>
+	<script src="/dsm/js/showhide.js"></script>
 
 </head>
 
@@ -122,8 +74,8 @@
       
         <header id="header">
 	<a href="/dsm/index.html">
-		<img src="/dsm/img/dsm.jpg" alt="dsm Logo">
-	  <h3 style="font-style:italic;">Danielshaving</h3>
+		<!-- <img src="/dsm/img/dsm.jpg" alt="dsm Logo"> -->
+		<div class="header-span"><span>Danielshaving -- A blog of Machine Learning</span>
 		<div style="margin: 45px"></div>
 	</a>
 
@@ -178,6 +130,18 @@
 		
 			
 		
+			
+		
+			
+				<a href="/dsm/css/highlight/CHANGES" title="Version 9.12.0">Version 9.12.0</a>
+			
+		
+			
+				<a href="/dsm/css/highlight/README.ru" title="Highlight.js">Highlight.js</a>
+			
+		
+			
+				<a href="/dsm/css/highlight/" title="Highlight.js">Highlight.js</a>
 			
 		
 			
@@ -575,7 +539,7 @@
                       
 									</a>
                   </time>
-                <div>首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格： 对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。 知识点小记 使用sizeof(nums)/sizeof(nums[0])获得数组的长度； 数组作为参数有两种方法，一种是以数组名本身，一种是以指针； 如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小； 简单插入排序 直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。 实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。 设数组为a[0…n-1]。 初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1 将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。 i++，并重复第二步直到i==n-1。 简单插入排序方法实现： //insert sort void insertSort(int nums[],... <a href="/dsm/typography" data-hover="插入排序">【more】</a></div>
+                <div>首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格： 对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。 知识点小记3 使用sizeof(nums)/sizeof(nums[0])获得数组的长度； 数组作为参数有两种方法，一种是以数组名本身，一种是以指针； 如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小； 简单插入排序 直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。 实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。 设数组为a[0…n-1]。 初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1 将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。 i++，并重复第二步直到i==n-1。 简单插入排序方法实现： //insert sort void insertSort(int nums[],... <a href="/dsm/typography" data-hover="插入排序">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -613,7 +577,7 @@
                       
 									</a>
                   </time>
-                <div>首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格： 对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。 知识点小记 使用sizeof(nums)/sizeof(nums[0])获得数组的长度； 数组作为参数有两种方法，一种是以数组名本身，一种是以指针； 如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小； 简单插入排序 直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。 实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。 设数组为a[0…n-1]。 初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1 将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。 i++，并重复第二步直到i==n-1。 简单插入排序方法实现： //insert sort void insertSort(int nums[],... <a href="/dsm/typography" data-hover="插入排序">【more】</a></div>
+                <div>首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格： 对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。 知识点小记3 使用sizeof(nums)/sizeof(nums[0])获得数组的长度； 数组作为参数有两种方法，一种是以数组名本身，一种是以指针； 如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小； 简单插入排序 直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。 实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。 设数组为a[0…n-1]。 初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1 将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。 i++，并重复第二步直到i==n-1。 简单插入排序方法实现： //insert sort void insertSort(int nums[],... <a href="/dsm/typography" data-hover="插入排序">【more】</a></div>
  							</div>
  						</div>
  					</div>
@@ -1052,6 +1016,12 @@
     </div>
     </div> -->
 <div class="feed">
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
     
         <!--  -->
     

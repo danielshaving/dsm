@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Version 9.12.0</title>
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/dsm/css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic%7CSignika:700,300,400,600' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/jpg" href='/dsm/img/dsm.jpg'>
+	<link rel="stylesheet" href="/dsm/css/highlight/styles/gruvbox-dark.css">
+	<script src="/dsm/css/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+	<script src="/dsm/js/showhide.js"></script>
+
+</head>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" version="1.1"><defs><symbol id="icon-menu" viewBox="0 0 1024 1024"><path class="path1" d="M128 213.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 725.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 469.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z"/></symbol><symbol id="icon-search" viewBox="0 0 951 1024"><path class="path1" d="M658.286 475.429q0-105.714-75.143-180.857t-180.857-75.143-180.857 75.143-75.143 180.857 75.143 180.857 180.857 75.143 180.857-75.143 75.143-180.857zM950.857 950.857q0 29.714-21.714 51.429t-51.429 21.714q-30.857 0-51.429-21.714l-196-195.429q-102.286 70.857-228 70.857-81.714 0-156.286-31.714t-128.571-85.714-85.714-128.571-31.714-156.286 31.714-156.286 85.714-128.571 128.571-85.714 156.286-31.714 156.286 31.714 128.571 85.714 85.714 128.571 31.714 156.286q0 125.714-70.857 228l196 196q21.143 21.143 21.143 51.429z"/></symbol><symbol id="icon-close" viewBox="0 0 1000 1000"><path d="M969.8,870.3c27,27.7,27,71.8,0,99.1C955.7,983,937.9,990,920,990c-17.9,0-35.7-7-49.7-20.7L500,599L129.6,969.4C115.6,983,97.8,990,79.9,990s-35.7-7-49.7-20.7c-27-27.3-27-71.4,0-99.1L400.9,500L30.3,129.3c-27-27.3-27-71.4,0-99.1c27.3-27,71.8-27,99.4,0L500,400.9L870.4,30.2c27.7-27,71.8-27,99.4,0c27,27.7,27,71.8,0,99.1L599.1,500L969.8,870.3z"/></symbol><symbol id="icon-twitter" viewBox="0 0 951 1024"><path class="path1" d="M925.714 233.143q-38.286 56-92.571 95.429 0.571 8 0.571 24 0 74.286-21.714 148.286t-66 142-105.429 120.286-147.429 83.429-184.571 31.143q-154.857 0-283.429-82.857 20 2.286 44.571 2.286 128.571 0 229.143-78.857-60-1.143-107.429-36.857t-65.143-91.143q18.857 2.857 34.857 2.857 24.571 0 48.571-6.286-64-13.143-106-63.714t-42-117.429v-2.286q38.857 21.714 83.429 23.429-37.714-25.143-60-65.714t-22.286-88q0-50.286 25.143-93.143 69.143 85.143 168.286 136.286t212.286 56.857q-4.571-21.714-4.571-42.286 0-76.571 54-130.571t130.571-54q80 0 134.857 58.286 62.286-12 117.143-44.571-21.143 65.714-81.143 101.714 53.143-5.714 106.286-28.571z"/></symbol><symbol id="icon-facebook" viewBox="0 0 585 1024"><path class="path1" d="M548 6.857v150.857h-89.714q-49.143 0-66.286 20.571t-17.143 61.714v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571q0-106.286 59.429-164.857t158.286-58.571q84 0 130.286 6.857z"/></symbol><symbol id="icon-google-plus" viewBox="0 0 951 1024"><path class="path1" d="M420 454.857q0 20.571 18.286 40.286t44.286 38.857 51.714 42 44 59.429 18.286 81.143q0 51.429-27.429 98.857-41.143 69.714-120.571 102.571t-170.286 32.857q-75.429 0-140.857-23.714t-98-78.571q-21.143-34.286-21.143-74.857 0-46.286 25.429-85.714t67.714-65.714q74.857-46.857 230.857-57.143-18.286-24-27.143-42.286t-8.857-41.714q0-20.571 12-48.571-26.286 2.286-38.857 2.286-84.571 0-142.571-55.143t-58-139.714q0-46.857 20.571-90.857t56.571-74.857q44-37.714 104.286-56t124.286-18.286h238.857l-78.857 50.286h-74.857q42.286 36 64 76t21.714 91.429q0 41.143-14 74t-33.714 53.143-39.714 37.143-34 35.143-14 37.714zM336.571 400q21.714 0 44.571-9.429t37.714-24.857q30.286-32.571 30.286-90.857 0-33.143-9.714-71.429t-27.714-74-48.286-59.143-66.857-23.429q-24 0-47.143 11.143t-37.429 30q-26.857 33.714-26.857 91.429 0 26.286 5.714 55.714t18 58.857 29.714 52.857 42.857 38.286 55.143 14.857zM337.714 898.857q33.143 0 63.714-7.429t56.571-22.286 41.714-41.714 15.714-62.286q0-14.286-4-28t-8.286-24-15.429-23.714-16.857-20-22-19.714-20.857-16.571-23.714-17.143-20.857-14.857q-9.143-1.143-27.429-1.143-30.286 0-60 4t-61.429 14.286-55.429 26.286-39.143 42.571-15.429 60.286q0 40 20 70.571t52.286 47.429 68 25.143 72.857 8.286zM800.571 398.286h121.714v61.714h-121.714v125.143h-60v-125.143h-121.143v-61.714h121.143v-124h60v124z"/></symbol><symbol id="icon-clock" viewBox="0 0 1000 1000"><path d="M500,10C229.8,10,10,229.8,10,500c0,270.2,219.8,490,490,490c270.2,0,490-219.8,490-490C990,229.8,770.2,10,500,10z M500,910.2c-226.2,0-410.2-184-410.2-410.2c0-226.2,184-410.2,410.2-410.2c226.2,0,410.2,184,410.2,410.2C910.2,726.1,726.2,910.2,500,910.2z M753.1,374c8.2,11.9,5.2,28.1-6.6,36.3L509.9,573.7c-4.4,3.1-9.6,4.6-14.8,4.6c-4.1,0-8.3-1-12.1-3c-8.6-4.5-14-13.4-14-23.1V202.5c0-14.4,11.7-26.1,26.1-26.1c14.4,0,26.1,11.7,26.1,26.1v300l195.6-135.1C728.7,359.2,744.9,362.1,753.1,374z"/></symbol><symbol id="icon-calendar" viewBox="0 0 1000 1000"><path d="M920,500v420H80V500H920 M990,430H10v490c0,38.7,31.3,70,70,70h840c38.7,0,70-31.3,70-70V430L990,430z"/><path d="M850,80v105c0,57.9-47.2,105-105,105c-58,0-105-47.1-105-105V80H360v105c0,57.9-47.2,105-105,105c-58,0-105-47.1-105-105V80C72.8,80,10,142.7,10,220v140h980V220C990,142.7,927.2,80,850,80z"/><path d="M255,10c-19.3,0-35,15.8-35,35v140c0,19.2,15.7,35,35,35c19.3,0,35-15.8,35-35V45C290,25.8,274.3,10,255,10z"/><path d="M745,10c-19.3,0-35,15.8-35,35v140c0,19.2,15.7,35,35,35c19.3,0,35-15.8,35-35V45C780,25.8,764.3,10,745,10z"/></symbol><symbol id="icon-github" viewBox="0 0 12 14"><path d="M6 1q1.633 0 3.012 0.805t2.184 2.184 0.805 3.012q0 1.961-1.145 3.527t-2.957 2.168q-0.211 0.039-0.312-0.055t-0.102-0.234q0-0.023 0.004-0.598t0.004-1.051q0-0.758-0.406-1.109 0.445-0.047 0.801-0.141t0.734-0.305 0.633-0.52 0.414-0.82 0.16-1.176q0-0.93-0.617-1.609 0.289-0.711-0.062-1.594-0.219-0.070-0.633 0.086t-0.719 0.344l-0.297 0.187q-0.727-0.203-1.5-0.203t-1.5 0.203q-0.125-0.086-0.332-0.211t-0.652-0.301-0.664-0.105q-0.352 0.883-0.062 1.594-0.617 0.68-0.617 1.609 0 0.664 0.16 1.172t0.41 0.82 0.629 0.523 0.734 0.305 0.801 0.141q-0.305 0.281-0.383 0.805-0.164 0.078-0.352 0.117t-0.445 0.039-0.512-0.168-0.434-0.488q-0.148-0.25-0.379-0.406t-0.387-0.187l-0.156-0.023q-0.164 0-0.227 0.035t-0.039 0.090 0.070 0.109 0.102 0.094l0.055 0.039q0.172 0.078 0.34 0.297t0.246 0.398l0.078 0.18q0.102 0.297 0.344 0.48t0.523 0.234 0.543 0.055 0.434-0.027l0.18-0.031q0 0.297 0.004 0.691t0.004 0.426q0 0.141-0.102 0.234t-0.312 0.055q-1.812-0.602-2.957-2.168t-1.145-3.527q0-1.633 0.805-3.012t2.184-2.184 3.012-0.805zM2.273 9.617q0.023-0.055-0.055-0.094-0.078-0.023-0.102 0.016-0.023 0.055 0.055 0.094 0.070 0.047 0.102-0.016zM2.516 9.883q0.055-0.039-0.016-0.125-0.078-0.070-0.125-0.023-0.055 0.039 0.016 0.125 0.078 0.078 0.125 0.023zM2.75 10.234q0.070-0.055 0-0.148-0.062-0.102-0.133-0.047-0.070 0.039 0 0.141t0.133 0.055zM3.078 10.562q0.062-0.062-0.031-0.148-0.094-0.094-0.156-0.023-0.070 0.062 0.031 0.148 0.094 0.094 0.156 0.023zM3.523 10.758q0.023-0.086-0.102-0.125-0.117-0.031-0.148 0.055t0.102 0.117q0.117 0.047 0.148-0.047zM4.016 10.797q0-0.102-0.133-0.086-0.125 0-0.125 0.086 0 0.102 0.133 0.086 0.125 0 0.125-0.086zM4.469 10.719q-0.016-0.086-0.141-0.070-0.125 0.023-0.109 0.117t0.141 0.062 0.109-0.109z"></path></symbol><symbol id="icon-medium" viewBox="0 0 1000 1000"><path d="M336.5,240.2v641.5c0,9.1-2.3,16.9-6.8,23.2s-11.2,9.6-20,9.6c-6.2,0-12.2-1.5-18-4.4L37.3,782.7c-7.7-3.6-14.1-9.8-19.4-18.3S10,747.4,10,739V115.5c0-7.3,1.8-13.5,5.5-18.6c3.6-5.1,8.9-7.7,15.9-7.7c5.1,0,13.1,2.7,24.1,8.2l279.5,140C335.9,238.6,336.5,239.5,336.5,240.2L336.5,240.2z M371.5,295.5l292,473.6l-292-145.5V295.5z M990,305.3v576.4c0,9.1-2.6,16.5-7.7,22.1c-5.1,5.7-12,8.5-20.8,8.5s-17.3-2.4-25.7-7.1L694.7,784.9L990,305.3z M988.4,239.7c0,1.1-46.8,77.6-140.3,229.4C754.6,621,699.8,709.8,683.8,735.7L470.5,389l177.2-288.2c6.2-10.2,15.7-15.3,28.4-15.3c5.1,0,9.8,1.1,14.2,3.3l295.9,147.7C987.6,237.1,988.4,238.2,988.4,239.7L988.4,239.7z"/></symbol><symbol id="icon-instagram" viewBox="0 0 489.84 489.84"><path d="M249.62,50.46c65.4,0,73.14.25,99,1.43C372.47,53,385.44,57,394.07,60.32a75.88,75.88,0,0,1,28.16,18.32,75.88,75.88,0,0,1,18.32,28.16c3.35,8.63,7.34,21.6,8.43,45.48,1.18,25.83,1.43,33.57,1.43,99s-0.25,73.14-1.43,99c-1.09,23.88-5.08,36.85-8.43,45.48a81.11,81.11,0,0,1-46.48,46.48c-8.63,3.35-21.6,7.34-45.48,8.43-25.82,1.18-33.57,1.43-99,1.43s-73.15-.25-99-1.43c-23.88-1.09-36.85-5.08-45.48-8.43A75.88,75.88,0,0,1,77,423.86,75.88,75.88,0,0,1,58.69,395.7c-3.35-8.63-7.34-21.6-8.43-45.48-1.18-25.83-1.43-33.57-1.43-99s0.25-73.14,1.43-99c1.09-23.88,5.08-36.85,8.43-45.48A75.88,75.88,0,0,1,77,78.64a75.88,75.88,0,0,1,28.16-18.32c8.63-3.35,21.6-7.34,45.48-8.43,25.83-1.18,33.57-1.43,99-1.43m0-44.13c-66.52,0-74.86.28-101,1.47s-43.87,5.33-59.45,11.38A120.06,120.06,0,0,0,45.81,47.44,120.06,120.06,0,0,0,17.56,90.82C11.5,106.4,7.36,124.2,6.17,150.27s-1.47,34.46-1.47,101,0.28,74.86,1.47,101,5.33,43.87,11.38,59.45a120.06,120.06,0,0,0,28.25,43.38,120.06,120.06,0,0,0,43.38,28.25c15.58,6.05,33.38,10.19,59.45,11.38s34.46,1.47,101,1.47,74.86-.28,101-1.47,43.87-5.33,59.45-11.38a125.24,125.24,0,0,0,71.63-71.63c6.05-15.58,10.19-33.38,11.38-59.45s1.47-34.46,1.47-101-0.28-74.86-1.47-101-5.33-43.87-11.38-59.45a120.06,120.06,0,0,0-28.25-43.38,120.06,120.06,0,0,0-43.38-28.25C394.47,13.13,376.67,9,350.6,7.8s-34.46-1.47-101-1.47h0Z" transform="translate(-4.7 -6.33)" /><path d="M249.62,125.48A125.77,125.77,0,1,0,375.39,251.25,125.77,125.77,0,0,0,249.62,125.48Zm0,207.41a81.64,81.64,0,1,1,81.64-81.64A81.64,81.64,0,0,1,249.62,332.89Z" transform="translate(-4.7 -6.33)"/><circle cx="375.66" cy="114.18" r="29.39" /></symbol><symbol id="icon-linkedin" viewBox="0 0 12 14"><path d="M2.727 4.883v7.742h-2.578v-7.742h2.578zM2.891 2.492q0.008 0.57-0.395 0.953t-1.059 0.383h-0.016q-0.641 0-1.031-0.383t-0.391-0.953q0-0.578 0.402-0.957t1.051-0.379 1.039 0.379 0.398 0.957zM12 8.187v4.437h-2.57v-4.141q0-0.82-0.316-1.285t-0.988-0.465q-0.492 0-0.824 0.27t-0.496 0.668q-0.086 0.234-0.086 0.633v4.32h-2.57q0.016-3.117 0.016-5.055t-0.008-2.313l-0.008-0.375h2.57v1.125h-0.016q0.156-0.25 0.32-0.438t0.441-0.406 0.68-0.34 0.895-0.121q1.336 0 2.148 0.887t0.813 2.598z"></path></symbol><symbol id="icon-heart" viewBox="0 0 34 30"><path d="M17,29.7 L16.4,29.2 C3.5,18.7 0,15 0,9 C0,4 4,0 9,0 C13.1,0 15.4,2.3 17,4.1 C18.6,2.3 20.9,0 25,0 C30,0 34,4 34,9 C34,15 30.5,18.7 17.6,29.2 L17,29.7 Z M9,2 C5.1,2 2,5.1 2,9 C2,14.1 5.2,17.5 17,27.1 C28.8,17.5 32,14.1 32,9 C32,5.1 28.9,2 25,2 C21.5,2 19.6,4.1 18.1,5.8 L17,7.1 L15.9,5.8 C14.4,4.1 12.5,2 9,2 Z" id="Shape"></path></symbol></defs></svg>
+
+
+<body>
+	<div id="wrap">
+
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+
+		
+		<a href="/dsm/index">Home</a>
+		
+		<a href="/dsm/about">About</a>
+		
+		<a href="/dsm/archives">Archives</a>
+		
+		<a href="/dsm/tags">Tags</a>
+		
+		<a href="/dsm/contact">Contact</a>
+		
+
+	</div>
+
+  <!-- Nav footer -->
+	
+	  <footer>
+
+	<span>version 1.1.0</span>
+	<a href="/dsm/danielcv/DanielCV.html"><img class="avatar" src="/dsm/img/dsm.svg" alt=""/></a>
+
+
+</footer>
+
+	
+
+
+</nav>
+
+
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header">
+	<a href="/dsm/index.html">
+		<!-- <img src="/dsm/img/dsm.jpg" alt="dsm Logo"> -->
+		<div class="header-span"><span>Danielshaving -- A blog of Machine Learning</span>
+		<div style="margin: 45px"></div>
+	</a>
+
+<div>
+	
+
+	<a class="svg-head" href="/dsm/index"><img id='head-img' src="/dsm/img/Home.svg"/></a>
+
+	
+
+	<a class="svg-head" href="/dsm/about"><img id='head-img' src="/dsm/img/About.svg"/></a>
+
+	
+
+	<a class="svg-head" href="/dsm/archives"><img id='head-img' src="/dsm/img/Archives.svg"/></a>
+
+	
+
+	<a class="svg-head" href="/dsm/tags"><img id='head-img' src="/dsm/img/Tags.svg"/></a>
+
+	
+
+	<a class="svg-head" href="/dsm/contact"><img id='head-img' src="/dsm/img/Contact.svg"/></a>
+
+	
+</div>
+
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="d2ab4e5a-317b-4c66-a2e8-761afc185c4a";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+	<!-- <nav class="site-nav">
+
+		
+			
+		
+			
+				<a href="/dsm/about" title="About Me">About Me</a>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<a href="/dsm/css/highlight/CHANGES" title="Version 9.12.0">Version 9.12.0</a>
+			
+		
+			
+				<a href="/dsm/css/highlight/README.ru" title="Highlight.js">Highlight.js</a>
+			
+		
+			
+				<a href="/dsm/css/highlight/" title="Highlight.js">Highlight.js</a>
+			
+		
+			
+		
+	</nav> -->
+	
+	
+</header>
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+
+		<main>
+
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" version="1.1"><defs><symbol id="icon-menu" viewBox="0 0 1024 1024"><path class="path1" d="M128 213.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 725.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 469.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z"/></symbol><symbol id="icon-search" viewBox="0 0 951 1024"><path class="path1" d="M658.286 475.429q0-105.714-75.143-180.857t-180.857-75.143-180.857 75.143-75.143 180.857 75.143 180.857 180.857 75.143 180.857-75.143 75.143-180.857zM950.857 950.857q0 29.714-21.714 51.429t-51.429 21.714q-30.857 0-51.429-21.714l-196-195.429q-102.286 70.857-228 70.857-81.714 0-156.286-31.714t-128.571-85.714-85.714-128.571-31.714-156.286 31.714-156.286 85.714-128.571 128.571-85.714 156.286-31.714 156.286 31.714 128.571 85.714 85.714 128.571 31.714 156.286q0 125.714-70.857 228l196 196q21.143 21.143 21.143 51.429z"/></symbol><symbol id="icon-close" viewBox="0 0 1000 1000"><path d="M969.8,870.3c27,27.7,27,71.8,0,99.1C955.7,983,937.9,990,920,990c-17.9,0-35.7-7-49.7-20.7L500,599L129.6,969.4C115.6,983,97.8,990,79.9,990s-35.7-7-49.7-20.7c-27-27.3-27-71.4,0-99.1L400.9,500L30.3,129.3c-27-27.3-27-71.4,0-99.1c27.3-27,71.8-27,99.4,0L500,400.9L870.4,30.2c27.7-27,71.8-27,99.4,0c27,27.7,27,71.8,0,99.1L599.1,500L969.8,870.3z"/></symbol><symbol id="icon-twitter" viewBox="0 0 951 1024"><path class="path1" d="M925.714 233.143q-38.286 56-92.571 95.429 0.571 8 0.571 24 0 74.286-21.714 148.286t-66 142-105.429 120.286-147.429 83.429-184.571 31.143q-154.857 0-283.429-82.857 20 2.286 44.571 2.286 128.571 0 229.143-78.857-60-1.143-107.429-36.857t-65.143-91.143q18.857 2.857 34.857 2.857 24.571 0 48.571-6.286-64-13.143-106-63.714t-42-117.429v-2.286q38.857 21.714 83.429 23.429-37.714-25.143-60-65.714t-22.286-88q0-50.286 25.143-93.143 69.143 85.143 168.286 136.286t212.286 56.857q-4.571-21.714-4.571-42.286 0-76.571 54-130.571t130.571-54q80 0 134.857 58.286 62.286-12 117.143-44.571-21.143 65.714-81.143 101.714 53.143-5.714 106.286-28.571z"/></symbol><symbol id="icon-facebook" viewBox="0 0 585 1024"><path class="path1" d="M548 6.857v150.857h-89.714q-49.143 0-66.286 20.571t-17.143 61.714v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571q0-106.286 59.429-164.857t158.286-58.571q84 0 130.286 6.857z"/></symbol><symbol id="icon-google-plus" viewBox="0 0 951 1024"><path class="path1" d="M420 454.857q0 20.571 18.286 40.286t44.286 38.857 51.714 42 44 59.429 18.286 81.143q0 51.429-27.429 98.857-41.143 69.714-120.571 102.571t-170.286 32.857q-75.429 0-140.857-23.714t-98-78.571q-21.143-34.286-21.143-74.857 0-46.286 25.429-85.714t67.714-65.714q74.857-46.857 230.857-57.143-18.286-24-27.143-42.286t-8.857-41.714q0-20.571 12-48.571-26.286 2.286-38.857 2.286-84.571 0-142.571-55.143t-58-139.714q0-46.857 20.571-90.857t56.571-74.857q44-37.714 104.286-56t124.286-18.286h238.857l-78.857 50.286h-74.857q42.286 36 64 76t21.714 91.429q0 41.143-14 74t-33.714 53.143-39.714 37.143-34 35.143-14 37.714zM336.571 400q21.714 0 44.571-9.429t37.714-24.857q30.286-32.571 30.286-90.857 0-33.143-9.714-71.429t-27.714-74-48.286-59.143-66.857-23.429q-24 0-47.143 11.143t-37.429 30q-26.857 33.714-26.857 91.429 0 26.286 5.714 55.714t18 58.857 29.714 52.857 42.857 38.286 55.143 14.857zM337.714 898.857q33.143 0 63.714-7.429t56.571-22.286 41.714-41.714 15.714-62.286q0-14.286-4-28t-8.286-24-15.429-23.714-16.857-20-22-19.714-20.857-16.571-23.714-17.143-20.857-14.857q-9.143-1.143-27.429-1.143-30.286 0-60 4t-61.429 14.286-55.429 26.286-39.143 42.571-15.429 60.286q0 40 20 70.571t52.286 47.429 68 25.143 72.857 8.286zM800.571 398.286h121.714v61.714h-121.714v125.143h-60v-125.143h-121.143v-61.714h121.143v-124h60v124z"/></symbol><symbol id="icon-clock" viewBox="0 0 1000 1000"><path d="M500,10C229.8,10,10,229.8,10,500c0,270.2,219.8,490,490,490c270.2,0,490-219.8,490-490C990,229.8,770.2,10,500,10z M500,910.2c-226.2,0-410.2-184-410.2-410.2c0-226.2,184-410.2,410.2-410.2c226.2,0,410.2,184,410.2,410.2C910.2,726.1,726.2,910.2,500,910.2z M753.1,374c8.2,11.9,5.2,28.1-6.6,36.3L509.9,573.7c-4.4,3.1-9.6,4.6-14.8,4.6c-4.1,0-8.3-1-12.1-3c-8.6-4.5-14-13.4-14-23.1V202.5c0-14.4,11.7-26.1,26.1-26.1c14.4,0,26.1,11.7,26.1,26.1v300l195.6-135.1C728.7,359.2,744.9,362.1,753.1,374z"/></symbol><symbol id="icon-calendar" viewBox="0 0 1000 1000"><path d="M920,500v420H80V500H920 M990,430H10v490c0,38.7,31.3,70,70,70h840c38.7,0,70-31.3,70-70V430L990,430z"/><path d="M850,80v105c0,57.9-47.2,105-105,105c-58,0-105-47.1-105-105V80H360v105c0,57.9-47.2,105-105,105c-58,0-105-47.1-105-105V80C72.8,80,10,142.7,10,220v140h980V220C990,142.7,927.2,80,850,80z"/><path d="M255,10c-19.3,0-35,15.8-35,35v140c0,19.2,15.7,35,35,35c19.3,0,35-15.8,35-35V45C290,25.8,274.3,10,255,10z"/><path d="M745,10c-19.3,0-35,15.8-35,35v140c0,19.2,15.7,35,35,35c19.3,0,35-15.8,35-35V45C780,25.8,764.3,10,745,10z"/></symbol><symbol id="icon-github" viewBox="0 0 12 14"><path d="M6 1q1.633 0 3.012 0.805t2.184 2.184 0.805 3.012q0 1.961-1.145 3.527t-2.957 2.168q-0.211 0.039-0.312-0.055t-0.102-0.234q0-0.023 0.004-0.598t0.004-1.051q0-0.758-0.406-1.109 0.445-0.047 0.801-0.141t0.734-0.305 0.633-0.52 0.414-0.82 0.16-1.176q0-0.93-0.617-1.609 0.289-0.711-0.062-1.594-0.219-0.070-0.633 0.086t-0.719 0.344l-0.297 0.187q-0.727-0.203-1.5-0.203t-1.5 0.203q-0.125-0.086-0.332-0.211t-0.652-0.301-0.664-0.105q-0.352 0.883-0.062 1.594-0.617 0.68-0.617 1.609 0 0.664 0.16 1.172t0.41 0.82 0.629 0.523 0.734 0.305 0.801 0.141q-0.305 0.281-0.383 0.805-0.164 0.078-0.352 0.117t-0.445 0.039-0.512-0.168-0.434-0.488q-0.148-0.25-0.379-0.406t-0.387-0.187l-0.156-0.023q-0.164 0-0.227 0.035t-0.039 0.090 0.070 0.109 0.102 0.094l0.055 0.039q0.172 0.078 0.34 0.297t0.246 0.398l0.078 0.18q0.102 0.297 0.344 0.48t0.523 0.234 0.543 0.055 0.434-0.027l0.18-0.031q0 0.297 0.004 0.691t0.004 0.426q0 0.141-0.102 0.234t-0.312 0.055q-1.812-0.602-2.957-2.168t-1.145-3.527q0-1.633 0.805-3.012t2.184-2.184 3.012-0.805zM2.273 9.617q0.023-0.055-0.055-0.094-0.078-0.023-0.102 0.016-0.023 0.055 0.055 0.094 0.070 0.047 0.102-0.016zM2.516 9.883q0.055-0.039-0.016-0.125-0.078-0.070-0.125-0.023-0.055 0.039 0.016 0.125 0.078 0.078 0.125 0.023zM2.75 10.234q0.070-0.055 0-0.148-0.062-0.102-0.133-0.047-0.070 0.039 0 0.141t0.133 0.055zM3.078 10.562q0.062-0.062-0.031-0.148-0.094-0.094-0.156-0.023-0.070 0.062 0.031 0.148 0.094 0.094 0.156 0.023zM3.523 10.758q0.023-0.086-0.102-0.125-0.117-0.031-0.148 0.055t0.102 0.117q0.117 0.047 0.148-0.047zM4.016 10.797q0-0.102-0.133-0.086-0.125 0-0.125 0.086 0 0.102 0.133 0.086 0.125 0 0.125-0.086zM4.469 10.719q-0.016-0.086-0.141-0.070-0.125 0.023-0.109 0.117t0.141 0.062 0.109-0.109z"></path></symbol><symbol id="icon-medium" viewBox="0 0 1000 1000"><path d="M336.5,240.2v641.5c0,9.1-2.3,16.9-6.8,23.2s-11.2,9.6-20,9.6c-6.2,0-12.2-1.5-18-4.4L37.3,782.7c-7.7-3.6-14.1-9.8-19.4-18.3S10,747.4,10,739V115.5c0-7.3,1.8-13.5,5.5-18.6c3.6-5.1,8.9-7.7,15.9-7.7c5.1,0,13.1,2.7,24.1,8.2l279.5,140C335.9,238.6,336.5,239.5,336.5,240.2L336.5,240.2z M371.5,295.5l292,473.6l-292-145.5V295.5z M990,305.3v576.4c0,9.1-2.6,16.5-7.7,22.1c-5.1,5.7-12,8.5-20.8,8.5s-17.3-2.4-25.7-7.1L694.7,784.9L990,305.3z M988.4,239.7c0,1.1-46.8,77.6-140.3,229.4C754.6,621,699.8,709.8,683.8,735.7L470.5,389l177.2-288.2c6.2-10.2,15.7-15.3,28.4-15.3c5.1,0,9.8,1.1,14.2,3.3l295.9,147.7C987.6,237.1,988.4,238.2,988.4,239.7L988.4,239.7z"/></symbol><symbol id="icon-instagram" viewBox="0 0 489.84 489.84"><path d="M249.62,50.46c65.4,0,73.14.25,99,1.43C372.47,53,385.44,57,394.07,60.32a75.88,75.88,0,0,1,28.16,18.32,75.88,75.88,0,0,1,18.32,28.16c3.35,8.63,7.34,21.6,8.43,45.48,1.18,25.83,1.43,33.57,1.43,99s-0.25,73.14-1.43,99c-1.09,23.88-5.08,36.85-8.43,45.48a81.11,81.11,0,0,1-46.48,46.48c-8.63,3.35-21.6,7.34-45.48,8.43-25.82,1.18-33.57,1.43-99,1.43s-73.15-.25-99-1.43c-23.88-1.09-36.85-5.08-45.48-8.43A75.88,75.88,0,0,1,77,423.86,75.88,75.88,0,0,1,58.69,395.7c-3.35-8.63-7.34-21.6-8.43-45.48-1.18-25.83-1.43-33.57-1.43-99s0.25-73.14,1.43-99c1.09-23.88,5.08-36.85,8.43-45.48A75.88,75.88,0,0,1,77,78.64a75.88,75.88,0,0,1,28.16-18.32c8.63-3.35,21.6-7.34,45.48-8.43,25.83-1.18,33.57-1.43,99-1.43m0-44.13c-66.52,0-74.86.28-101,1.47s-43.87,5.33-59.45,11.38A120.06,120.06,0,0,0,45.81,47.44,120.06,120.06,0,0,0,17.56,90.82C11.5,106.4,7.36,124.2,6.17,150.27s-1.47,34.46-1.47,101,0.28,74.86,1.47,101,5.33,43.87,11.38,59.45a120.06,120.06,0,0,0,28.25,43.38,120.06,120.06,0,0,0,43.38,28.25c15.58,6.05,33.38,10.19,59.45,11.38s34.46,1.47,101,1.47,74.86-.28,101-1.47,43.87-5.33,59.45-11.38a125.24,125.24,0,0,0,71.63-71.63c6.05-15.58,10.19-33.38,11.38-59.45s1.47-34.46,1.47-101-0.28-74.86-1.47-101-5.33-43.87-11.38-59.45a120.06,120.06,0,0,0-28.25-43.38,120.06,120.06,0,0,0-43.38-28.25C394.47,13.13,376.67,9,350.6,7.8s-34.46-1.47-101-1.47h0Z" transform="translate(-4.7 -6.33)" /><path d="M249.62,125.48A125.77,125.77,0,1,0,375.39,251.25,125.77,125.77,0,0,0,249.62,125.48Zm0,207.41a81.64,81.64,0,1,1,81.64-81.64A81.64,81.64,0,0,1,249.62,332.89Z" transform="translate(-4.7 -6.33)"/><circle cx="375.66" cy="114.18" r="29.39" /></symbol><symbol id="icon-linkedin" viewBox="0 0 12 14"><path d="M2.727 4.883v7.742h-2.578v-7.742h2.578zM2.891 2.492q0.008 0.57-0.395 0.953t-1.059 0.383h-0.016q-0.641 0-1.031-0.383t-0.391-0.953q0-0.578 0.402-0.957t1.051-0.379 1.039 0.379 0.398 0.957zM12 8.187v4.437h-2.57v-4.141q0-0.82-0.316-1.285t-0.988-0.465q-0.492 0-0.824 0.27t-0.496 0.668q-0.086 0.234-0.086 0.633v4.32h-2.57q0.016-3.117 0.016-5.055t-0.008-2.313l-0.008-0.375h2.57v1.125h-0.016q0.156-0.25 0.32-0.438t0.441-0.406 0.68-0.34 0.895-0.121q1.336 0 2.148 0.887t0.813 2.598z"></path></symbol><symbol id="icon-heart" viewBox="0 0 34 30"><path d="M17,29.7 L16.4,29.2 C3.5,18.7 0,15 0,9 C0,4 4,0 9,0 C13.1,0 15.4,2.3 17,4.1 C18.6,2.3 20.9,0 25,0 C30,0 34,4 34,9 C34,15 30.5,18.7 17.6,29.2 L17,29.7 Z M9,2 C5.1,2 2,5.1 2,9 C2,14.1 5.2,17.5 17,27.1 C28.8,17.5 32,14.1 32,9 C32,5.1 28.9,2 25,2 C21.5,2 19.6,4.1 18.1,5.8 L17,7.1 L15.9,5.8 C14.4,4.1 12.5,2 9,2 Z" id="Shape"></path></symbol></defs></svg>
+
+
+<article id="page">
+
+  <h2 id="version-9120">Version 9.12.0</h2>
+
+<p>New language:</p>
+
+<ul>
+  <li><em>MikroTik</em> RouterOS Scripting language by <a href="https://github.com/DiVAN1x">Ivan Dementev</a>.</li>
+</ul>
+
+<p>New style:</p>
+
+<ul>
+  <li><em>VisualStudio 2015 Dark</em> by <a href="https://github.com/Nicolas01">Nicolas LLOBERA</a></li>
+</ul>
+
+<p>Improvements:</p>
+
+<ul>
+  <li><em>Crystal</em> updated with new keywords and syntaxes by <a href="https://github.com/MakeNowJust">Tsuyusato Kitsune</a>.</li>
+  <li><em>Julia</em> updated to the modern definitions by <a href="https://github.com/ararslan">Alex Arslan</a>.</li>
+  <li><em>julia-repl</em> added by <a href="https://github.com/mortenpi">Morten Piibeleht</a>.</li>
+  <li><a href="https://github.com/4ppl">Stanislav Belov</a> wrote a new definition for <em>1C</em>, replacing the one that
+has not been updated for more than 8 years. The new version supports syntax
+for versions 7.7 and 8.</li>
+  <li><a href="https://github.com/Nicolas01">Nicolas LLOBERA</a> improved C# definition fixing edge cases with function
+titles detection and added highlighting of <code class="highlighter-rouge">[Attributes]</code>.</li>
+  <li><a href="https://github.com/nnnik">nnnik</a> provided a few correctness fixes for <em>Autohotkey</em>.</li>
+  <li><a href="https://github.com/maacl">Martin Clausen</a> made annotation collections in <em>Clojure</em> to look
+consistently with other kinds.</li>
+  <li><a href="https://github.com/Azoy">Alejandro Alonso</a> updated <em>Swift</em> keywords.</li>
+</ul>
+
+<h2 id="version-9110">Version 9.11.0</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>Shell</em> by <a href="https://github.com/MakeNowJust">Tsuyusato Kitsune</a></li>
+  <li><em>jboss-cli</em> by <a href="https://github.com/rparree">Raphaël Parrëe</a></li>
+</ul>
+
+<p>Improvements:</p>
+
+<ul>
+  <li>[Joël Porquet] has <a href="https://github.com/isagalaev/highlight.js/commit/5b3e0e68bfaae282faff6697d6a490567fa9d44b">greatly improved the definition of <em>makefile</em></a>.</li>
+  <li><em>C++</em> class titles are now highlighted as in other languages with classes.</li>
+  <li><a href="https://github.com/jordi-petit">Jordi Petit</a> added rarely used <code class="highlighter-rouge">or</code>, <code class="highlighter-rouge">and</code> and <code class="highlighter-rouge">not</code> keywords to <em>C++</em>.</li>
+  <li><a href="https://github.com/NuclearCookie">Pieter Vantorre</a> fixed highlighting of negative floating point values.</li>
+</ul>
+
+<h2 id="version-9100">Version 9.10.0</h2>
+
+<p>Apologies for missing the previous release cycle. Some thing just can’t be
+automated… Anyway, we’re back!</p>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>Hy</em> by <a href="https://github.com/profitware">Sergey Sobko</a></li>
+  <li><em>Leaf</em> by <a href="https://github.com/halechan">Hale Chan</a></li>
+  <li><em>N1QL</em> by <a href="https://github.com/andrestaht">Andres Täht</a> and <a href="https://github.com/nene">Rene Saarsoo</a></li>
+</ul>
+
+<p>Improvements:</p>
+
+<ul>
+  <li><em>Rust</em> got updated with new keywords by <a href="https://github.com/kasma1990">Kasper Andersen</a> and then
+significantly modernized even more by <a href="https://github.com/eddyb">Eduard-Mihai Burtescu</a> (yes, @eddyb,
+Rust core team member!)</li>
+  <li><em>Python</em> updated with f-literals by <a href="https://github.com/flying-sheep">Philipp A</a>.</li>
+  <li><em>YAML</em> updated with unquoted strings support.</li>
+  <li><em>Gauss</em> updated with new keywords by <a href="https://github.com/matthewevans">Matt Evans</a>.</li>
+  <li><em>Lua</em> updated with new keywords by <a href="https://github.com/mossarelli">Joe Blow</a>.</li>
+  <li><em>Kotlin</em> updated with new keywords by <a href="https://github.com/phauer">Philipp Hauer</a>.</li>
+  <li><em>TypeScript</em> got highlighting of function params and updated keywords by
+<a href="https://github.com/dempfi">Ike Ku</a>.</li>
+  <li><em>Scheme</em> now correctly handles `-quoted lists thanks to <a href="https://github.com/Kraks">Guannan Wei</a>.</li>
+  <li><a href="https://github.com/samsam2310">Sam Wu</a> fixed handling of <code class="highlighter-rouge">&lt;&lt;</code> in <em>C++</em> defines.</li>
+</ul>
+
+<h2 id="version-990">Version 9.9.0</h2>
+
+<p>New languages</p>
+
+<ul>
+  <li><em>LLVM</em> by <a href="https://github.com/f0rki">Michael Rodler</a></li>
+</ul>
+
+<p>Improvements:</p>
+
+<ul>
+  <li><em>TypeScript</em> updated with annotations and param lists inside constructors, by
+<a href="https://github.com/rparree">Raphael Parree</a>.</li>
+  <li><em>CoffeeScript</em> updated with new keywords and fixed to recognize JavaScript
+in ```, thanks to thanks to <a href="https://github.com/GeoffreyBooth">Geoffrey Booth</a>.</li>
+  <li>Compiler directives in <em>Delphi</em> are now correctly highlighted as “meta”.</li>
+</ul>
+
+<h2 id="version-980-new-york">Version 9.8.0 “New York”</h2>
+
+<p>This version is the second one that deserved a name. Because I’m in New York,
+and the release isn’t missing the deadline only because it’s still Tuesday on
+West Coast.</p>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>Clean</em> by <a href="https://github.com/camilstaps">Camil Staps</a></li>
+  <li><em>Flix</em> by <a href="https://github.com/magnus-madsen">Magnus Madsen</a></li>
+</ul>
+
+<p>Improvements:</p>
+
+<ul>
+  <li><a href="https://github.com/FuzzyWuzzie">Kenton Hamaluik</a> did a comprehensive update for <em>Haxe</em>.</li>
+  <li>New commands for <em>PowerShell</em> from <a href="https://github.com/darkitty">Nicolas Le Gall</a>.</li>
+  <li><a href="https://github.com/idleberg">Jan T. Sott</a> updated <em>NSIS</em>.</li>
+  <li><em>Java</em> and <em>Swift</em> support unicode characters in identifiers thanks to
+<a href="https://github.com/manniL">Alexander Lichter</a>.</li>
+</ul>
+
+<h2 id="version-970">Version 9.7.0</h2>
+
+<p>A comprehensive bugfix release. This is one of the best things about
+highlight.js: even boring things keep getting better (even if slow).</p>
+
+<ul>
+  <li>VHDL updated with PSL keywords and uses more consistent styling.</li>
+  <li>Nested C-style comments no longer break highlighting in many languages.</li>
+  <li>JavaScript updated with <code class="highlighter-rouge">=&gt;</code> functions, highlighted object attributes and
+parsing within template string substitution blocks (<code class="highlighter-rouge">${...}</code>).</li>
+  <li>Fixed another corner case with self-closing <code class="highlighter-rouge">&lt;tag/&gt;</code> in JSX.</li>
+  <li>Added <code class="highlighter-rouge">HEALTHCHECK</code> directive in Docker.</li>
+  <li>Delphi updated with new Free Pascal keywords.</li>
+  <li>Fixed digit separator parsing in C++.</li>
+  <li>C# updated with new keywords and fixed to allow multiple identifiers within
+generics <code class="highlighter-rouge">&lt;...&gt;</code>.</li>
+  <li>Fixed another slow regex in Less.</li>
+</ul>
+
+<h2 id="version-960">Version 9.6.0</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>ABNF</em> and <em>EBNF</em> by <a href="https://github.com/mckibbenta">Alex McKibben</a></li>
+  <li><em>Awk</em> by <a href="https://github.com/matthewbdaly">Matthew Daly</a></li>
+  <li><em>SubUnit</em> by <a href="https://github.com/ligurio">Sergey Bronnikov</a></li>
+</ul>
+
+<p>New styles:</p>
+
+<ul>
+  <li><em>Atom One</em> in both Dark and Light variants  by <a href="https://github.com/danielgamage">Daniel Gamage</a></li>
+</ul>
+
+<p>Plus, a few smaller updates for <em>Lasso</em>, <em>Elixir</em>, <em>C++</em> and <em>SQL</em>.</p>
+
+<h2 id="version-950">Version 9.5.0</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>Excel</em> by <a href="https://github.com/OiCMudkips">Victor Zhou</a></li>
+  <li><em>Linden Scripting Language</em> by <a href="https://github.com/buildersbrewery">Builder’s Brewery</a></li>
+  <li><em>TAP</em> (Test Anything Protocol) by <a href="https://github.com/ligurio">Sergey Bronnikov</a></li>
+  <li><em>Pony</em> by <a href="https://github.com/jemc">Joe Eli McIlvain</a></li>
+  <li><em>Coq</em> by <a href="https://github.com/boyers">Stephan Boyer</a></li>
+  <li><em>dsconfig</em> and <em>LDIF</em> by <a href="https://github.com/braveulysses">Jacob Childress</a></li>
+</ul>
+
+<p>New styles:</p>
+
+<ul>
+  <li><em>Ocean Dark</em> by <a href="https://github.com/gavsiu">Gavin Siu</a></li>
+</ul>
+
+<p>Notable changes:</p>
+
+<ul>
+  <li><a href="https://github.com/1ec5">Minh Nguyễn</a> added more built-ins to Objective C.</li>
+  <li><a href="https://github.com/sourrust">Jeremy Hull</a> fixed corner cases in C++ preprocessor directives and Diff
+comments.</li>
+  <li><a href="https://github.com/OiCMudkips">Victor Zhou</a> added support for digit separators in C++ numbers.</li>
+</ul>
+
+<h2 id="version-940">Version 9.4.0</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>PureBASIC</em> by <a href="https://github.com/tajmone">Tristano Ajmone</a></li>
+  <li><em>BNF</em> by <a href="https://github.com/sannis">Oleg Efimov</a></li>
+  <li><em>Ada</em> by <a href="https://github.com/captain-hanuta">Lars Schulna</a></li>
+</ul>
+
+<p>New styles:</p>
+
+<ul>
+  <li><em>PureBASIC</em> by <a href="https://github.com/tajmone">Tristano Ajmone</a></li>
+</ul>
+
+<p>Improvements to existing languages and styles:</p>
+
+<ul>
+  <li>We now highlight function declarations in Go.</li>
+  <li><a href="https://github.com/temp-impl">Taisuke Fujimoto</a> contributed very convoluted rules for raw and
+interpolated strings in C#.</li>
+  <li><a href="https://github.com/BooneJS">Boone Severson</a> updated Verilog to comply with IEEE 1800-2012
+SystemVerilog.</li>
+  <li><a href="https://github.com/OiCMudkips">Victor Zhou</a> improved rules for comments and strings in PowerShell files.</li>
+  <li><a href="https://github.com/jvoigtlaender">Janis Voigtländer</a> updated the definition of Elm to version 0.17 of the
+languages. Elm is now featured on the front page of <a href="https://highlightjs.org">https://highlightjs.org</a>.</li>
+  <li>Special variable <code class="highlighter-rouge">$this</code> is highlighted as a keyword in PHP.</li>
+  <li><code class="highlighter-rouge">usize</code> and <code class="highlighter-rouge">isize</code> are now highlighted in Rust.</li>
+  <li>Fixed labels and directives in x86 assembler.</li>
+</ul>
+
+<h2 id="version-930">Version 9.3.0</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>Tagger Script</em> by <a href="https://github.com/phw">Philipp Wolfer</a></li>
+  <li><em>MoonScript</em> by <a href="https://github.com/billyquith">Billy Quith</a></li>
+</ul>
+
+<p>New styles:</p>
+
+<ul>
+  <li><em>xt256</em> by <a href="https://github.com/initbar">Herbert Shin</a></li>
+</ul>
+
+<p>Improvements to existing languages and styles:</p>
+
+<ul>
+  <li>More robust handling of unquoted HTML tag attributes</li>
+  <li>Relevance tuning for QML which was unnecessary eager at seizing other
+languages’ code</li>
+  <li>Improve GAMS language parsing</li>
+  <li>Fixed a bunch of bugs around selectors in Less</li>
+  <li>Kotlin’s got a new definition for annotations, updated keywords and other
+minor improvements</li>
+  <li>Added <code class="highlighter-rouge">move</code> to Rust keywords</li>
+  <li>Markdown now recognizes ```-fenced code blocks</li>
+  <li>Improved detection of function declarations in C++ and C#</li>
+</ul>
+
+<h2 id="version-920">Version 9.2.0</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>QML</em> by <a href="https://github.com/jf990">John Foster</a></li>
+  <li><em>HTMLBars</em> by <a href="https://github.com/lastobelus">Michael Johnston</a></li>
+  <li><em>CSP</em> by <a href="https://github.com/oxdef">Taras</a></li>
+  <li><em>Maxima</em> by <a href="https://github.com/robert-dodier">Robert Dodier</a></li>
+</ul>
+
+<p>New styles:</p>
+
+<ul>
+  <li><em>Gruvbox</em> by <a href="https://github.com/Qeole">Qeole</a></li>
+  <li><em>Dracula</em> by <a href="https://github.com/dciccale">Denis Ciccale</a></li>
+</ul>
+
+<p>Improvements to existing languages and styles:</p>
+
+<ul>
+  <li>We now correctly handle JSX with arbitrary node tree depth.</li>
+  <li>Argument list for <code class="highlighter-rouge">(lambda)</code> in Scheme is no longer highlighted as a function
+call.</li>
+  <li>Stylus syntax doesn’t break on valid CSS.</li>
+  <li>More correct handling of comments and strings and other improvements for
+VimScript.</li>
+  <li>More subtle work on the default style.</li>
+  <li>We now use anonymous modules for AMD.</li>
+  <li><code class="highlighter-rouge">macro_rules!</code> is now recognized as a built-in in Rust.</li>
+</ul>
+
+<h2 id="version-910">Version 9.1.0</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>Stan</em> by <a href="http://brendanrocks.com">Brendan Rocks</a></li>
+  <li><em>BASIC</em> by <a href="https://github.com/raphnet">Raphaël Assénat</a></li>
+  <li><em>GAUSS</em> by <a href="https://github.com/matthewevans">Matt Evans</a></li>
+  <li><em>DTS</em> by <a href="https://github.com/mbr0wn">Martin Braun</a></li>
+  <li><em>Arduino</em> by <a href="https://github.com/smellai">Stefania Mellai</a></li>
+</ul>
+
+<p>New Styles:</p>
+
+<ul>
+  <li><em>Arduino Light</em> by <a href="https://github.com/smellai">Stefania Mellai</a></li>
+</ul>
+
+<p>Improvements to existing languages and styles:</p>
+
+<ul>
+  <li>Handle return type annotations in Python</li>
+  <li>Allow shebang headers in Javascript</li>
+  <li>Support strings in Rust meta</li>
+  <li>Recognize <code class="highlighter-rouge">struct</code> as a class-level definition in Rust</li>
+  <li>Recognize b-prefixed chars and strings in Rust</li>
+  <li>Better numbers handling in Verilog</li>
+</ul>
+
+<h2 id="version-900">Version 9.0.0</h2>
+
+<p>The new major version brings a reworked styling system. Highlight.js now defines
+a limited set of highlightable classes giving a consistent result across all the
+styles and languages. You can read a more detailed explanation and background in
+the <a href="https://github.com/isagalaev/highlight.js/issues/348">tracking issue</a> that started this long process back in May.</p>
+
+<p>This change is backwards incompatible for those who uses highlight.js with a
+custom stylesheet. The <a href="http://highlightjs.readthedocs.org/en/latest/style-guide.html">new style guide</a> explains how to write styles
+in this new world.</p>
+
+<p>Bundled themes have also suffered a significant amount of improvements and may
+look different in places, but all the things now consistent and make more sense.
+Among others, the Default style has got a refresh and will probably be tweaked
+some more in next releases. Please do give your feedback in our
+<a href="https://github.com/isagalaev/highlight.js/issues">issue tracker</a>.</p>
+
+<p>New languages in this release:</p>
+
+<ul>
+  <li><em>Caché Object Script</em> by <a href="https://github.com/ZitRos">Nikita Savchenko</a></li>
+  <li><em>YAML</em> by <a href="https://github.com/zealot128">Stefan Wienert</a></li>
+  <li><em>MIPS Assembler</em> by <a href="https://github.com/Nebuleon">Nebuleon Fumika</a></li>
+  <li><em>HSP</em> by <a href="https://github.com/prince-0203">prince</a></li>
+</ul>
+
+<p>Improvements to existing languages and styles:</p>
+
+<ul>
+  <li>ECMAScript 6 modules import now do not require closing semicolon.</li>
+  <li>ECMAScript 6 classes constructors now highlighted.</li>
+  <li>Template string support for Typescript, as for ECMAScript 6.</li>
+  <li>Scala case classes params highlight fixed.</li>
+  <li>Built-in names introduced in Julia v0.4 added by <a href="https://github.com/bicycle1885">Kenta Sato</a>.</li>
+  <li>Refreshed Default style.</li>
+</ul>
+
+<p>Other notable changes:</p>
+
+<ul>
+  <li><a href="https://github.com/isagalaev/highlight.js#web-workers">Web workers support</a> added bu <a href="https://github.com/frigus02">Jan Kühle</a>.</li>
+  <li>We now have tests for compressed browser builds as well.</li>
+  <li>The building tool chain has been switched to node.js 4.x. and is now
+shamelessly uses ES6 features all over the place, courtesy of <a href="https://github.com/sourrust">Jeremy Hull</a>.</li>
+  <li>License added to non-compressed browser build.</li>
+</ul>
+
+<h2 id="version-891">Version 8.9.1</h2>
+
+<p>Some last-minute changes reverted due to strange bug with minified browser build:</p>
+
+<ul>
+  <li>Scala case classes params highlight fixed</li>
+  <li>ECMAScript 6 modules import now do not require closing semicolon</li>
+  <li>ECMAScript 6 classes constructors now highlighted</li>
+  <li>Template string support for Typescript, as for ECMAScript 6</li>
+  <li>License added to not minified browser build</li>
+</ul>
+
+<h2 id="version-890">Version 8.9.0</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>crmsh</em> by <a href="https://github.com/krig">Kristoffer Gronlund</a></li>
+  <li><em>SQF</em> by <a href="https://github.com/senevoldsen90">Soren Enevoldsen</a></li>
+</ul>
+
+<p>Notable fixes and improvements to existing languages:</p>
+
+<ul>
+  <li>Added <code class="highlighter-rouge">abstract</code> and <code class="highlighter-rouge">namespace</code> keywords to TypeScript by <a href="https://github.com/DanielRosenwasser">Daniel Rosenwasser</a></li>
+  <li>Added <code class="highlighter-rouge">label</code> support to Dockerfile by <a href="https://github.com/abtris">Ladislav Prskavec</a></li>
+  <li>Crystal highlighting improved by <a href="https://github.com/MakeNowJust">Tsuyusato Kitsune</a></li>
+  <li>Missing Swift keywords added by <a href="https://github.com/natecook1000">Nate Cook</a></li>
+  <li>Improve detection of C block comments</li>
+  <li><del>Scala case classes params highlight fixed</del></li>
+  <li><del>ECMAScript 6 modules import now do not require closing semicolon</del></li>
+  <li><del>ECMAScript 6 classes constructors now highlighted</del></li>
+  <li><del>Template string support for Typescript, as for ECMAScript 6</del></li>
+</ul>
+
+<p>Other notable changes:</p>
+
+<ul>
+  <li><del>License added to not minified browser build</del></li>
+</ul>
+
+<h2 id="version-880">Version 8.8.0</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>Golo</em> by <a href="https://github.com/k33g">Philippe Charrière</a></li>
+  <li><em>GAMS</em> by <a href="https://github.com/b-pos465">Stefan Bechert</a></li>
+  <li><em>IRPF90</em> by <a href="https://github.com/scemama">Anthony Scemama</a></li>
+  <li><em>Access logs</em> by <a href="https://github.com/sannis">Oleg Efimov</a></li>
+  <li><em>Crystal</em> by <a href="https://github.com/MakeNowJust">Tsuyusato Kitsune</a></li>
+</ul>
+
+<p>Notable fixes and improvements to existing languages:</p>
+
+<ul>
+  <li>JavaScript highlighting no longer fails with ES6 default parameters</li>
+  <li>Added keywords <code class="highlighter-rouge">async</code> and <code class="highlighter-rouge">await</code> to Python</li>
+  <li>PHP heredoc support improved</li>
+  <li>Allow preprocessor directives within C++ functions</li>
+</ul>
+
+<p>Other notable changes:</p>
+
+<ul>
+  <li>Change versions to X.Y.Z SemVer-compatible format</li>
+  <li>Added ability to build all targets at once</li>
+</ul>
+
+<h2 id="version-87">Version 8.7</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>Zephir</em> by <a href="https://github.com/sannis">Oleg Efimov</a></li>
+  <li><em>Elm</em> by <a href="https://github.com/jvoigtlaender">Janis Voigtländer</a></li>
+  <li><em>XQuery</em> by <a href="https://github.com/dirkk">Dirk Kirsten</a></li>
+  <li><em>Mojolicious</em> by <a href="https://github.com/dotandimet">Dotan Dimet</a></li>
+  <li><em>AutoIt</em> by Manh Tuan from <a href="https://github.com/J2TeaM">J2TeaM</a></li>
+  <li><em>Toml</em> (ini extension) by <a href="https://github.com/GuillaumeGomez">Guillaume Gomez</a></li>
+</ul>
+
+<p>New styles:</p>
+
+<ul>
+  <li><em>Hopscotch</em> by <a href="https://github.com/idleberg">Jan T. Sott</a></li>
+  <li><em>Grayscale</em> by <a href="https://github.com/simonmysun">MY Sun</a></li>
+</ul>
+
+<p>Notable fixes and improvements to existing languages:</p>
+
+<ul>
+  <li>Fix encoding of images when copied over in certain builds</li>
+  <li>Fix incorrect highlighting of the word “bug” in comments</li>
+  <li>Treat decorators different from matrix multiplication in Python</li>
+  <li>Fix traits inheritance highlighting in Rust</li>
+  <li>Fix incorrect document</li>
+  <li>Oracle keywords added to SQL language definition by <a href="https://github.com/Vadimtro">Vadimtro</a></li>
+  <li>Postgres keywords added to SQL language definition by <a href="https://github.com/ghost">Benjamin Auder</a></li>
+  <li>Fix registers in x86asm being highlighted as a hex number</li>
+  <li>Fix highlighting for numbers with a leading decimal point</li>
+  <li>Correctly highlight numbers and strings inside of C/C++ macros</li>
+  <li>C/C++ functions now support pointer, reference, and move returns</li>
+</ul>
+
+<h2 id="version-86">Version 8.6</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>C/AL</em> by <a href="https://github.com/kfuglsang">Kenneth Fuglsang</a></li>
+  <li><em>DNS zone file</em> by <a href="https://github.com/enko">Tim Schumacher</a></li>
+  <li><em>Ceylon</em> by <a href="https://github.com/lucaswerkmeister">Lucas Werkmeister</a></li>
+  <li><em>OpenSCAD</em> by <a href="https://github.com/pzl">Dan Panzarella</a></li>
+  <li><em>Inform7</em> by <a href="https://github.com/sequitur">Bruno Dias</a></li>
+  <li><em>armasm</em> by <a href="https://github.com/pzl">Dan Panzarella</a></li>
+  <li><em>TP</em> by <a href="https://github.com/unreal">Jay Strybis</a></li>
+</ul>
+
+<p>New styles:</p>
+
+<ul>
+  <li><em>Atelier Cave</em>, <em>Atelier Estuary</em>,
+<em>Atelier Plateau</em> and <em>Atelier Savanna</em> by <a href="https://github.com/atelierbram">Bram de Haan</a></li>
+  <li><em>Github Gist</em> by <a href="https://github.com/LouisBarranqueiro">Louis Barranqueiro</a></li>
+</ul>
+
+<p>Notable fixes and improvements to existing languages:</p>
+
+<ul>
+  <li>Multi-line raw strings from C++11 are now supported</li>
+  <li>Fix class names with dashes in HAML</li>
+  <li>The <code class="highlighter-rouge">async</code> keyword from ES6/7 is now supported</li>
+  <li>TypeScript functions handle type and parameter complexity better</li>
+  <li>We unified phpdoc/javadoc/yardoc etc modes across all languages</li>
+  <li>CSS .class selectors relevance was dropped to prevent wrong language detection</li>
+  <li>Images is now included to CDN build</li>
+  <li>Release process is now automated</li>
+</ul>
+
+<h2 id="version-85">Version 8.5</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>pf.conf</em> by <a href="https://github.com/oldlaptop">Peter Piwowarski</a></li>
+  <li><em>Julia</em> by <a href="https://github.com/bicycle1885">Kenta Sato</a></li>
+  <li><em>Prolog</em> by <a href="https://github.com/rla">Raivo Laanemets</a></li>
+  <li><em>Docker</em> by <a href="https://github.com/AlexisNo">Alexis Hénaut</a></li>
+  <li><em>Fortran</em> by <a href="https://github.com/scemama">Anthony Scemama</a> and <a href="https://github.com/TApplencourt">Thomas Applencourt</a></li>
+  <li><em>Kotlin</em> by <a href="https://github.com/cy6erGn0m">Sergey Mashkov</a></li>
+</ul>
+
+<p>New styles:</p>
+
+<ul>
+  <li><em>Agate</em> by <a href="https://github.com/tovic">Taufik Nurrohman</a></li>
+  <li><em>Darcula</em> by [JetBrains][]</li>
+  <li><em>Atelier Sulphurpool</em> by <a href="https://github.com/atelierbram">Bram de Haan</a></li>
+  <li><em>Android Studio</em> by <a href="https://github.com/kanytu">Pedro Oliveira</a></li>
+</ul>
+
+<p>Notable fixes and improvements to existing languages:</p>
+
+<ul>
+  <li>ES6 features in JavaScript are better supported now by <a href="https://github.com/Justineo">Gu Yiling</a>.</li>
+  <li>Swift now recognizes body-less method definitions.</li>
+  <li>Single expression functions <code class="highlighter-rouge">def foo, do: ... </code> now work in Elixir.</li>
+  <li>More uniform detection of built-in classes in Objective C.</li>
+  <li>Fixes for number literals and processor directives in Rust.</li>
+  <li>HTML <code class="highlighter-rouge">&lt;script&gt;</code> tag now allows any language, not just JavaScript.</li>
+  <li>Multi-line comments are supported now in MatLab.</li>
+</ul>
+
+<h2 id="version-84">Version 8.4</h2>
+
+<p>We’ve got the new <a href="https://highlightjs.org/static/demo/">demo page</a>! The obvious new feature is the new look, but
+apart from that it’s got smarter: by presenting languages in groups it avoids
+running 10000 highlighting attempts after first load which was slowing it down
+and giving bad overall impression. It is now also being generated from test
+code snippets so the authors of new languages don’t have to update both tests
+and the demo page with the same thing.</p>
+
+<p>Other notable changes:</p>
+
+<ul>
+  <li>The <code class="highlighter-rouge">template_comment</code> class is gone in favor of the more general <code class="highlighter-rouge">comment</code>.</li>
+  <li>Number parsing unified and improved across languages.</li>
+  <li>C++, Java and C# now use unified grammar to highlight titles in
+function/method definitions.</li>
+  <li>The browser build is now usable as an AMD module, there’s no separate build
+target for that anymore.</li>
+  <li>OCaml has got a <a href="https://github.com/isagalaev/highlight.js/pull/608#issue-46190207">comprehensive overhaul</a> by <a href="https://github.com/polazarus">Mickaël Delahaye</a>.</li>
+  <li>Clojure’s data structures and literals are now highlighted outside of lists
+and we can now highlight Clojure’s REPL sessions.</li>
+</ul>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>AspectJ</em> by <a href="https://github.com/ozlerhakan">Hakan Özler</a></li>
+  <li><em>STEP Part 21</em> by <a href="https://github.com/adamjcook">Adam Joseph Cook</a></li>
+  <li><em>SML</em> derived by <a href="https://github.com/edalorzo">Edwin Dalorzo</a> from OCaml definition</li>
+  <li><em>Mercury</em> by <a href="https://github.com/mucaho">mucaho</a></li>
+  <li><em>Smali</em> by <a href="https://github.com/titze">Dennis Titze</a></li>
+  <li><em>Verilog</em> by <a href="https://github.com/craftyjon">Jon Evans</a></li>
+  <li><em>Stata</em> by <a href="https://github.com/bquistorff">Brian Quistorff</a></li>
+</ul>
+
+<h2 id="version-83">Version 8.3</h2>
+
+<p>We streamlined our tool chain, it is now based entirely on node.js instead of
+being a mix of node.js, Python and Java. The build script options and arguments
+remained the same, and we’ve noted all the changes in the <a href="http://highlightjs.readthedocs.org/en/latest/building-testing.html">documentation</a>.
+Apart from reducing complexity, the new build script is also faster from not
+having to start Java machine repeatedly. The credits for the work go to <a href="https://github.com/sourrust">Jeremy
+Hull</a>.</p>
+
+<p>Some notable fixes:</p>
+
+<ul>
+  <li>PHP and JavaScript mixed in HTML now live happily with each other.</li>
+  <li>JavaScript regexes now understand ES6 flags “u” and “y”.</li>
+  <li><code class="highlighter-rouge">throw</code> keyword is no longer detected as a method name in Java.</li>
+  <li>Fixed parsing of numbers and symbols in Clojure thanks to <a href="http://kalnitsky.org.ua/">input from Ivan
+Kleshnin</a>.</li>
+</ul>
+
+<p>New languages in this release:</p>
+
+<ul>
+  <li><em>Less</em> by <a href="https://github.com/seven-phases-max">Max Mikhailov</a></li>
+  <li><em>Stylus</em> by <a href="https://github.com/scien">Bryant Williams</a></li>
+  <li><em>Tcl</em> by <a href="https://github.com/Nindaleth">Radek Liska</a></li>
+  <li><em>Puppet</em> by <a href="https://github.com/Moliholy">Jose Molina Colmenero</a></li>
+  <li><em>Processing</em> by <a href="https://github.com/paluka">Erik Paluka</a></li>
+  <li><em>Twig</em> templates by <a href="https://github.com/lukeholder">Luke Holder</a></li>
+  <li><em>PowerShell</em> by <a href="https://github.com/drmohundro">David Mohundro</a>, based on <a href="https://github.com/OctopusDeploy/Library/blob/master/app/shared/presentation/highlighting/powershell.js">the work of Nicholas Blumhardt</a></li>
+  <li><em>XL</em> by <a href="https://github.com/c3d">Christophe de Dinechin</a></li>
+  <li><em>LiveScript</em> by <a href="https://github.com/Daiz-">Taneli Vatanen</a> and <a href="https://github.com/sevvie">Jen Evers-Corvina</a></li>
+  <li><em>ERB</em> (Ruby in HTML) by <a href="https://github.com/lucasmazza">Lucas Mazza</a></li>
+  <li><em>Roboconf</em> by <a href="https://github.com/vincent-zurczak">Vincent Zurczak</a></li>
+</ul>
+
+<h2 id="version-82">Version 8.2</h2>
+
+<p>We’ve finally got <a href="https://github.com/isagalaev/highlight.js/tree/master/test">real tests</a> and <a href="https://travis-ci.org/isagalaev/highlight.js">continuous testing on Travis</a>
+thanks to <a href="https://github.com/sourrust">Jeremy Hull</a> and <a href="https://github.com/chriseidhof">Chris Eidhof</a>. The tests designed to cover
+everything: language detection, correct parsing of individual language features
+and various special cases. This is a very important change that gives us
+confidence in extending language definitions and refactoring library core.</p>
+
+<p>We’re going to redesign the old <a href="https://highlightjs.org/static/test.html">demo/test suite</a> into an interactive
+demo web app. If you’re confident front-end developer or designer and want to
+help us with it, drop a comment into <a href="https://github.com/isagalaev/highlight.js/issues/542">the issue</a> on GitHub.</p>
+
+<p>As usually there’s a handful of new languages in this release:</p>
+
+<ul>
+  <li><em>Groovy</em> by <a href="https://github.com/glaforge">Guillaume Laforge</a></li>
+  <li><em>Dart</em> by <a href="https://github.com/dikmax">Maxim Dikun</a></li>
+  <li><em>Dust</em> by <a href="https://github.com/bfui">Michael Allen</a></li>
+  <li><em>Scheme</em> by <a href="https://github.com/jpverkamp">JP Verkamp</a></li>
+  <li><em>G-Code</em> by <a href="https://github.com/adamjcook">Adam Joseph Cook</a></li>
+  <li><em>Q</em> from Kx Systems by <a href="https://github.com/sv">Sergey Vidyuk</a></li>
+</ul>
+
+<p>Other improvements:</p>
+
+<ul>
+  <li><a href="https://github.com/non">Erik Osheim</a> heavily reworked Scala definitions making it richer.</li>
+  <li><a href="https://github.com/lucasmazza">Lucas Mazza</a> fixed Ruby hashes highlighting</li>
+  <li>Lisp variants (Lisp, Clojure and Scheme) are unified in regard to naming
+the first symbol in parentheses: it’s “keyword” in general case and also
+“built_in” for built-in functions in Clojure and Scheme.</li>
+</ul>
+
+<h2 id="version-81">Version 8.1</h2>
+
+<p>New languages:</p>
+
+<ul>
+  <li><em>Gherkin</em> by <a href="https://github.com/pikesley">Sam Pikesley</a></li>
+  <li><em>Elixir</em> by <a href="https://github.com/knewter">Josh Adams</a></li>
+  <li><em>NSIS</em> by <a href="https://github.com/idleberg">Jan T. Sott</a></li>
+  <li><em>VIM script</em> by <a href="https://github.com/harttle">Jun Yang</a></li>
+  <li><em>Protocol Buffers</em> by <a href="https://github.com/dtao">Dan Tao</a></li>
+  <li><em>Nix</em> by <a href="https://github.com/iElectric">Domen Kožar</a></li>
+  <li><em>x86asm</em> by <a href="https://github.com/innocenat">innocenat</a></li>
+  <li><em>Cap’n Proto</em> and <em>Thrift</em> by <a href="https://github.com/sannis">Oleg Efimov</a></li>
+  <li><em>Monkey</em> by <a href="https://github.com/devolonter">Arthur Bikmullin</a></li>
+  <li><em>TypeScript</em> by <a href="https://github.com/panuhorsmalahti">Panu Horsmalahti</a></li>
+  <li><em>Nimrod</em> by <a href="https://github.com/flaviut">Flaviu Tamas</a></li>
+  <li><em>Gradle</em> by <a href="https://github.com/chester1000">Damian Mee</a></li>
+  <li><em>Haxe</em> by <a href="http://christopher.kaster.ws">Christopher Kaster</a></li>
+  <li><em>Swift</em> by <a href="https://github.com/chriseidhof">Chris Eidhof</a> and <a href="https://github.com/natecook1000">Nate Cook</a></li>
+</ul>
+
+<p>New styles:</p>
+
+<ul>
+  <li><em>Kimbie</em>, light and dark variants by <a href="https://github.com/idleberg">Jan T. Sott</a></li>
+  <li><em>Color brewer</em> by <a href="https://github.com/fabriciotav">Fabrício Tavares de Oliveira</a></li>
+  <li><em>Codepen.io embed</em> by <a href="https://github.com/ourmaninamsterdam">Justin Perry</a></li>
+  <li><em>Hybrid</em> by <a href="https://github.com/nicwest">Nic West</a></li>
+</ul>
+
+<p>Other improvements:</p>
+
+<ul>
+  <li>The README is heavily reworked and brought up to date by <a href="https://github.com/sourrust">Jeremy Hull</a>.</li>
+  <li>Added <a href="http://highlightjs.readthedocs.org/en/latest/api.html#listlanguages"><code class="highlighter-rouge">listLanguages()</code></a> method in the API.</li>
+  <li>Improved C/C++/C# detection.</li>
+  <li>Added a bunch of new language aliases, documented the existing ones. Thanks to
+<a href="https://github.com/sindresorhus">Sindre Sorhus</a> for background research.</li>
+  <li>Added phrasal English words to boost relevance in comments.</li>
+  <li>Many improvements to SQL definition made by <a href="https://github.com/auge8472">Heiko August</a>,
+<a href="https://github.com/neor-ru">Nikolay Lisienko</a> and <a href="https://github.com/Burstaholic">Travis Odom</a>.</li>
+  <li>The shorter <code class="highlighter-rouge">lang-</code> prefix for language names in HTML classes supported
+alongside <code class="highlighter-rouge">language-</code>. Thanks to <a href="https://github.com/jenius">Jeff Escalante</a>.</li>
+  <li>Ruby’s got support for interactive console sessions. Thanks to
+<a href="https://github.com/phurni">Pascal Hurni</a>.</li>
+  <li>Added built-in functions for R language. Thanks to <a href="https://github.com/unikum">Artem A. Klevtsov</a>.</li>
+  <li>Rust’s got definition for lifetime parameters and improved string syntax.
+Thanks to <a href="https://github.com/shmatov">Roman Shmatov</a>.</li>
+  <li>Various improvements to Objective-C definition by <a href="https://github.com/mdiep">Matt Diephouse</a>.</li>
+  <li>Fixed highlighting of generics in Java.</li>
+</ul>
+
+<h2 id="version-80">Version 8.0</h2>
+
+<p>This new major release is quite a big overhaul bringing both new features and
+some backwards incompatible changes. However, chances are that the majority of
+users won’t be affected by the latter: the basic scenario described in the
+README is left intact.</p>
+
+<p>Here’s what did change in an incompatible way:</p>
+
+<ul>
+  <li>
+    <p>We’re now prefixing all classes located in <a href="http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html">CSS classes reference</a> with
+<code class="highlighter-rouge">hljs-</code>, by default, because some class names would collide with other
+people’s stylesheets. If you were using an older version, you might still want
+the previous behavior, but still want to upgrade. To suppress this new
+behavior, you would initialize like so:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nx">hljs</span><span class="p">.</span><span class="nx">configure</span><span class="p">({</span><span class="na">classPrefix</span><span class="p">:</span> <span class="s1">''</span><span class="p">});</span>
+  <span class="nx">hljs</span><span class="p">.</span><span class="nx">initHighlightingOnLoad</span><span class="p">();</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">tabReplace</code> and <code class="highlighter-rouge">useBR</code> that were used in different places are also unified
+into the global options object and are to be set using <code class="highlighter-rouge">configure(options)</code>.
+This function is documented in our <a href="http://highlightjs.readthedocs.org/en/latest/api.html">API docs</a>. Also note that these
+parameters are gone from <code class="highlighter-rouge">highlightBlock</code> and <code class="highlighter-rouge">fixMarkup</code> which are now also
+rely on <code class="highlighter-rouge">configure</code>.</p>
+  </li>
+  <li>
+    <p>We removed public-facing (though undocumented) object <code class="highlighter-rouge">hljs.LANGUAGES</code> which
+was used to register languages with the library in favor of two new methods:
+<code class="highlighter-rouge">registerLanguage</code> and <code class="highlighter-rouge">getLanguage</code>. Both are documented in our <a href="http://highlightjs.readthedocs.org/en/latest/api.html">API docs</a>.</p>
+  </li>
+  <li>
+    <p>Result returned from <code class="highlighter-rouge">highlight</code> and <code class="highlighter-rouge">highlightAuto</code> no longer contains two
+separate attributes contributing to relevance score, <code class="highlighter-rouge">relevance</code> and
+<code class="highlighter-rouge">keyword_count</code>. They are now unified in <code class="highlighter-rouge">relevance</code>.</p>
+  </li>
+</ul>
+
+<p>Another technically compatible change that nonetheless might need attention:</p>
+
+<ul>
+  <li>The structure of the NPM package was refactored, so if you had installed it
+locally, you’ll have to update your paths. The usual <code class="highlighter-rouge">require('highlight.js')</code>
+works as before. This is contributed by <a href="https://github.com/dimsmol">Dmitry Smolin</a>.</li>
+</ul>
+
+<p>New features:</p>
+
+<ul>
+  <li>
+    <p>Languages now can be recognized by multiple names like “js” for JavaScript or
+“html” for, well, HTML (which earlier insisted on calling it “xml”). These
+aliases can be specified in the class attribute of the code container in your
+HTML as well as in various API calls. For now there are only a few very common
+aliases but we’ll expand it in the future. All of them are listed in the
+<a href="http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html">class reference</a>.</p>
+  </li>
+  <li>
+    <p>Language detection can now be restricted to a subset of languages relevant in
+a given context — a web page or even a single highlighting call. This is
+especially useful for node.js build that includes all the known languages.
+Another example is a StackOverflow-style site where users specify languages
+as tags rather than in the markdown-formatted code snippets. This is
+documented in the <a href="http://highlightjs.readthedocs.org/en/latest/api.html">API reference</a> (see methods <code class="highlighter-rouge">highlightAuto</code> and
+<code class="highlighter-rouge">configure</code>).</p>
+  </li>
+  <li>
+    <p>Language definition syntax streamlined with <a href="https://groups.google.com/d/topic/highlightjs/VoGC9-1p5vk/discussion">variants</a> and
+<a href="https://github.com/isagalaev/highlight.js/commit/6c7fdea002eb3949577a85b3f7930137c7c3038d">beginKeywords</a>.</p>
+  </li>
+</ul>
+
+<p>New languages and styles:</p>
+
+<ul>
+  <li><em>Oxygene</em> by <a href="https://github.com/carlokok">Carlo Kok</a></li>
+  <li><em>Mathematica</em> by <a href="https://github.com/dkvasnicka">Daniel Kvasnička</a></li>
+  <li><em>Autohotkey</em> by <a href="https://github.com/dlimpid">Seongwon Lee</a></li>
+  <li><em>Atelier</em> family of styles in 10 variants by <a href="https://github.com/atelierbram">Bram de Haan</a></li>
+  <li><em>Paraíso</em> styles by <a href="https://github.com/idleberg">Jan T. Sott</a></li>
+</ul>
+
+<p>Miscellaneous improvements:</p>
+
+<ul>
+  <li>Highlighting <code class="highlighter-rouge">=&gt;</code> prompts in Clojure.</li>
+  <li><a href="https://github.com/sourrust">Jeremy Hull</a> fixed a lot of styles for consistency.</li>
+  <li>Finally, highlighting PHP and HTML <a href="https://twitter.com/highlightjs/status/408890903017689088">mixed in peculiar ways</a>.</li>
+  <li>Objective C and C# now properly highlight titles in method definition.</li>
+  <li>Big overhaul of relevance counting for a number of languages. Please do report
+bugs about mis-detection of non-trivial code snippets!</li>
+</ul>
+
+<h2 id="version-75">Version 7.5</h2>
+
+<p>A catch-up release dealing with some of the accumulated contributions. This one
+is probably will be the last before the 8.0 which will be slightly backwards
+incompatible regarding some advanced use-cases.</p>
+
+<p>One outstanding change in this version is the addition of 6 languages to the
+<a href="/soft/highlight/en/download/">hosted script</a>: Markdown, ObjectiveC, CoffeeScript, Apache, Nginx and
+Makefile. It now weighs about 6K more but we’re going to keep it under 30K.</p>
+
+<p>New languages:</p>
+
+<ul>
+  <li>OCaml by <a href="https://github.com/mehdid">Mehdi Dogguy</a> and <a href="https://github.com/nbraud">Nicolas Braud-Santoni</a></li>
+  <li><a href="http://livecode.com/developers/guides/server/">LiveCode Server</a> by <a href="https://github.com/revig">Ralf Bitter</a></li>
+  <li>Scilab by <a href="https://github.com/sylvestre">Sylvestre Ledru</a></li>
+  <li>basic support for Makefile by <a href="https://github.com/isagalaev">Ivan Sagalaev</a></li>
+</ul>
+
+<p>Improvements:</p>
+
+<ul>
+  <li>Ruby’s got support for characters like <code class="highlighter-rouge">?A</code>, <code class="highlighter-rouge">?1</code>, <code class="highlighter-rouge">?\012</code> etc. and <code class="highlighter-rouge">%r{..}</code>
+regexps.</li>
+  <li>Clojure now allows a function call in the beginning of s-expressions
+<code class="highlighter-rouge">(($filter "myCount") (arr 1 2 3 4 5))</code>.</li>
+  <li>Haskell’s got new keywords and now recognizes more things like pragmas,
+preprocessors, modules, containers, FFIs etc. Thanks to <a href="https://github.com/treep">Zena Treep</a>
+for the implementation and to <a href="https://github.com/sourrust">Jeremy Hull</a> for guiding it.</li>
+  <li>Miscellaneous fixes in PHP, Brainfuck, SCSS, Asciidoc, CMake, Python and F#.</li>
+</ul>
+
+<h2 id="new-core-developers">New core developers</h2>
+
+<p>The latest long period of almost complete inactivity in the project coincided
+with growing interest to it led to a decision that now seems completely obvious:
+we need more core developers.</p>
+
+<p>So without further ado let me welcome to the core team two long-time
+contributors: <a href="https://github.com/sourrust">Jeremy Hull</a> and <a href="https://github.com/sannis">Oleg
+Efimov</a>.</p>
+
+<p>Hope now we’ll be able to work through stuff faster!</p>
+
+<p>P.S. The historical commit is <a href="http://roudakov.ru/">here</a> for the record.</p>
+
+<h2 id="version-74">Version 7.4</h2>
+
+<p>This long overdue version is a snapshot of the current source tree with all the
+changes that happened during the past year. Sorry for taking so long!</p>
+
+<p>Along with the changes in code highlight.js has finally got its new home at
+<a href="http://highlightjs.org/">http://highlightjs.org/</a>, moving from its cradle on Software Maniacs which it
+outgrew a long time ago. Be sure to report any bugs about the site to
+<a href="mailto:info@highlightjs.org">info@highlightjs.org</a>.</p>
+
+<p>On to what’s new…</p>
+
+<p>New languages:</p>
+
+<ul>
+  <li>Handlebars templates by <a href="https://github.com/eviltrout">Robin Ward</a></li>
+  <li>Oracle Rules Language by <a href="https://github.com/jayce7">Jason Jacobson</a></li>
+  <li>F# by <a href="https://github.com/follesoe">Joans Follesø</a></li>
+  <li>AsciiDoc and Haml by <a href="https://github.com/mojavelinux">Dan Allen</a></li>
+  <li>Lasso by <a href="https://github.com/EricFromCanada">Eric Knibbe</a></li>
+  <li>SCSS by <a href="https://github.com/kemch">Kurt Emch</a></li>
+  <li>VB.NET by <a href="https://github.com/rschiang">Poren Chiang</a></li>
+  <li>Mizar by <a href="https://github.com/kelleyvanevert">Kelley van Evert</a></li>
+</ul>
+
+<p>New style themes:</p>
+
+<ul>
+  <li>Monokai Sublime by <a href="http://nn.mit-license.org/">noformnocontent</a></li>
+  <li>Railscasts by <a href="https://github.com/visoft">Damien White</a></li>
+  <li>Obsidian by <a href="https://github.com/ioncreature">Alexander Marenin</a></li>
+  <li>Docco by <a href="https://github.com/thingsinjars">Simon Madine</a></li>
+  <li>Mono Blue by <a href="https://github.com/isagalaev">Ivan Sagalaev</a> (uses a single color hue for everything)</li>
+  <li>Foundation by <a href="https://github.com/mojavelinux">Dan Allen</a></li>
+</ul>
+
+<p>Other notable changes:</p>
+
+<ul>
+  <li>Corrected many corner cases in CSS.</li>
+  <li>Dropped Python 2 version of the build tool.</li>
+  <li>Implemented building for the AMD format.</li>
+  <li>Updated Rust keywords (thanks to <a href="https://github.com/dmedvinsky">Dmitry Medvinsky</a>).</li>
+  <li>Literal regexes can now be used in language definitions.</li>
+  <li>CoffeeScript highlighting is now significantly more robust and rich due to
+input from <a href="https://github.com/abe33">Cédric Néhémie</a>.</li>
+</ul>
+
+<h2 id="version-73">Version 7.3</h2>
+
+<ul>
+  <li>
+    <p>Since this version highlight.js no longer works in IE version 8 and older.
+It’s made it possible to reduce the library size and dramatically improve code
+readability and made it easier to maintain. Time to go forward!</p>
+  </li>
+  <li>
+    <p>New languages: AppleScript (by <a href="https://github.com/nathan11g">Nathan Grigg</a> and <a href="https://github.com/drdrang">Dr. Drang</a>) and
+Brainfuck (by <a href="https://github.com/bolknote">Evgeny Stepanischev</a>).</p>
+  </li>
+  <li>
+    <p>Improvements to existing languages:</p>
+
+    <ul>
+      <li>interpreter prompt in Python (<code class="highlighter-rouge">&gt;&gt;&gt;</code> and <code class="highlighter-rouge">...</code>)</li>
+      <li>@-properties and classes in CoffeeScript</li>
+      <li>E4X in JavaScript (by <a href="https://github.com/Sannis">Oleg Efimov</a>)</li>
+      <li>new keywords in Perl (by <a href="https://github.com/kimmel">Kirk Kimmel</a>)</li>
+      <li>big Ruby syntax update (by <a href="https://github.com/vast">Vasily Polovnyov</a>)</li>
+      <li>small fixes in Bash</li>
+    </ul>
+  </li>
+  <li>
+    <p>Also Oleg Efimov did a great job of moving all the docs for language and style
+developers and contributors from the old wiki under the source code in the
+“docs” directory. Now these docs are nicely presented at
+<a href="http://highlightjs.readthedocs.org/">http://highlightjs.readthedocs.org/</a>.</p>
+  </li>
+</ul>
+
+<h2 id="version-72">Version 7.2</h2>
+
+<p>A regular bug-fix release without any significant new features. Enjoy!</p>
+
+<h2 id="version-71">Version 7.1</h2>
+
+<p>A Summer crop:</p>
+
+<ul>
+  <li><a href="https://github.com/mfornos">Marc Fornos</a> made the definition for Clojure along with the matching
+style Rainbow (which, of course, works for other languages too).</li>
+  <li>CoffeeScript support continues to improve getting support for regular
+expressions.</li>
+  <li>Yoshihide Jimbo ported to highlight.js <a href="http://jmblog.github.com/color-themes-for-highlightjs/">five Tomorrow styles</a> from the
+<a href="https://github.com/ChrisKempson/Tomorrow-Theme">project by Chris Kempson</a>.</li>
+  <li>Thanks to <a href="https://github.com/caseman">Casey Duncun</a> the library can now be built in the popular
+<a href="http://requirejs.org/docs/whyamd.html">AMD format</a>.</li>
+  <li>And last but not least, we’ve got a fair number of correctness and consistency
+fixes, including a pretty significant refactoring of Ruby.</li>
+</ul>
+
+<h2 id="version-70">Version 7.0</h2>
+
+<p>The reason for the new major version update is a global change of keyword syntax
+which resulted in the library getting smaller once again. For example, the
+hosted build is 2K less than at the previous version while supporting two new
+languages.</p>
+
+<p>Notable changes:</p>
+
+<ul>
+  <li>
+    <p>The library now works not only in a browser but also with <a href="http://nodejs.org/">node.js</a>. It is
+installable with <code class="highlighter-rouge">npm install highlight.js</code>. <a href="http://softwaremaniacs.org/wiki/doku.php/highlight.js:api">API</a> docs are available on our
+wiki.</p>
+  </li>
+  <li>
+    <p>The new unique feature (apparently) among syntax highlighters is highlighting
+<em>HTTP</em> headers and an arbitrary language in the request body. The most useful
+languages here are <em>XML</em> and <em>JSON</em> both of which highlight.js does support.
+Here’s <a href="http://bazaar.launchpad.net/~isagalaev/+junk/highlight/annotate/342/src/wp_highlight.js.php">the detailed post</a> about the feature.</p>
+  </li>
+  <li>
+    <p>Two new style themes: a dark “south” <em><a href="http://web-cms-designs.com/ftopict-10-pojoaque-style-for-highlight-js-code-highlighter.html">Pojoaque</a></em> by Jason Tate and an
+emulation of<em>XCode</em> IDE by <a href="https://github.com/angelolloqui">Angel Olloqui</a>.</p>
+  </li>
+  <li>
+    <p>Three new languages: <em>D</em> by <a href="https://github.com/raleksandar">Aleksandar Ružičić</a>, <em>R</em> by <a href="https://github.com/seejohnrun">Joe Cheng</a>
+and <em>GLSL</em> by <a href="https://github.com/tikhomirov">Sergey Tikhomirov</a>.</p>
+  </li>
+  <li>
+    <p><em>Nginx</em> syntax has become a million times smaller and more universal thanks to
+remaking it in a more generic manner that doesn’t require listing all the
+directives in the known universe.</p>
+  </li>
+  <li>
+    <p>Function titles are now highlighted in <em>PHP</em>.</p>
+  </li>
+  <li>
+    <p><em>Haskell</em> and <em>VHDL</em> were significantly reworked to be more rich and correct
+by their respective maintainers <a href="https://github.com/sourrust">Jeremy Hull</a> and <a href="http://kalnitsky.org.ua/">Igor Kalnitsky</a>.</p>
+  </li>
+</ul>
+
+<p>And last but not least, many bugs have been fixed around correctness and
+language detection.</p>
+
+<p>Overall highlight.js currently supports 51 languages and 20 style themes.</p>
+
+<h2 id="version-62">Version 6.2</h2>
+
+<p>A lot of things happened in highlight.js since the last version! We’ve got nine
+new contributors, the discussion group came alive, and the main branch on GitHub
+now counts more than 350 followers. Here are most significant results coming
+from all this activity:</p>
+
+<ul>
+  <li>
+    <p>5 (five!) new languages: Rust, ActionScript, CoffeeScript, MatLab and
+experimental support for markdown. Thanks go to <a href="https://github.com/vlasovskikh">Andrey Vlasovskikh</a>,
+<a href="https://github.com/myadzel">Alexander Myadzel</a>, <a href="https://github.com/dnagir">Dmytrii Nagirniak</a>, <a href="https://github.com/Sannis">Oleg Efimov</a>, <a href="https://github.com/btd">Denis
+Bardadym</a> and <a href="https://github.com/seejohnrun">John Crepezzi</a>.</p>
+  </li>
+  <li>
+    <p>2 new style themes: Monokai by <a href="http://grigio.org/">Luigi Maselli</a> and stylistic imitation of
+another well-known highlighter Google Code Prettify by <a href="http://anton.kovalyov.net/">Aahan Krish</a>.</p>
+  </li>
+  <li>
+    <p>A vast number of <a href="https://github.com/isagalaev/highlight.js/commits/">correctness fixes and code refactorings</a>, mostly made
+by <a href="https://github.com/Sannis">Oleg Efimov</a> and <a href="https://github.com/bolknote">Evgeny Stepanischev</a>.</p>
+  </li>
+</ul>
+
+<h2 id="version-61--solarized">Version 6.1 — Solarized</h2>
+
+<p><a href="https://github.com/sourrust">Jeremy Hull</a> has implemented my dream feature — a port of <a href="http://ethanschoonover.com/solarized">Solarized</a>
+style theme famous for being based on the intricate color theory to achieve
+correct contrast and color perception. It is now available for highlight.js in
+both variants — light and dark.</p>
+
+<p>This version also adds a new original style Arta. Its author pumbur maintains a
+<a href="https://github.com/pumbur/highlight.js">heavily modified fork of highlight.js</a> on GitHub.</p>
+
+<h2 id="version-60">Version 6.0</h2>
+
+<p>New major version of the highlighter has been built on a significantly
+refactored syntax. Due to this it’s even smaller than the previous one while
+supporting more languages!</p>
+
+<p>New languages are:</p>
+
+<ul>
+  <li>Haskell by <a href="https://github.com/sourrust">Jeremy Hull</a></li>
+  <li>Erlang in two varieties — module and REPL — made collectively by <a href="http://desh.su/">Nikolay
+Zakharov</a>, <a href="https://github.com/arhibot">Dmitry Kovega</a> and <a href="https://github.com/ignatov">Sergey Ignatov</a></li>
+  <li>Objective C by <a href="https://github.com/vhbit">Valerii Hiora</a></li>
+  <li>Vala by <a href="https://github.com/antono">Antono Vasiljev</a></li>
+  <li>Go by <a href="https://github.com/steplg">Stephan Kountso</a></li>
+</ul>
+
+<p>Also this version is marginally faster and fixes a number of small long-standing
+bugs.</p>
+
+<p>Developer overview of the new language syntax is available in a <a href="http://softwaremaniacs.org/blog/2011/04/25/highlight-js-60-beta/en/">blog post about
+recent beta release</a>.</p>
+
+<p>P.S. New version is not yet available on a Yandex CDN, so for now you have to
+download <a href="/soft/highlight/en/download/">your own copy</a>.</p>
+
+<h2 id="version-514">Version 5.14</h2>
+
+<p>Fixed bugs in HTML/XML detection and relevance introduced in previous
+refactoring.</p>
+
+<p>Also test.html now shows the second best result of language detection by
+relevance.</p>
+
+<h2 id="version-513">Version 5.13</h2>
+
+<p>Past weekend began with a couple of simple additions for existing languages but
+ended up in a big code refactoring bringing along nice improvements for language
+developers.</p>
+
+<h3 id="for-users">For users</h3>
+
+<ul>
+  <li>Description of C++ has got new keywords from the upcoming <a href="http://ru.wikipedia.org/wiki/C%2B%2B0x">C++ 0x</a> standard.</li>
+  <li>Description of HTML has got new tags from <a href="http://en.wikipedia.org/wiki/HTML5">HTML 5</a>.</li>
+  <li>CSS-styles have been unified to use consistent padding and also have lost
+pop-outs with names of detected languages.</li>
+  <li><a href="http://kalnitsky.org.ua/">Igor Kalnitsky</a> has sent two new language descriptions: CMake &amp; VHDL.</li>
+</ul>
+
+<p>This makes total number of languages supported by highlight.js to reach 35.</p>
+
+<p>Bug fixes:</p>
+
+<ul>
+  <li>Custom classes on <code class="highlighter-rouge">&lt;pre&gt;</code> tags are not being overridden anymore</li>
+  <li>More correct highlighting of code blocks inside non-<code class="highlighter-rouge">&lt;pre&gt;</code> containers:
+highlighter now doesn’t insist on replacing them with its own container and
+just replaces the contents.</li>
+  <li>Small fixes in browser compatibility and heuristics.</li>
+</ul>
+
+<h3 id="for-developers">For developers</h3>
+
+<p>The most significant change is the ability to include language submodes right
+under <code class="highlighter-rouge">contains</code> instead of defining explicit named submodes in the main array:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>contains: [
+  'string',
+  'number',
+  {begin: '\\n', end: hljs.IMMEDIATE_RE}
+]
+</code></pre></div></div>
+
+<p>This is useful for auxiliary modes needed only in one place to define parsing.
+Note that such modes often don’t have <code class="highlighter-rouge">className</code> and hence won’t generate a
+separate <code class="highlighter-rouge">&lt;span&gt;</code> in the resulting markup. This is similar in effect to
+<code class="highlighter-rouge">noMarkup: true</code>. All existing languages have been refactored accordingly.</p>
+
+<p>Test file test.html has at last become a real test. Now it not only puts the
+detected language name under the code snippet but also tests if it matches the
+expected one. Test summary is displayed right above all language snippets.</p>
+
+<h2 id="cdn">CDN</h2>
+
+<p>Fine people at <a href="http://yandex.com/">Yandex</a> agreed to host highlight.js on their big fast servers.
+<a href="http://softwaremaniacs.org/soft/highlight/en/download/">Link up</a>!</p>
+
+<h2 id="version-510--paris">Version 5.10 — “Paris”.</h2>
+
+<p>Though I’m on a vacation in Paris, I decided to release a new version with a
+couple of small fixes:</p>
+
+<ul>
+  <li>Tomas Vitvar discovered that TAB replacement doesn’t always work when used
+with custom markup in code</li>
+  <li>SQL parsing is even more rigid now and doesn’t step over SmallTalk in tests</li>
+</ul>
+
+<h2 id="version-59">Version 5.9</h2>
+
+<p>A long-awaited version is finally released.</p>
+
+<p>New languages:</p>
+
+<ul>
+  <li>Andrew Fedorov made a definition for Lua</li>
+  <li>a long-time highlight.js contributor <a href="http://kung-fu-tzu.ru/">Peter Leonov</a> made a definition for
+Nginx config</li>
+  <li><a href="http://fulc.ru/">Vladimir Moskva</a> made a definition for TeX</li>
+</ul>
+
+<p>Fixes for existing languages:</p>
+
+<ul>
+  <li><a href="http://gnuu.org/">Loren Segal</a> reworked the Ruby definition and added highlighting for
+<a href="http://yardoc.org/">YARD</a> inline documentation</li>
+  <li>the definition of SQL has become more solid and now it shouldn’t be overly
+greedy when it comes to language detection</li>
+</ul>
+
+<p>The highlighter has become more usable as a library allowing to do highlighting
+from initialization code of JS frameworks and in ajax methods (see.
+readme.eng.txt).</p>
+
+<p>Also this version drops support for the <a href="http://wordpress.org/">WordPress</a> plugin. Everyone is
+welcome to <a href="http://bazaar.launchpad.net/~isagalaev/+junk/highlight/annotate/342/src/wp_highlight.js.php">pick up its maintenance</a> if needed.</p>
+
+<h2 id="version-58">Version 5.8</h2>
+
+<ul>
+  <li>Jan Berkel has contributed a definition for Scala. +1 to hotness!</li>
+  <li>All CSS-styles are rewritten to work only inside <code class="highlighter-rouge">&lt;pre&gt;</code> tags to avoid
+conflicts with host site styles.</li>
+</ul>
+
+<h2 id="version-57">Version 5.7.</h2>
+
+<p>Fixed escaping of quotes in VBScript strings.</p>
+
+<h2 id="version-55">Version 5.5</h2>
+
+<p>This version brings a small change: now .ini-files allow digits, underscores and
+square brackets in key names.</p>
+
+<h2 id="version-54">Version 5.4</h2>
+
+<p>Fixed small but upsetting bug in the packer which caused incorrect highlighting
+of explicitly specified languages. Thanks to Andrew Fedorov for precise
+diagnostics!</p>
+
+<h2 id="version-53">Version 5.3</h2>
+
+<p>The version to fulfil old promises.</p>
+
+<p>The most significant change is that highlight.js now preserves custom user
+markup in code along with its own highlighting markup. This means that now it’s
+possible to use, say, links in code. Thanks to <a href="http://dolzhenko.blogspot.com/">Vladimir Dolzhenko</a> for the
+<a href="http://roudakov.ru/">initial proposal</a> and for making a proof-of-concept patch.</p>
+
+<p>Also in this version:</p>
+
+<ul>
+  <li><a href="http://vasily.polovnyov.ru/">Vasily Polovnyov</a> has sent a GitHub-like style and has implemented
+support for CSS @-rules and Ruby symbols.</li>
+  <li>Yura Zaripov has sent two styles: Brown Paper and School Book.</li>
+  <li>Oleg Volchkov has sent a definition for <a href="http://www.parser.ru/">Parser 3</a>.</li>
+</ul>
+
+<h2 id="version-52">Version 5.2</h2>
+
+<ul>
+  <li>at last it’s possible to replace indentation TABs with something sensible
+(e.g. 2 or 4 spaces)</li>
+  <li>new keywords and built-ins for 1C by Sergey Baranov</li>
+  <li>a couple of small fixes to Apache highlighting</li>
+</ul>
+
+<h2 id="version-51">Version 5.1</h2>
+
+<p>This is one of those nice version consisting entirely of new and shiny
+contributions!</p>
+
+<ul>
+  <li><a href="http://vehq.ru/about/">Vladimir Ermakov</a> created highlighting for AVR Assembler</li>
+  <li><a href="http://rukeba.com/">Ruslan Keba</a> created highlighting for Apache config file. Also his
+original visual style for it is now available for all highlight.js languages
+under the name “Magula”.</li>
+  <li><a href="http://drakeguan.org/">Shuen-Huei Guan</a> (aka Drake) sent new keywords for RenderMan
+languages. Also thanks go to <a href="http://k-evdokimenko.moikrug.ru/">Konstantin Evdokimenko</a> for his advice on
+the matter.</li>
+</ul>
+
+<h2 id="version-50">Version 5.0</h2>
+
+<p>The main change in the new major version of highlight.js is a mechanism for
+packing several languages along with the library itself into a single compressed
+file. Now sites using several languages will load considerably faster because
+the library won’t dynamically include additional files while loading.</p>
+
+<p>Also this version fixes a long-standing bug with Javascript highlighting that
+couldn’t distinguish between regular expressions and division operations.</p>
+
+<p>And as usually there were a couple of minor correctness fixes.</p>
+
+<p>Great thanks to all contributors! Keep using highlight.js.</p>
+
+<h2 id="version-43">Version 4.3</h2>
+
+<p>This version comes with two contributions from <a href="http://jason.diamond.name/weblog/">Jason Diamond</a>:</p>
+
+<ul>
+  <li>language definition for C# (yes! it was a long-missed thing!)</li>
+  <li>Visual Studio-like highlighting style</li>
+</ul>
+
+<p>Plus there are a couple of minor bug fixes for parsing HTML and XML attributes.</p>
+
+<h2 id="version-42">Version 4.2</h2>
+
+<p>The biggest news is highlighting for Lisp, courtesy of Vasily Polovnyov. It’s
+somewhat experimental meaning that for highlighting “keywords” it doesn’t use
+any pre-defined set of a Lisp dialect. Instead it tries to highlight first word
+in parentheses wherever it makes sense. I’d like to ask people programming in
+Lisp to confirm if it’s a good idea and send feedback to <a href="http://softwaremaniacs.org/forum/viewforum.php?id=6">the forum</a>.</p>
+
+<p>Other changes:</p>
+
+<ul>
+  <li>Smalltalk was excluded from DEFAULT_LANGUAGES to save traffic</li>
+  <li><a href="http://voldmar.ya.ru/">Vladimir Epifanov</a> has implemented javascript style switcher for
+test.html</li>
+  <li>comments now allowed inside Ruby function definition</li>
+  <li><a href="http://en.wikipedia.org/wiki/Maya_Embedded_Language">MEL</a> language from <a href="http://drakeguan.org/">Shuen-Huei Guan</a></li>
+  <li>whitespace now allowed between <code class="highlighter-rouge">&lt;pre&gt;</code> and <code class="highlighter-rouge">&lt;code&gt;</code></li>
+  <li>better auto-detection of C++ and PHP</li>
+  <li>HTML allows embedded VBScript (<code class="highlighter-rouge">&lt;% .. %&gt;</code>)</li>
+</ul>
+
+<h2 id="version-41">Version 4.1</h2>
+
+<p>Languages:</p>
+
+<ul>
+  <li>Bash from Vah</li>
+  <li>DOS bat-files from Alexander Makarov (Sam)</li>
+  <li>Diff files from Vasily Polovnyov</li>
+  <li>Ini files from myself though initial idea was from Sam</li>
+</ul>
+
+<p>Styles:</p>
+
+<ul>
+  <li>Zenburn from Vladimir Epifanov, this is an imitation of a
+<a href="http://en.wikipedia.org/wiki/Zenburn">well-known theme for Vim</a>.</li>
+  <li>Ascetic from myself, as a realization of ideals of non-flashy highlighting:
+just one color in only three gradations :-)</li>
+</ul>
+
+<p>In other news. <a href="http://softwaremaniacs.org/forum/viewtopic.php?id=1823">One small bug</a> was fixed, built-in keywords were added for
+Python and C++ which improved auto-detection for the latter (it was shame that
+<a href="http://alenacpp.blogspot.com/">my wife’s blog</a> had issues with it from time to time). And lastly
+thanks go to Sam for getting rid of my stylistic comments in code that were
+getting in the way of <a href="http://code.google.com/p/jsmin-php/">JSMin</a>.</p>
+
+<h2 id="version-40">Version 4.0</h2>
+
+<p>New major version is a result of vast refactoring and of many contributions.</p>
+
+<p>Visible new features:</p>
+
+<ul>
+  <li>Highlighting of embedded languages. Currently is implemented highlighting of
+Javascript and CSS inside HTML.</li>
+  <li>Bundled 5 ready-made style themes!</li>
+</ul>
+
+<p>Invisible new features:</p>
+
+<ul>
+  <li>Highlight.js no longer pollutes global namespace. Only one object and one
+function for backward compatibility.</li>
+  <li>Performance is further increased by about 15%.</li>
+</ul>
+
+<p>Changing of a major version number caused by a new format of language definition
+files. If you use some third-party language files they should be updated.</p>
+
+<h2 id="version-35">Version 3.5</h2>
+
+<p>A very nice version in my opinion fixing a number of small bugs and slightly
+increased speed in a couple of corner cases. Thanks to everybody who reports
+bugs in he <a href="http://softwaremaniacs.org/forum/viewforum.php?id=6">forum</a> and by email!</p>
+
+<p>There is also a new language — XML. A custom XML formerly was detected as HTML
+and didn’t highlight custom tags. In this version I tried to make custom XML to
+be detected and highlighted by its own rules. Which by the way include such
+things as CDATA sections and processing instructions (<code class="highlighter-rouge">&lt;? ... ?&gt;</code>).</p>
+
+<h2 id="version-33">Version 3.3</h2>
+
+<p><a href="http://xonixx.blogspot.com/">Vladimir Gubarkov</a> has provided an interesting and useful addition.
+File export.html contains a little program that shows and allows to copy and
+paste an HTML code generated by the highlighter for any code snippet. This can
+be useful in situations when one can’t use the script itself on a site.</p>
+
+<h2 id="version-32-consists-completely-of-contributions">Version 3.2 consists completely of contributions:</h2>
+
+<ul>
+  <li>Vladimir Gubarkov has described SmallTalk</li>
+  <li>Yuri Ivanov has described 1C</li>
+  <li>Peter Leonov has packaged the highlighter as a Firefox extension</li>
+  <li>Vladimir Ermakov has compiled a mod for phpBB</li>
+</ul>
+
+<p>Many thanks to you all!</p>
+
+<h2 id="version-31">Version 3.1</h2>
+
+<p>Three new languages are available: Django templates, SQL and Axapta. The latter
+two are sent by <a href="http://roudakov.ru/">Dmitri Roudakov</a>. However I’ve almost entirely rewrote an
+SQL definition but I’d never started it be it from the ground up :-)</p>
+
+<p>The engine itself has got a long awaited feature of grouping keywords
+(“keyword”, “built-in function”, “literal”). No more hacks!</p>
+
+<h2 id="version-30">Version 3.0</h2>
+
+<p>It is major mainly because now highlight.js has grown large and has become
+modular. Now when you pass it a list of languages to highlight it will
+dynamically load into a browser only those languages.</p>
+
+<p>Also:</p>
+
+<ul>
+  <li>Konstantin Evdokimenko of <a href="http://ribkit.sourceforge.net/">RibKit</a> project has created a highlighting for
+RenderMan Shading Language and RenderMan Interface Bytestream. Yay for more
+languages!</li>
+  <li>Heuristics for C++ and HTML got better.</li>
+  <li>I’ve implemented (at last) a correct handling of backslash escapes in C-like
+languages.</li>
+</ul>
+
+<p>There is also a small backwards incompatible change in the new version. The
+function initHighlighting that was used to initialize highlighting instead of
+initHighlightingOnLoad a long time ago no longer works. If you by chance still
+use it — replace it with the new one.</p>
+
+<h2 id="version-29">Version 2.9</h2>
+
+<p>Highlight.js is a parser, not just a couple of regular expressions. That said
+I’m glad to announce that in the new version 2.9 has support for:</p>
+
+<ul>
+  <li>in-string substitutions for Ruby – <code class="highlighter-rouge">#{...}</code></li>
+  <li>strings from from numeric symbol codes (like #XX) for Delphi</li>
+</ul>
+
+<h2 id="version-28">Version 2.8</h2>
+
+<p>A maintenance release with more tuned heuristics. Fully backwards compatible.</p>
+
+<h2 id="version-27">Version 2.7</h2>
+
+<ul>
+  <li>Nikita Ledyaev presents highlighting for VBScript, yay!</li>
+  <li>A couple of bugs with escaping in strings were fixed thanks to Mickle</li>
+  <li>Ongoing tuning of heuristics</li>
+</ul>
+
+<p>Fixed bugs were rather unpleasant so I encourage everyone to upgrade!</p>
+
+<h2 id="version-24">Version 2.4</h2>
+
+<ul>
+  <li>Peter Leonov provides another improved highlighting for Perl</li>
+  <li>Javascript gets a new kind of keywords — “literals”. These are the words
+“true”, “false” and “null”</li>
+</ul>
+
+<p>Also highlight.js homepage now lists sites that use the library. Feel free to
+add your site by <a href="mailto:Maniac@SoftwareManiacs.Org">dropping me a message</a> until I find the time to build a
+submit form.</p>
+
+<h2 id="version-23">Version 2.3</h2>
+
+<p>This version fixes IE breakage in previous version. My apologies to all who have
+already downloaded that one!</p>
+
+<h2 id="version-22">Version 2.2</h2>
+
+<ul>
+  <li>added highlighting for Javascript</li>
+  <li>at last fixed parsing of Delphi’s escaped apostrophes in strings</li>
+  <li>in Ruby fixed highlighting of keywords ‘def’ and ‘class’, same for ‘sub’ in
+Perl</li>
+</ul>
+
+<h2 id="version-20">Version 2.0</h2>
+
+<ul>
+  <li>Ruby support by <a href="http://anton.kovalyov.net/">Anton Kovalyov</a></li>
+  <li>speed increased by orders of magnitude due to new way of parsing</li>
+  <li>this same way allows now correct highlighting of keywords in some tricky
+places (like keyword “End” at the end of Delphi classes)</li>
+</ul>
+
+<h2 id="version-10">Version 1.0</h2>
+
+<p>Version 1.0 of javascript syntax highlighter is released!</p>
+
+<p>It’s the first version available with English description. Feel free to post
+your comments and question to <a href="http://softwaremaniacs.org/forum/viewforum.php?id=6">highlight.js forum</a>. And don’t be afraid
+if you find there some fancy Cyrillic letters – it’s for Russian users too :-)</p>
+
+
+
+</article>
+
+
+	  </main>
+
+		  <!-- Pagination links -->
+      
+
+	  </div>
+
+	    <!-- Footer -->
+	    <footer>
+  <p>
+    
+    <a class="socialmedia"itemprop="github" href="https://github.com/danielshaving" title="Github">
+      <svg><use xlink:href="#icon-github"></use></svg>
+    </a>
+    
+    
+    <a class="socialmedia" itemprop="facebook" href="https://www.facebook.com/danielshaving" title="Facebook">
+      <svg><use xlink:href="#icon-facebook"></use></svg>
+    </a>
+    
+    
+    <a class="socialmedia" itemprop="twitter" href="https://twitter.com/twitter_username" title="Twitter">
+      <svg><use xlink:href="#icon-twitter"></use></svg>
+    </a>
+    
+    
+    <a class="socialmedia" itemprop="medium" href="https://medium.com/@medium_username" title="Twitter">
+      <svg><use xlink:href="#icon-medium"></use></svg>
+    </a>
+    
+    
+    <a class="socialmedia" itemprop="instagram" href="https://www.instagram.com/instagram_username" title="Instagram">
+      <svg><use xlink:href="#icon-instagram"></use></svg>
+    </a>
+    
+    
+    <a class="socialmedia" itemprop="linkedin" href="https://www.linkedin.com/in/liuxia" title="LinkedIn">
+      <svg><use xlink:href="#icon-linkedin"></use></svg>
+    </a>
+    
+  </p>
+
+
+  <!-- <div class="footer-meta">
+
+            <div class="meta-item meta-posts">
+                <h3 class="meta-title">置顶文章</h3>
+
+    
+
+      <span class="feed"><a href="/typography" title="访问 插入排序" data-hover="插入排序">插入排序</a></span>
+
+    
+
+      <span class="feed"><a href="/code-syntax" title="访问 Code Syntax" data-hover="Code Syntax">Code Syntax</a></span>
+
+    
+
+      <span class="feed"><a href="/example-9" title="访问 Example 8" data-hover="Example 8">Example 8</a></span>
+
+    
+
+      <span class="feed"><a href="/example-8" title="访问 Example 8" data-hover="Example 8">Example 8</a></span>
+
+    
+
+      <span class="feed"><a href="/example-7" title="访问 Example 7" data-hover="Example 7">Example 7</a></span>
+
+    
+
+      <span class="feed"><a href="/example-6" title="访问 Example 6" data-hover="Example 6">Example 6</a></span>
+
+    
+
+      <span class="feed"><a href="/example-5" title="访问 Example 5" data-hover="Example 5">Example 5</a></span>
+
+    
+
+      <span class="feed"><a href="/example-4" title="访问 Example 4" data-hover="Example 4">Example 4</a></span>
+
+    
+
+      <span class="feed"><a href="/example-3" title="访问 Example 3" data-hover="Example 3">Example 3</a></span>
+
+    
+
+      <span class="feed"><a href="/example-2" title="访问 Example 2" data-hover="Example 2">Example 2</a></span>
+
+    
+
+      <span class="feed"><a href="/example-10" title="访问 Example 8" data-hover="Example 8">Example 8</a></span>
+
+    
+
+      <span class="feed"><a href="/example-1" title="访问 Example 1" data-hover="Example 1">Example 1</a></span>
+
+    
+
+      <span class="feed"><a href="/hello-world2" title="访问 Hello World 2" data-hover="Hello World 2">Hello World 2</a></span>
+
+    
+
+      <span class="feed"><a href="/hello-world" title="访问 Hello World" data-hover="Hello World">Hello World</a></span>
+
+    
+
+            </div>
+            <div class="meta-item meta-comments">
+                <h3 class="meta-title">最新文章</h3>
+  
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    </div>
+    </div> -->
+<div class="feed">
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
+    
+
+  <div class="feed">Total Articles：</div>
+  <span><a class="feed" href="http://localhost:4000/dsm/feed.xml" title="Atom/RSS feed">Danielshaving Blog RSS</a></span> <span>&nbsp; &nbsp;&nbsp;&nbsp;@2018 - Danielshaving by <a class="feed" href="/dsm/danielcv/DanielCV.html">Liu Xia</a></span>
+  <a href="/dsm/danielcv/DanielCV.html"><img class="avatar" src="/dsm/img/dsm.svg" alt=""/></a>
+
+</footer>
+
+
+	    <!-- Script -->
+      <script src="/dsm/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

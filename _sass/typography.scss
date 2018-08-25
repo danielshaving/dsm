@@ -17,20 +17,27 @@ p, ul, ol {
 }
 
 h1 {
-	font-size: 2.25em; /* 36px/16px */
-	line-height: 1.3333em; /* 48px/36px */
+	font-size: 2.45em; /* 36px/16px */
+	line-height: 1.9em; /* 48px/36px */
 	padding: 0.33335em 0; /* 12px/36px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
+	margin-bottom: 20px;
 }
 
 h2 {
-	font-size: 1.5em; /* 24px/16px */
-	line-height: 1em; /* 24px/24px */
+	font-size: 2.3em; /* 24px/16px */
+	line-height: 1.8em ;/* 24px/24px */
 	padding: 1em 0 0 0; /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */
 }
 
 h3, h4, h5, h6 {
-	font-size: 1.125em; /* 18px/16px */
-	line-height: 1.3334em; /* 24px/18px */
+	font-size: 1.325em; /* 18px/16px */
+	color: $main-color;
+	line-height: 1.1em; /* 24px/18px */
+	margin-top: 14px;
+	margin-bottom: 14px;
+	padding-bottom: 2px;
+	border-bottom: dashed 1px;
+	border-bottom-color: linear-gradient(90deg, $main-color, white,white);
 	padding: 0.66667em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
 }
 

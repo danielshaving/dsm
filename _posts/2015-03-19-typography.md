@@ -4,17 +4,20 @@ categories: [machine_learning, math]
 
 ---
 
+
 首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格：
 
 对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。
 
-### 知识点小记
+### 知识点小记3
 
 * 使用sizeof(nums)/sizeof(nums[0])获得数组的长度；
 
 * 数组作为参数有两种方法，一种是以数组名本身，一种是以指针；
 
 * 如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小；
+
+  ![optional caption text2](/dsm/img/dsm.jpg)
 
 ### 简单插入排序
 
@@ -45,34 +48,6 @@ void insertSort(int nums[], int n){
 ```
 下面是一个完整的例子：
 
-```
-#include <iostream>
-using namespace std;
-void insertSort(int nums[], int n)；
-int main()
-{
-    int nums[] = {9,2,7,4,5};
-    int n = sizeof(nums)/sizeof(nums[0]);
-    insertSort(nums, n);
-    for(int i =0; i< (sizeof(nums)/sizeof(nums[0])); i++){
-        cout<<nums[i]<<" ";
-    }
-    return 0;
-}
-
-//insert sort
-void insertSort(int nums[], int n){
-    for(int i=1;i<n;i++){
-        int temp = nums[i];
-        int j=i-1;
-        while(nums[j]>temp && j>=0){
-            nums[j+1] = nums[j];
-            j--;
-        }
-        nums[j+1] = temp;
-    }
-}
-```
 简单插入排序最坏和平均时间复杂度都为O(n2),空间复杂度为O(1)，最好的时间复杂度为O(n).属于稳定的排序算法。
 
 ### 希尔排序

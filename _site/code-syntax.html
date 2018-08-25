@@ -13,63 +13,15 @@
 	<link rel="stylesheet" href="/dsm/css/main.css">
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic%7CSignika:700,300,400,600' rel='stylesheet' type='text/css'>
 	<link rel="icon" type="image/jpg" href='/dsm/img/dsm.jpg'>
+	<link rel="stylesheet" href="/dsm/css/highlight/styles/gruvbox-dark.css">
+	<script src="/dsm/css/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
 
 	<!-- RSS -->
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
-   <script>
-     function isHidden(Div,Show_and_Hide_Button){
-       var vDiv = document.getElementsByName(Div);
-			 var i;
-			 for (i = 0; i < vDiv.length; i ++ ){
-			 vDiv[i].style.display = (vDiv[i].style.display == 'none')?'block':'none';
-  		 }
-
-		 	 var Show_and_Hide_Button_Elements = document.getElementById(Show_and_Hide_Button);
-
-
-     // Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
-			 // Show_and_Hide_Button_Elements.value = '100';
-       if (Show_and_Hide_Button_Elements.innerHTML.indexOf('MORE') != -1){
-			 Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
-			 Show_and_Hide_Button_Elements.style.borderTop = "none";
-			 Show_and_Hide_Button_Elements.style.borderBottom = "0.5px dashed";
-			 Show_and_Hide_Button_Elements.style.borderBottom.width = "thin";
-			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
-			 Show_and_Hide_Button_Elements.marginTop = "10px";
-			 Show_and_Hide_Button_Elements.style.textAlign = "left";
-
-		   }
-
-
-       // Show_and_Hide_Button_Elements.style.color = "blue";
-
-			 else
-
-			 {Show_and_Hide_Button_Elements.innerHTML = "&darr;&darr;MORE&darr;&darr;";
-
-			 Show_and_Hide_Button_Elements.style.borderTop = "0.5px dashed";
-			 Show_and_Hide_Button_Elements.style.borderTop.width = "thin";
-			 Show_and_Hide_Button_Elements.style.borderBottom = "none";
-			 Show_and_Hide_Button_Elements.marginTop = "25px";
-			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
-			 Show_and_Hide_Button_Elements.style.textAlign = "right";
-		 	 // Show_and_Hide_Button_Elements.style.fontSize = "17px";
-
-       }
-
-			 console.log( "handler1" );
-
-
-     }
-
-
-		 // function gnid(Div){
-			//  var vDiv = document.getElementsByName(Div);
-     //   vDiv.style.background = #032321;
-		 //
-		 // }
-   </script>
+	<script src="/dsm/js/showhide.js"></script>
 
 </head>
 
@@ -122,8 +74,8 @@
       
         <header id="header">
 	<a href="/dsm/index.html">
-		<img src="/dsm/img/dsm.jpg" alt="dsm Logo">
-	  <h3 style="font-style:italic;">Danielshaving</h3>
+		<!-- <img src="/dsm/img/dsm.jpg" alt="dsm Logo"> -->
+		<div class="header-span"><span>Danielshaving -- A blog of Machine Learning</span>
 		<div style="margin: 45px"></div>
 	</a>
 
@@ -181,6 +133,18 @@
 			
 		
 			
+				<a href="/dsm/css/highlight/CHANGES" title="Version 9.12.0">Version 9.12.0</a>
+			
+		
+			
+				<a href="/dsm/css/highlight/README.ru" title="Highlight.js">Highlight.js</a>
+			
+		
+			
+				<a href="/dsm/css/highlight/" title="Highlight.js">Highlight.js</a>
+			
+		
+			
 		
 	</nav> -->
 	
@@ -208,66 +172,21 @@
 	<link rel="stylesheet" href="/dsm/css/main.css">
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic%7CSignika:700,300,400,600' rel='stylesheet' type='text/css'>
 	<link rel="icon" type="image/jpg" href='/dsm/img/dsm.jpg'>
+	<link rel="stylesheet" href="/dsm/css/highlight/styles/gruvbox-dark.css">
+	<script src="/dsm/css/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
 
 	<!-- RSS -->
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
-   <script>
-     function isHidden(Div,Show_and_Hide_Button){
-       var vDiv = document.getElementsByName(Div);
-			 var i;
-			 for (i = 0; i < vDiv.length; i ++ ){
-			 vDiv[i].style.display = (vDiv[i].style.display == 'none')?'block':'none';
-  		 }
-
-		 	 var Show_and_Hide_Button_Elements = document.getElementById(Show_and_Hide_Button);
-
-
-     // Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
-			 // Show_and_Hide_Button_Elements.value = '100';
-       if (Show_and_Hide_Button_Elements.innerHTML.indexOf('MORE') != -1){
-			 Show_and_Hide_Button_Elements.innerHTML = "&uarr;&uarr;HIDE&uarr;&uarr;";
-			 Show_and_Hide_Button_Elements.style.borderTop = "none";
-			 Show_and_Hide_Button_Elements.style.borderBottom = "0.5px dashed";
-			 Show_and_Hide_Button_Elements.style.borderBottom.width = "thin";
-			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
-			 Show_and_Hide_Button_Elements.marginTop = "10px";
-			 Show_and_Hide_Button_Elements.style.textAlign = "left";
-
-		   }
-
-
-       // Show_and_Hide_Button_Elements.style.color = "blue";
-
-			 else
-
-			 {Show_and_Hide_Button_Elements.innerHTML = "&darr;&darr;MORE&darr;&darr;";
-
-			 Show_and_Hide_Button_Elements.style.borderTop = "0.5px dashed";
-			 Show_and_Hide_Button_Elements.style.borderTop.width = "thin";
-			 Show_and_Hide_Button_Elements.style.borderBottom = "none";
-			 Show_and_Hide_Button_Elements.marginTop = "25px";
-			 Show_and_Hide_Button_Elements.style.fontStyle = "Italic";
-			 Show_and_Hide_Button_Elements.style.textAlign = "right";
-		 	 // Show_and_Hide_Button_Elements.style.fontSize = "17px";
-
-       }
-
-			 console.log( "handler1" );
-
-
-     }
-
-
-		 // function gnid(Div){
-			//  var vDiv = document.getElementsByName(Div);
-     //   vDiv.style.background = #032321;
-		 //
-		 // }
-   </script>
+	<script src="/dsm/js/showhide.js"></script>
 
 </head>
 
+
+<script src="//cdn.bootcss.com/highlightjs-line-numbers.js/1.1.0/highlightjs-line-numbers.min.js"></script>
+<script>hljs.initLineNumbersOnLoad();</script>
 
 <article id="post-page">
 	<h2>Code Syntax</h2>
@@ -279,43 +198,15 @@
 
 		<p>To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the <a href="http://jekyllrb.com/docs/templates/#code-snippet-highlighting">Jekyll documentation</a>. In this way the code will be included into a <code class="highlighter-rouge">.highlight</code> CSS class and will be highlight according to the <a href="https://github.com/mojombo/tpw/blob/master/css/syntax.css">syntax.scss</a> file. This is the standard style adopted by <strong>Github</strong> to highlight the code.</p>
 
-<p>This is a CSS example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>body {
+  background-color: #fff;
+  }
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="code"><pre><span class="nt">body</span> <span class="p">{</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
-  <span class="p">}</span>
-
-<span class="nt">h1</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="m">#ffaa33</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.5em</span><span class="p">;</span>
-  <span class="p">}</span></pre></td></tr></tbody></table></code></pre></figure>
-
-<p>And this is a HTML example, with a linenumber:</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="code"><pre><span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"example.com"</span><span class="nt">&gt;</span>Example<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/html&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
-
-<p>Last, a Ruby example:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">hello</span>
-  <span class="nb">puts</span> <span class="s2">"Hello World!"</span>
-<span class="k">end</span></pre></td></tr></tbody></table></code></pre></figure>
-
+h1 {
+  color: #ffaa33;
+  font-size: 1.5em;
+  }
+</code></pre></div></div>
 
 
 
@@ -626,6 +517,12 @@ s.src = 'https://danielshaving.disqus.com/embed.js';
     </div>
     </div> -->
 <div class="feed">
+    
+        <!--  -->
+    
+        <!--  -->
+    
+        <!--  -->
     
         <!--  -->
     

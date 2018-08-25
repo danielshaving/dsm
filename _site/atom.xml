@@ -4,7 +4,7 @@
  <title>Dsm | A simple blog of ml technical sharings</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-08-21T19:24:02+02:00</updated>
+ <updated>2018-08-25T17:36:01+02:00</updated>
  <author>
    <name>Daniel Liu</name>
    <uri>http://www.danielshaving.com</uri>
@@ -18,7 +18,7 @@
    <link href="http://localhost:4000/typography"/>
    <id>http://localhost:4000/typography</id>
    <updated>2015-03-19T00:00:00+01:00</updated>
-   <content type="html">&lt;p&gt;首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格：&lt;/p&gt; &lt;p&gt;对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。&lt;/p&gt; &lt;h3 id=&quot;知识点小记&quot;&gt;知识点小记&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;使用sizeof(nums)/sizeof(nums[0])获得数组的长度；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;数组作为参数有两种方法，一种是以数组名本身，一种是以指针；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小；&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;简单插入排序&quot;&gt;简单插入排序&lt;/h3&gt; &lt;p&gt;直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。&lt;/p&gt; &lt;p&gt;实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。&lt;/p&gt; &lt;p&gt;设数组为a[0…n-1]。&lt;/p&gt; &lt;ul&gt; &lt;li&gt;初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1&lt;/li&gt; &lt;li&gt;将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。&lt;/li&gt; &lt;li&gt;i++，并重复第二步直到i==n-1。 简单插入排序方法实现：&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//insert sort void insertSort(int nums[], int n){ for(int i=1;i&amp;lt;n;i++){ int temp = nums[i]; int j=i-1; while(nums[j]&amp;gt;temp &amp;amp;&amp;amp; j&amp;gt;=0){ nums[j+1] =...</content>
+   <content type="html">&lt;p&gt;首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格：&lt;/p&gt; &lt;p&gt;对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。&lt;/p&gt; &lt;h3 id=&quot;知识点小记3&quot;&gt;知识点小记3&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;使用sizeof(nums)/sizeof(nums[0])获得数组的长度；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;数组作为参数有两种方法，一种是以数组名本身，一种是以指针；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小；&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/dsm/img/dsm.jpg&quot; alt=&quot;optional caption text2&quot; /&gt;&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;简单插入排序&quot;&gt;简单插入排序&lt;/h3&gt; &lt;p&gt;直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。&lt;/p&gt; &lt;p&gt;实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。&lt;/p&gt; &lt;p&gt;设数组为a[0…n-1]。&lt;/p&gt; &lt;ul&gt; &lt;li&gt;初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1&lt;/li&gt; &lt;li&gt;将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。&lt;/li&gt; &lt;li&gt;i++，并重复第二步直到i==n-1。 简单插入排序方法实现：&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//insert sort void insertSort(int nums[], int n){ for(int i=1;i&amp;lt;n;i++){ int temp = nums[i]; int...</content>
  </entry>
 
  

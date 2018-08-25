@@ -68,16 +68,18 @@
 
 #menu {
   height: 4px;
-  width: 1.5em;
-  background-color: lighten($text-color, 35%);
+  width: 2.5em;
+  background-color: $main-color;
+  border-color: black;
+  border-width: 1px;
   margin-top: 8px;
   &:after, &:before {
     content: "";
     display: block;
     position: relative;
     height: 4px;
-    width: 1.5em;
-    background-color: lighten($text-color, 35%);
+    width: 2.5em;
+    background-color: #ab3d3d;
     transition: all 0.3s ease-in;
   }
   &:before {
@@ -297,10 +299,10 @@ img[title="Emerald"] {
     box-shadow: 0 2px 6px #ddd;
   }
 
-code {
-  color: lighten($text-color, 35%);
-  background-color: lighten($background-color, 35%);
-}
+// code {
+//   color: lighten($text-color, 35%);
+//   background-color: lighten($background-color, 35%);
+// }
 
 /* Set the vertical rhythm (and padding-left) for lists inside post content */
 

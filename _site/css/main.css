@@ -6,6 +6,10 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img { margin: 0; padding: 0; 
 
 /*- Base color -*/
 /*- Base settings -*/
+header { width: 100%; height: auto; background: #000000 url(/dsm/img/header.png) 100% 100% no-repeat; background-size: cover; margin-bottom: 40px; }
+
+header .header-span { font-size: 2.1em; font-family: Trebuchet MS; background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat; text-shadow: 5px -5px black, 4px -4px white; font-weight: bold; -webkit-text-fill-color: transparent; -webkit-background-clip: text; }
+
 html { background-color: #FFFFFF; font-size: 16px; line-height: 1.5; color: #222222; }
 @media (min-width: 940px) { html { font-size: 18px; } }
 
@@ -19,11 +23,11 @@ body { font-family: 'Source Sans Pro', sans-serif; letter-spacing: 0.01em; }
 /*- Typography for medium and small screen, based on 16px font-size -*/
 p, ul, ol { font-size: 1em; /* 16px */ line-height: 1.5em; /* 24px/16px */ margin-bottom: 1.5em; /* 24px/16px */ }
 
-h1 { font-size: 2.25em; /* 36px/16px */ line-height: 1.3333em; /* 48px/36px */ padding: 0.33335em 0; /* 12px/36px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
+h1 { font-size: 2.45em; /* 36px/16px */ line-height: 1.9em; /* 48px/36px */ padding: 0.33335em 0; /* 12px/36px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ margin-bottom: 20px; }
 
-h2 { font-size: 1.5em; /* 24px/16px */ line-height: 1em; /* 24px/24px */ padding: 1em 0 0 0; /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */ }
+h2 { font-size: 2.3em; /* 24px/16px */ line-height: 1.8em; /* 24px/24px */ padding: 1em 0 0 0; /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */ }
 
-h3, h4, h5, h6 { font-size: 1.125em; /* 18px/16px */ line-height: 1.3334em; /* 24px/18px */ padding: 0.66667em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
+h3, h4, h5, h6 { font-size: 1.325em; /* 18px/16px */ color: #659cd5; line-height: 1.1em; /* 24px/18px */ margin-top: 14px; margin-bottom: 14px; padding-bottom: 2px; border-bottom: dashed 1px; border-bottom-color: linear-gradient(90deg, #659cd5, white, white); padding: 0.66667em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
 
 blockquote { font-style: italic; margin: 1.5em; /* 24px/18px */ -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; background-color: #f2f2f2; padding: 0 1.5em; /* 24px/18px */ }
 blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
@@ -61,8 +65,8 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 
 #nav-menu-left { display: block; position: fixed; top: 35px; left: 25px; z-index: 10; height: 24px; }
 
-#menu { height: 4px; width: 1.5em; background-color: #7b7b7b; margin-top: 8px; }
-#menu:after, #menu:before { content: ""; display: block; position: relative; height: 4px; width: 1.5em; background-color: #7b7b7b; transition: all 0.3s ease-in; }
+#menu { height: 4px; width: 2.5em; background-color: #659cd5; border-color: black; border-width: 1px; margin-top: 8px; }
+#menu:after, #menu:before { content: ""; display: block; position: relative; height: 4px; width: 2.5em; background-color: #ab3d3d; transition: all 0.3s ease-in; }
 #menu:before { top: -8px; }
 #menu:after { top: 4px; }
 #menu.btn-close { background: none; }
@@ -113,8 +117,6 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 img { max-width: 100%; display: block; margin: 0 auto; margin-bottom: 24px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; }
 
 img[title="Emerald"] { box-shadow: 0 2px 6px #ddd; }
-
-code { color: #7b7b7b; background-color: white; }
 
 /* Set the vertical rhythm (and padding-left) for lists inside post content */
 .content ul, .content ol { line-height: 1.5em; /* 24px/16px */ padding-left: 1.5em; }
@@ -384,7 +386,7 @@ section#contact .text-danger { color: #e74c3c; }
 
 /* Literal.Number.Integer.Long */
 /*- Custom style -*/
-.svg-head { margin-left: 2em; margin-right: 2em; }
+.svg-head { margin-left: 1em; margin-right: 1em; }
 
 .svg-head #head-img { height: 60px; width: auto; }
 
