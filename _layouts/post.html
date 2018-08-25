@@ -21,9 +21,11 @@ layout: default
 
 </article>
 
+<!-- <div style="margin-top: 40px"></div> -->
+
 <div class="tags">
 		{% if page.categories != null %}
-		<b>Tags: </b>
+		<a href = "{{ site.tagurl | prepend: site.baseurl}}"><b> Tags: </b></a>
    {% for tag in page.categories %}
 		<a href="{{ site.tagurl | prepend: site.baseurl | append: '#' | append: tag}}" class="btn-default">{{tag}}</a>
     {% endfor %}
