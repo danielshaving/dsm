@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</title>
+	<title>Using iOS CoreMotion to call gyroscope and accelerometer</title>
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/dsm/css/main.css">
@@ -162,24 +162,24 @@
 <script>hljs.initLineNumbersOnLoad();</script>
 
 <article id="post-page">
-	<h1>Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</h1>
+	<h1>Using iOS CoreMotion to call gyroscope and accelerometer</h1>
 	<div></div>
-	<time datetime="2015-03-01T00:00:00+01:00" class="by-line">01 Mar 2015
+	<time datetime="2014-10-19T00:00:00+02:00" class="by-line">19 Oct 2014
 		<a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-		<span class="tag-title">SSL of Python</span>
+		<span class="tag-title">Gyroscope and accelerometer of iOS</span>
 	</time>
-
+	<div style="margin: 3px"></div>
 	<div class="tags">
 			
 			<a href = "/dsm/tags.html"><b> Tags: </b></a>
 	   
-			<a href="/dsm/tags.html#SSL" class="btn-default">SSL</a>
+			<a href="/dsm/tags.html#iOS" class="btn-default">iOS</a>
 	    
-			<a href="/dsm/tags.html#Crawler" class="btn-default">Crawler</a>
+			<a href="/dsm/tags.html#CoreMotion" class="btn-default">CoreMotion</a>
 	    
-			<a href="/dsm/tags.html#Python" class="btn-default">Python</a>
+			<a href="/dsm/tags.html#Gyroscope" class="btn-default">Gyroscope</a>
 	    
-			<a href="/dsm/tags.html#urllib" class="btn-default">urllib</a>
+			<a href="/dsm/tags.html#Accelerometer" class="btn-default">Accelerometer</a>
 	    
 			
 	</div>
@@ -187,78 +187,208 @@
 
 	<div class="content">
 
-		<h3 id="1-a-ssl-certificate-verify-error">1. A SSL Certificate Verify Error</h3>
-<p>If you are the first time to create a crawler which on the way to read contents of some websites, the Python IDLE probably could alert an error, named SSL: CERTIFICATE_VERIFY_FAILED, look like this:</p>
+		<h3 id="1-coremotion-framework">1. CoreMotion Framework</h3>
+<p>Core Motion reports motion- and environment-related data from the onboard hardware of iOS devices, including from the accelerometers and gyroscopes, and from the pedometer, magnetometer, and barometer. You use this framework to access hardware-generated data so that you can use it in your app. For example, a game might use accelerometer and gyroscope data to control onscreen game behavior.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<p>You may access this Framework in the following scenarios of one application:</p>
+<ul>
+  <li>Navigation or orientation in a map-kit function, to help the user get known of his orientation.</li>
+  <li>Sporting applications to record the distance of a user’s displacement.</li>
+  <li>Rotate MVC and responsive UI in a game.(like <font color="#0073aa">Temple Run</font>)</li>
+  <li>Shakehand in some social network applications</li>
+  <li>…</li>
+</ul>
 
-<span class="n">base_url</span> <span class="o">=</span> <span class="s">"http://www.wikipedia.com"</span>
-<span class="n">the_http</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">base_url</span><span class="p">)</span>
+<p>In fact, all of these scenarios applied <font color="#0073aa">CoreMotion.framework</font></p>
+
+<p>The purpose of <font color="#0073aa">CoreMotion.framework</font> provided by iOS is to help developers to capture the data from gyroscope and accelerometer. It not only provide the speed value or rotation value, more importantly, iOS integrates plenty of algorithms in it, which can directly output the gravity acceleration component in different orientation and dimensions.</p>
+
+<p><a href="https://developer.apple.com/documentation/coremotion">CoreMotion Framework</a></p>
+
+<h3 id="2-accelerometer">2. Accelerometer</h3>
+<p>It was very simple to understand accelerometer, which was divided by x,y,z axis, separatedly measures proper acceleration.</p>
+
+<p>Proper acceleration, being the acceleration (or rate of change of velocity) of a body in its own instantaneous rest frame, is not the same as coordinate acceleration, being the acceleration in a fixed coordinate system.</p>
+
+<p>For example, an accelerometer at rest on the surface of the Earth will measure an acceleration due to Earth’s gravity, straight upwards (by definition) of g ≈ 9.81 m/s2. By contrast, accelerometers in free fall (falling toward the center of the Earth at a rate of about 9.81 m/s2) will measure zero.</p>
+
+<p><img src="/dsm/img/201410/Accemeter.png" alt="Accemeter" /></p>
+
+<h3 id="3-gyroscope">3. Gyroscope</h3>
+<p>A gyroscope is a device used for mearsuring or maintaining orientation and angular velocity.</p>
+
+<p>It is a spinning wheel in which x,y,z three axis of rotation is free to assume any orientation by itself.</p>
+
+<p>When rotating, the orientation of this axis is unaffected by tilting or rotation of the mounting.</p>
+
+<p><img src="/dsm/img/201410/Gyrometer.png" alt="Gyrometer" /></p>
+
+<h3 id="4-usage-of-coremotion">4. Usage of CoreMotion</h3>
+
+<p><img src="/dsm/img/201410/CMFramework.png" alt="CMFramework" /></p>
+
+<p>CoreMotion principly provides three kinds of data:</p>
+<ul>
+  <li>Acceleration Velocity Data <font color="#0073aa">CMAccelerometerData</font></li>
+  <li>Angular Velocity Data <font color="#0073aa">CMGryoData</font></li>
+  <li>Device Motion Data <font color="#0073aa">CMDeviceMotion</font></li>
+</ul>
+
+<p><img src="/dsm/img/201410/CMDeviceMotion.png" alt="CMDeviceMotion" /></p>
+
+<p>Attributes of CMDeviceMotion:</p>
+<ul>
+  <li>
+    <font color="#0073aa">attitude</font>
+    <p>The attitude of the device</p>
+  </li>
+  <li>
+    <font color="#0073aa">gravity</font>
+    <p>The gravity acceleration vector expressed in the device’s reference frame.</p>
+  </li>
+  <li>
+    <font color="#0073aa">userAcceleration</font>
+    <p>The acceleration that the user is giving to the device.</p>
+  </li>
+  <li>
+    <font color="#0073aa">RotationRate</font>
+    <p>The rotation rate of the device.</p>
+  </li>
+</ul>
+
+<h3 id="5-procedures-of-calling-coremotion">5. Procedures of calling coremotion</h3>
+
+<ul>
+  <li>Initiate the attributes of <font color="#0073aa">CMMotionManager</font></li>
+  <li>Call the managed objects and objective-oriented functions</li>
+  <li>Processing the data</li>
+  <li>Stopping getting data from Hardware devices, like this:</li>
+</ul>
+
+<pre><code class="language-C">-(void)stopAccelerometerUpdates;//Stopping getting data from the accelerometer
+-(void)stopGyroUpdates;//Stopping getting data from the Gyroscope
+-(void)stopDeviceMotionUpdates;//Stopping getting data from the Device motion
+</code></pre>
+
+<h3 id="5-using-push-method-to-get-data-from-coremotion-framework">5. Using Push Method to get data from CoreMotion Framework</h3>
+
+<p>The push method provides one operation queue manager and calling back block, CoreMotion will recall the block for every simultaneously collected data and to process it.</p>
+
+<ul>
+  <li>Using Push Method to get data from the acceleromter</li>
+</ul>
+
+<pre><code class="language-C">- (void)useAccelerometerPush{
+    //Initiate the global manager object
+    CMMotionManager* manager = [[CMMotionManager alloc] init];
+    self.motionManager = manager;
+    //Check if the accelerometer is available
+    if ([manager isAccelerometerAvailable] &amp;&amp; ![manager isAccelerometerActive]){
+        //Tell the manager, the frequency of update is 100Hz
+        manager.accelerometerUpdateInterval = 0.01;
+        NSOperationQueue* queue = [[NSOperationQueue alloc] init];
+        //Get the data by push-method and process it
+        [manager startAccelerometerUpdatesToQueue:queue
+                 withHandler:^(CMAccelerometerData* accelerometerData, NSError* error)
+         {
+             NSLog(@"X = %.04f",accelerometerData.acceleration.x);
+             NSLog(@"Y = %.04f",accelerometerData.acceleration.y);
+             NSLog(@"Z = %.04f",accelerometerData.acceleration.z);
+         }];
+    }
+}
+</code></pre>
+
+<ul>
+  <li>Using Push Method to get data from the gyrometer</li>
+</ul>
+
+<pre><code class="language-C">- (void)useGyroPush{
+    //Initiate the global manager object
+    CMMotionManager* manager = [[CMMotionManager alloc] init];
+    self.motionManager = manager;
+    //Check if the accelerometer is available
+    if ([manager isGyroAvailable] &amp;&amp; ![manager isGyroActive]){
+
+        NSOperationQueue* queue = [[NSOperationQueue alloc] init];
+        //Tell the manager, the frequency of update is 100Hz
+        manager.gyroUpdateInterval = 0.01;
+        //Get the data by push-method and process it
+        [manager startGyroUpdatesToQueue:queue
+                             withHandler:^(CMGyroData* gyroData, NSError* error)
+        {
+            NSLog(@"Gyro Rotation x = %.04f", gyroData.rotationRate.x);
+            NSLog(@"Gyro Rotation y = %.04f", gyroData.rotationRate.y);
+            NSLog(@"Gyro Rotation z = %.04f", gyroData.rotationRate.z);
+        }];
+    }
+}
+</code></pre>
+
+<h3 id="6-using-pull-method-to-get-data-from-coremotion-framework">6. Using Pull Method to get data from CoreMotion Framework</h3>
+
+<p>If you want to use Pull Methor to get data, you need to ask <font color="#0073aa">CMMotionManager</font> for data, this data is the last updated one. If you do not ask the data, <font color="#0073aa">CMMotionManager</font> would not provide the data by itself.</p>
+
+<ul>
+  <li>Using Pull Method to get data from the acceleromter</li>
+</ul>
+
+<pre><code class="language-C">- (void)useAccelerometerPull{
+    //Initiate the global manager object
+    CMMotionManager* manager = [[CMMotionManager alloc] init];
+    self.motionManager = manager;
+    //Check if the accelerometer is available
+    if ([manager isAccelerometerAvailable] &amp;&amp; ![manager isAccelerometerActive]){
+    //Tell the manager, the frequency of update is 100Hz
+        manager.accelerometerUpdateInterval = 0.01;
+    //Update
+        [manager startAccelerometerUpdates];
+    }
+    //Get data and start to process it
+    CMAccelerometerData* newestAccel = self.motionManager.accelerometerData;
+    NSLog(@"X = %.04f",newestAccel.acceleration.x);
+    NSLog(@"Y = %.04f",newestAccel.acceleration.y);
+    NSLog(@"Z = %.04f",newestAccel.acceleration.z);
+}
+</code></pre>
+
+<ul>
+  <li>Using Pull Method to get data from the gyroscope</li>
+</ul>
+
+<pre><code class="language-C">- (void)useGyroPull{
+    //Initiate the global manager object
+    CMMotionManager* manager = [[CMMotionManager alloc] init];
+    self.motionManager = manager;
+    //Check if the gyrometer is available
+    if ([manager isGyroAvailable] &amp;&amp; ![manager isGyrometerActive]){
+    //Tell the manager, the frequency of update is 100Hz
+        manager.gyrometerUpdateInterval = 0.01;
+    //Update
+        [manager startGyrometerUpdates];
+    }
+    //Get data and start to process it
+    CMGyrometerData* newestGyro = self.motionManager.gyrometerData;
+    NSLog(@"X = %.04f",newestGyro.rotationRate.x);
+    NSLog(@"Y = %.04f",newestGyro.rotationRate.y);
+    NSLog(@"Z = %.04f",newestGyro.rotationRate.z);
+}
+</code></pre>
+
+<h3 id="7-an-example-to-keep-the-image-balance-for-your-iphone">7. An Example: to keep the image balance for your iPhone</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (void)keepBalance {
+    if (self.manager.isDeviceMotionAvailable) {
+        self.manager.deviceMotionUpdateInterval = 0.05f;
+        [self.manager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion* _Nullable motion, NSError* _Nullable error) {
+            double rotation = atan2(motion.gravity.x, motion.gravity.y) - M_PI;
+            self.imageView.transform = CGAffineTransformMakeRotation(rotation);
+        }];
+    }
+}
 </code></pre></div></div>
-<p>and you must got the problem of unable to get local issuer certificate (ssl.c:1045)</p>
-
-<p><img src="/dsm/img/20150301/Error-Screen.png" alt="SSL_Certificate" /></p>
-
-<h3 id="2-python-ssl-class">2. Python SSL Class</h3>
-
-<p><img src="/dsm/img/20150301/SSL-Certificate-Image.jpeg" alt="SSL_Certificate" /></p>
-
-<p>To check this problem, I diagnoise by using the documentation of python (<a href="https://docs.python.org/2/library/ssl.html#ssl.SSLContext">Python SSLContext documentation</a>)</p>
-
-<blockquote>
-  <font color="#0073aa">CLASS: SSLContext:</font>
-  <p>Create a new SSL context. You must pass protocol which must be one of the PROTOCOL_* constants defined in this module. PROTOCOL_SSLv23 is currently recommended for maximum interoperability.</p>
-</blockquote>
-
-<p>Be attention to its function:</p>
-
-<blockquote>
-  <font color="#0073aa">FUNCTION: SSLContext.verify_mode:</font>
-  <p>Whether to try to verify other peers’ certificates and how to behave if verification fails. This attribute must be one of CERT_NONE, CERT_OPTIONAL or CERT_REQUIRED.</p>
-</blockquote>
-
-<p>By default the attribute is CERT_NONE:</p>
-
-<blockquote>
-  <font color="#0073aa">CONSTANT: SSLContext.CERT_NONE:</font>
-  <p>Possible value for SSLContext.verify_mode, or the cert_reqs parameter to wrap_socket(). In this mode (the default), no certificates will be required from the other side of the socket connection. If a certificate is received from the other end, no attempt to validate it is made.</p>
-</blockquote>
-
-<p>Everytime when you called url to read a website, the SSLContext will initiate this function to check the SSL of the other peer, surely you need to bypass this function !</p>
-
-<h3 id="3-bypass-the-cert_none">3. Bypass the CERT_NONE</h3>
-
-<p>When calling the SSLContext constructor directly, CERT_NONE is the default. Since it does not authenticate the other peer, it can be insecure, especially in client mode where most of time you would like to ensure the authenticity of the server you’re talking to. Therefore, when in client mode, it is highly recommended to use CERT_REQUIRED.</p>
-
-<p>To add to the above, if you want to know more about why you are seeing these issues you will want to have a look at PEP 476.</p>
-
-<blockquote>
-  <p>This PEP proposes to enable verification of X509 certificate signatures, as well as hostname verification for Python’s HTTP clients by default, subject to opt-out on a per-call basis. This change would be applied to Python 2.7, Python 3.4, and Python 3.5.</p>
-</blockquote>
-
-<p>With that, we need to firstly import SSL class:</p>
-
-<pre><code class="language-Python">import ssl
-</code></pre>
-
-<p>And then call ssl._create_unverified_context() to enable verification of X509 certificate signatures, as well as hostname verification for Python’s HTTP clients by default, subject to opt-out on a per-call basis.</p>
-
-<p><a href="https://www.python.org/dev/peps/pep-0476/">pep_0467</a></p>
-
-<pre><code class="language-Python">context = ssl._create_unverified_context()#create an enabled context
-the_http = urlopen(base_url, context=context)#let the context as a parameter of urlopen
-</code></pre>
-
-<p>Final of all, you can store the http content and process it by python without alerting any error.</p>
-
-<h3 id="4-final-code">4. Final code:</h3>
-<pre><code class="language-Python">import ssl
-from urllib.request import urlopen
-
-base_url = "http://www.wikipedia.com"
-context = ssl._create_unverified_context()
-the_http = urlopen(base_url, context=context)
-</code></pre>
+<p><img src="/dsm/img/201410/rotate1.gif" alt="Rotate1" />
+<img src="/dsm/img/201410/rotate2.gif" alt="Rotate2" /></p>
 
 
 
@@ -271,13 +401,13 @@ the_http = urlopen(base_url, context=context)
 		
 		<a href = "/dsm/tags.html"><b> Tags: </b></a>
    
-		<a href="/dsm/tags.html#SSL" class="btn-default">SSL</a>
+		<a href="/dsm/tags.html#iOS" class="btn-default">iOS</a>
     
-		<a href="/dsm/tags.html#Crawler" class="btn-default">Crawler</a>
+		<a href="/dsm/tags.html#CoreMotion" class="btn-default">CoreMotion</a>
     
-		<a href="/dsm/tags.html#Python" class="btn-default">Python</a>
+		<a href="/dsm/tags.html#Gyroscope" class="btn-default">Gyroscope</a>
     
-		<a href="/dsm/tags.html#urllib" class="btn-default">urllib</a>
+		<a href="/dsm/tags.html#Accelerometer" class="btn-default">Accelerometer</a>
     
 		
 </div>
@@ -286,10 +416,10 @@ the_http = urlopen(base_url, context=context)
 <div class="PageNavigation">
 
   
-    <a class="next" href="/dsm/typography">&laquo;--- 插入排序 </a>
+    <a class="next" href="/dsm/hello-world2">&laquo;--- Hello World 2 </a>
   
 	
-    <a class="prev" href="/dsm/example-9"> Example 8 ---&raquo;</a>
+    <a class="prev" href="/dsm/hello-world"> Hello World ---&raquo;</a>
   
 
 
@@ -309,7 +439,7 @@ the_http = urlopen(base_url, context=context)
 			 
 			   
 							<div class="item-title">
-								<a href="/dsm/code-syntax" data-hover="Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error">Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</a>
+								<a href="/dsm/Using-iOS-CoreMotion-to-call-gyroscope-and-accelerometer" data-hover="Using iOS CoreMotion to call gyroscope and accelerometer">Using iOS CoreMotion to call gyroscope and accelerometer</a>
 							</div>
 					 	 
 						 
@@ -433,7 +563,7 @@ s.src = 'https://danielshaving.disqus.com/embed.js';
 
     
 
-      <span class="feed"><a href="/code-syntax" title="访问 Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error" data-hover="Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error">Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</a></span>
+      <span class="feed"><a href="/Solving-urlopen-and-SSL-CERTIFICATE_VERIFY_FAILED-Error" title="访问 Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error" data-hover="Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error">Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</a></span>
 
     
 
@@ -469,15 +599,15 @@ s.src = 'https://danielshaving.disqus.com/embed.js';
 
     
 
-      <span class="feed"><a href="/example-10" title="访问 Example 8" data-hover="Example 8">Example 8</a></span>
-
-    
-
       <span class="feed"><a href="/example-1" title="访问 Example 1" data-hover="Example 1">Example 1</a></span>
 
     
 
       <span class="feed"><a href="/hello-world2" title="访问 Hello World 2" data-hover="Hello World 2">Hello World 2</a></span>
+
+    
+
+      <span class="feed"><a href="/Using-iOS-CoreMotion-to-call-gyroscope-and-accelerometer" title="访问 Using iOS CoreMotion to call gyroscope and accelerometer" data-hover="Using iOS CoreMotion to call gyroscope and accelerometer">Using iOS CoreMotion to call gyroscope and accelerometer</a></span>
 
     
 

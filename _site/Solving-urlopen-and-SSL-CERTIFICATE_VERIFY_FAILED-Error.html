@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>Example 8</title>
+	<title>Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</title>
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/dsm/css/main.css">
@@ -162,18 +162,24 @@
 <script>hljs.initLineNumbersOnLoad();</script>
 
 <article id="post-page">
-	<h1>Example 8</h1>
+	<h1>Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</h1>
 	<div></div>
-	<time datetime="2015-02-15T00:00:00+01:00" class="by-line">15 Feb 2015
+	<time datetime="2015-03-01T00:00:00+01:00" class="by-line">01 Mar 2015
 		<a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-		<span class="tag-title"></span>
+		<span class="tag-title">SSL of Python</span>
 	</time>
-
+	<div style="margin: 3px"></div>
 	<div class="tags">
 			
 			<a href = "/dsm/tags.html"><b> Tags: </b></a>
 	   
-			<a href="/dsm/tags.html#ls" class="btn-default">ls</a>
+			<a href="/dsm/tags.html#SSL" class="btn-default">SSL</a>
+	    
+			<a href="/dsm/tags.html#Crawler" class="btn-default">Crawler</a>
+	    
+			<a href="/dsm/tags.html#Python" class="btn-default">Python</a>
+	    
+			<a href="/dsm/tags.html#urllib" class="btn-default">urllib</a>
 	    
 			
 	</div>
@@ -181,9 +187,78 @@
 
 	<div class="content">
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae nostrum optio praesentium quisquam vero. Nostrum illum modi aut, ratione qui! Quas laudantium, soluta asperiores minima molestiae similique consequatur ut.</p>
+		<h3 id="1-a-ssl-certificate-verify-error">1. A SSL Certificate Verify Error</h3>
+<p>If you are the first time to create a crawler which on the way to read contents of some websites, the Python IDLE probably could alert an error, named SSL: CERTIFICATE_VERIFY_FAILED, look like this:</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda ad tenetur, numquam aliquid excepturi fuga. Pariatur numquam rem possimus, optio voluptate aspernatur ex, ipsum tenetur earum molestiae nulla suscipit sequi labore fugit repudiandae natus? Nam vel rem, rerum maxime harum. Molestias suscipit quaerat molestiae dolores fuga earum modi, distinctio repellat, laborum commodi quibusdam ex dolore, eius maiores architecto necessitatibus. Repellendus a vitae, est nesciunt. Aspernatur fugiat labore cumque, optio, magni, aperiam ut totam error eligendi iure culpa illum dolorum quam?</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+
+<span class="n">base_url</span> <span class="o">=</span> <span class="s">"http://www.wikipedia.com"</span>
+<span class="n">the_http</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">base_url</span><span class="p">)</span>
+</code></pre></div></div>
+<p>and you must got the problem of unable to get local issuer certificate (ssl.c:1045)</p>
+
+<p><img src="/dsm/img/20150301/Error-Screen.png" alt="SSL_Certificate" /></p>
+
+<h3 id="2-python-ssl-class">2. Python SSL Class</h3>
+
+<p><img src="/dsm/img/20150301/SSL-Certificate-Image.jpeg" alt="SSL_Certificate" /></p>
+
+<p>To check this problem, I diagnoise by using the documentation of python (<a href="https://docs.python.org/2/library/ssl.html#ssl.SSLContext">Python SSLContext documentation</a>)</p>
+
+<blockquote>
+  <font color="#0073aa">CLASS: SSLContext:</font>
+  <p>Create a new SSL context. You must pass protocol which must be one of the PROTOCOL_* constants defined in this module. PROTOCOL_SSLv23 is currently recommended for maximum interoperability.</p>
+</blockquote>
+
+<p>Be attention to its function:</p>
+
+<blockquote>
+  <font color="#0073aa">FUNCTION: SSLContext.verify_mode:</font>
+  <p>Whether to try to verify other peers’ certificates and how to behave if verification fails. This attribute must be one of CERT_NONE, CERT_OPTIONAL or CERT_REQUIRED.</p>
+</blockquote>
+
+<p>By default the attribute is CERT_NONE:</p>
+
+<blockquote>
+  <font color="#0073aa">CONSTANT: SSLContext.CERT_NONE:</font>
+  <p>Possible value for SSLContext.verify_mode, or the cert_reqs parameter to wrap_socket(). In this mode (the default), no certificates will be required from the other side of the socket connection. If a certificate is received from the other end, no attempt to validate it is made.</p>
+</blockquote>
+
+<p>Everytime when you called url to read a website, the SSLContext will initiate this function to check the SSL of the other peer, surely you need to bypass this function !</p>
+
+<h3 id="3-bypass-the-cert_none">3. Bypass the CERT_NONE</h3>
+
+<p>When calling the SSLContext constructor directly, CERT_NONE is the default. Since it does not authenticate the other peer, it can be insecure, especially in client mode where most of time you would like to ensure the authenticity of the server you’re talking to. Therefore, when in client mode, it is highly recommended to use CERT_REQUIRED.</p>
+
+<p>To add to the above, if you want to know more about why you are seeing these issues you will want to have a look at PEP 476.</p>
+
+<blockquote>
+  <p>This PEP proposes to enable verification of X509 certificate signatures, as well as hostname verification for Python’s HTTP clients by default, subject to opt-out on a per-call basis. This change would be applied to Python 2.7, Python 3.4, and Python 3.5.</p>
+</blockquote>
+
+<p>With that, we need to firstly import SSL class:</p>
+
+<pre><code class="language-Python">import ssl
+</code></pre>
+
+<p>And then call ssl._create_unverified_context() to enable verification of X509 certificate signatures, as well as hostname verification for Python’s HTTP clients by default, subject to opt-out on a per-call basis.</p>
+
+<p><a href="https://www.python.org/dev/peps/pep-0476/">pep_0467</a></p>
+
+<pre><code class="language-Python">context = ssl._create_unverified_context()#create an enabled context
+the_http = urlopen(base_url, context=context)#let the context as a parameter of urlopen
+</code></pre>
+
+<p>Final of all, you can store the http content and process it by python without alerting any error.</p>
+
+<h3 id="4-final-code">4. Final code:</h3>
+<pre><code class="language-Python">import ssl
+from urllib.request import urlopen
+
+base_url = "http://www.wikipedia.com"
+context = ssl._create_unverified_context()
+the_http = urlopen(base_url, context=context)
+</code></pre>
 
 
 
@@ -196,7 +271,13 @@
 		
 		<a href = "/dsm/tags.html"><b> Tags: </b></a>
    
-		<a href="/dsm/tags.html#ls" class="btn-default">ls</a>
+		<a href="/dsm/tags.html#SSL" class="btn-default">SSL</a>
+    
+		<a href="/dsm/tags.html#Crawler" class="btn-default">Crawler</a>
+    
+		<a href="/dsm/tags.html#Python" class="btn-default">Python</a>
+    
+		<a href="/dsm/tags.html#urllib" class="btn-default">urllib</a>
     
 		
 </div>
@@ -205,10 +286,10 @@
 <div class="PageNavigation">
 
   
-    <a class="next" href="/dsm/example-2">&laquo;--- Example 2 </a>
+    <a class="next" href="/dsm/typography">&laquo;--- 插入排序 </a>
   
 	
-    <a class="prev" href="/dsm/example-1"> Example 1 ---&raquo;</a>
+    <a class="prev" href="/dsm/example-9"> Example 8 ---&raquo;</a>
   
 
 
@@ -228,7 +309,7 @@
 			 
 			   
 							<div class="item-title">
-								<a href="/dsm/example-9" data-hover="Example 8">Example 8</a>
+								<a href="/dsm/Solving-urlopen-and-SSL-CERTIFICATE_VERIFY_FAILED-Error" data-hover="Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error">Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</a>
 							</div>
 					 	 
 						 
@@ -237,75 +318,28 @@
 		   
 			
 		
-			
-			 
-			   
-							<div class="item-title">
-								<a href="/dsm/example-4" data-hover="Example 4">Example 4</a>
-							</div>
-					 	 
-						 
 
-				 
-		   
-			
-		
-			
-			 
-			   
-							<div class="item-title">
-								<a href="/dsm/example-2" data-hover="Example 2">Example 2</a>
-							</div>
-					 	 
-						 
 
-				 
-		   
-			
 		
+	 	
 			
 			 
 			
 		
+
+
+		
+	 	
 			
 			 
-			   
-							<div class="item-title">
-								<a href="/dsm/example-1" data-hover="Example 1">Example 1</a>
-							</div>
-					 	 
-						 
-
-				 
-		   
 			
 		
-			
-			 
-			   
-							<div class="item-title" name="hiddendiv" style="display:none">
-								<a href="/dsm/hello-world2" data-hover="Hello World 2">Hello World 2</a>
-							</div>
-						
 
-						<!--  -->
 
-         
-		   
-			
 		
+	 	
 			
 			 
-			   
-							<div class="item-title" name="hiddendiv" style="display:none">
-								<a href="/dsm/hello-world" data-hover="Hello World">Hello World</a>
-							</div>
-						
-
-						<!--  -->
-
-         
-		   
 			
 		
 
@@ -315,10 +349,6 @@
 
 
 
-
-<div class = "item-title" >
-<a style="border-top: 0.5px dashed; border-width: thin; text-align: right;" id="show_more_show_Less" type="button" onclick="isHidden('hiddendiv','show_more_show_Less')" ><i>&darr;&darr;MORE&darr;&darr;</i></a>
-</div>
 
 
 <!-- <input type="button" value="ADD" onclick="change(this)"/>
@@ -403,7 +433,7 @@ s.src = 'https://danielshaving.disqus.com/embed.js';
 
     
 
-      <span class="feed"><a href="/code-syntax" title="访问 Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error" data-hover="Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error">Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</a></span>
+      <span class="feed"><a href="/Solving-urlopen-and-SSL-CERTIFICATE_VERIFY_FAILED-Error" title="访问 Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error" data-hover="Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error">Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</a></span>
 
     
 
@@ -439,15 +469,15 @@ s.src = 'https://danielshaving.disqus.com/embed.js';
 
     
 
-      <span class="feed"><a href="/example-10" title="访问 Example 8" data-hover="Example 8">Example 8</a></span>
-
-    
-
       <span class="feed"><a href="/example-1" title="访问 Example 1" data-hover="Example 1">Example 1</a></span>
 
     
 
       <span class="feed"><a href="/hello-world2" title="访问 Hello World 2" data-hover="Hello World 2">Hello World 2</a></span>
+
+    
+
+      <span class="feed"><a href="/Using-iOS-CoreMotion-to-call-gyroscope-and-accelerometer" title="访问 Using iOS CoreMotion to call gyroscope and accelerometer" data-hover="Using iOS CoreMotion to call gyroscope and accelerometer">Using iOS CoreMotion to call gyroscope and accelerometer</a></span>
 
     
 

@@ -28,8 +28,10 @@ layout: default
 		</div>
 
 			<!-- <img class="card-header-avatar" src="{{site.author.avatar}}" /> -->
-			{% if post.titleimg and post.abstract %}
+			{% if post.titleimg %}
 				<img class="index-img" src="{{post.titleimg}}" />
+			{% endif %}
+			{% if post.abstract %}
 				<p class="index-content">{{ post.abstract | strip_html | truncatewords:50 }}<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">【read】</a></p>
 			{% endif %}
 
