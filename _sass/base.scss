@@ -25,8 +25,12 @@ $background-color: #FFFFFF;
 $text-color: #222222;
 $highlight-color: #0073aa;
 $grey-background-color: #eef1f3;
+$main-red: #c66161;
 
 /*- Base settings -*/
+
+
+
 header {
 	width: 100%;
 	height: auto;
@@ -62,9 +66,9 @@ html {
 
 /*- Link -*/
 a {
-	color: $main-color;
+	color: $main-red;
 	text-decoration: none;
-	font-weight: 700;
+	font-weight: lighter;
 	&:hover,
 	&:focus {
 		color: darken($main-color, 5%);

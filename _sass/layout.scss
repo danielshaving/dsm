@@ -155,11 +155,23 @@
   }
 }
 
+.index-img {
+
+  width: 100%;min-height: 60px; max-height: 100px; object-fit: cover;
+}
+
+.index-content {
+
+  font-family: 'Signika', sans-serif; //Emerald logo font;
+  font-size: 22px;
+}
 /* Posts */
 
 #posts {
   li {
     list-style-type: none;
+    border-bottom: $grey-background-color 1.5px solid;
+    padding-bottom: 1.7em;
 
   }
 }
@@ -230,16 +242,16 @@
 
 .post-div{
 
-  box-shadow: 3px,3px,3px,$text-color;
+  // box-shadow: 3px,3px,3px,$text-color;
 }
 
 .post+.post:before {
-    display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px auto;
-    background-color: lighten($text-color, 70%);
+    // display: block;
+    // content: '';
+    // width: 5rem;
+    // height: 1px;
+    // margin: 23px auto;
+    // background-color: lighten($text-color, 70%);
   }
 
 .by-line {
@@ -255,6 +267,16 @@
     margin-bottom: 1.3334em; /* 24px/18px */
     font-weight: 200;
   }
+}
+
+.tag-title{
+  font-weight: bold;
+  color: #6977a1;
+  background-color:$grey-background-color;
+  border-radius: 3px 3px 3px;
+  font-family: "Gill Sans", sans-serif;
+
+
 }
 
 .card-header-title{
@@ -511,7 +533,7 @@ section#contact .text-danger {
 
 .btn-default {
     color: $background-color;
-    background-color: #b6b6b7;
+    background-color: $main-red;
     border-color: #ccc;
     border: 1px solid;
     border-radius: 6px;
@@ -560,9 +582,9 @@ section#contact .text-danger {
 
 // ----------------------------------
 
-.item-title a{font-size:20px;word-break:break-all;margin-top: 10px; margin-left: 10px; color:grey;line-height: 30px;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2; }
+.item-title a{font-size:21px; font-weight: bold; word-break:break-all;margin-top: 10px; margin-left: 10px; color:grey;line-height: 30px;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2; }
 .item-title a:hover{
-    font-size:20px;word-break:break-all;color:red;line-height: 30px;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2;
+    font-size:21px;word-break:break-all;color:red;line-height: 30px;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2;
 }
 
 
@@ -594,7 +616,7 @@ section#contact .text-danger {
 
 .main-content{position:relative;margin:0 auto;-webkit-animation:fade-in .5s;animation:fade-in;animation-duration:.5s;}
 .archive-page{padding:20px 20px 40px;}
-.archive-page .categorys-title{font-size:21px;position:relative;margin-top:43px;color:$highlight-color;text-decoration: underline;text-transform: uppercase;}
+.archive-page .categorys-title{font-size:24px;position:relative;margin-top:43px;font-weight: bold; color:$highlight-color;text-decoration: underline;text-transform: uppercase;}
 // .archive-page .categorys-title a{color:#5f5f5f;}
 // .archive-page .categorys-title::before{position:absolute;top:0;left:-15px;padding:0 30px;content:'#';color:#eb5055;}
 .archive-page .post-list-item-container{margin-top: 16px; border:1px solid rgba(184,197,214,.5);border-radius:3px;background:$grey-background-color;-webkit-box-shadow:0 1px 4px rgba(0,0,0,.04);box-shadow:0 1px 4px rgba(0,0,0,.04);border-radius: .6rem;}

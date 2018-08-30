@@ -24,11 +24,11 @@ layout: default
 				</div>
 						<div>
 							<div class="item-title">
-								<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" title="visit {{ post.title }}">{{ post.title }}</a>
+								<a class="item-title" href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" title="visit {{ post.title }}"><b>{{ post.title }}</b></a>
               </div>
 							<div class="item-meta clearfix">
 								<div class="item-meta-date">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.date | date: "%F %H:%M:%S "}}&nbsp;&nbsp; <a class="content" href="{{ site.tagurl | prepend: site.baseurl | append: '#' | append: post.categories[0] }}"  data-hover="{{ post.categories }}">{{ post.categories[0] }} </a><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">【more】</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.date | date: "%F"}}&nbsp;&nbsp;&nbsp;&nbsp;  <span class="tag-title">{{ post.tag }} </span>&nbsp;&nbsp;&nbsp;&nbsp;<a class="content" href="{{ site.tagurl | prepend: site.baseurl | append: '#' | append: post.categories[0] }}"  data-hover="{{ post.categories }}">{{ post.categories[0] }} </a>&nbsp;&nbsp;&nbsp;<a class="content" href="{{ site.tagurl | prepend: site.baseurl | append: '#' | append: post.categories[1] }}"  data-hover="{{ post.categories }}">{{ post.categories[1] }} </a> &nbsp;&nbsp;&nbsp;<a class="content" href="{{ site.tagurl | prepend: site.baseurl | append: '#' | append: post.categories[2] }}"  data-hover="{{ post.categories }}">{{ post.categories[2] }} </a> &nbsp;&nbsp;<a class="tag-title" href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">... </a>
                 </div>
 							</div>
 						</div>

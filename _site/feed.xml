@@ -5,8 +5,8 @@
     <description>A simple blog of ml technical sharings</description>
     <link>http://localhost:4000/dsm/</link>
     <atom:link href="http://localhost:4000/dsm/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Aug 2018 17:47:15 +0200</pubDate>
-    <lastBuildDate>Sat, 25 Aug 2018 17:47:15 +0200</lastBuildDate>
+    <pubDate>Thu, 30 Aug 2018 13:03:20 +0200</pubDate>
+    <lastBuildDate>Thu, 30 Aug 2018 13:03:20 +0200</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
@@ -24,27 +24,22 @@
       </item>
     
       <item>
-        <title>Code Syntax</title>
-        <description>&lt;p&gt;To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the &lt;a href=&quot;http://jekyllrb.com/docs/templates/#code-snippet-highlighting&quot;&gt;Jekyll documentation&lt;/a&gt;. In this way the code will be included into a &lt;code class=&quot;highlighter-rouge&quot;&gt;.highlight&lt;/code&gt; CSS class and will be highlight according to the &lt;a href=&quot;https://github.com/mojombo/tpw/blob/master/css/syntax.css&quot;&gt;syntax.scss&lt;/a&gt; file. This is the standard style adopted by &lt;strong&gt;Github&lt;/strong&gt; to highlight the code.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;body {
-  background-color: #fff;
-  }
-
-h1 {
-  color: #ffaa33;
-  font-size: 1.5em;
-  }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
+        <title>Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</title>
+        <description>&lt;h3 id=&quot;1-a-ssl-certificate-verify-error&quot;&gt;1. A SSL Certificate Verify Error&lt;/h3&gt; &lt;p&gt;If you are the first time to create a crawler which on the way to read contents of some websites, the Python IDLE probably could alert an error, named SSL: CERTIFICATE_VERIFY_FAILED, look like this:&lt;/p&gt; &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://www.wikipedia.com&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the_http&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;p&gt;and you must got the problem of unable to get local issuer certificate (ssl.c:1045)&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/dsm/img/20150301/Error-Screen.png&quot; alt=&quot;SSL_Certificate&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;2-python-ssl-class&quot;&gt;2. Python SSL Class&lt;/h3&gt; &lt;p&gt;&lt;img src=&quot;/dsm/img/20150301/SSL-Certificate-Image.jpeg&quot; alt=&quot;SSL_Certificate&quot; /&gt;&lt;/p&gt; &lt;p&gt;To check this problem,...</description>
         <pubDate>Sun, 01 Mar 2015 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/dsm/code-syntax</link>
         <guid isPermaLink="true">http://localhost:4000/dsm/code-syntax</guid>
         
+        <category>SSL of Python</category>
         
-        <category>aaa</category>
         
-        <category>ppo</category>
+        <category>SSL</category>
+        
+        <category>Crawler</category>
+        
+        <category>Python</category>
+        
+        <category>urllib</category>
         
       </item>
     

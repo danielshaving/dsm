@@ -14,7 +14,7 @@ html { background-color: #FFFFFF; font-size: 16px; line-height: 1.5; color: #222
 @media (min-width: 940px) { html { font-size: 18px; } }
 
 /*- Link -*/
-a { color: #659cd5; text-decoration: none; font-weight: 700; }
+a { color: #c66161; text-decoration: none; font-weight: lighter; }
 a:hover, a:focus { color: #518fd0; }
 
 /*- Typography -*/
@@ -23,13 +23,13 @@ body { font-family: 'Source Sans Pro', sans-serif; letter-spacing: 0.01em; }
 /*- Typography for medium and small screen, based on 16px font-size -*/
 p, ul, ol { font-size: 1em; /* 16px */ line-height: 1.5em; /* 24px/16px */ margin-bottom: 1.5em; /* 24px/16px */ }
 
-h1 { font-size: 2.45em; /* 36px/16px */ line-height: 1.9em; /* 48px/36px */ padding: 0.33335em 0; /* 12px/36px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ margin-bottom: 20px; }
+h1 { font-size: 2.8em; /* 36px/16px */ line-height: 1.9em; /* 48px/36px */ padding: 0.33335em 0; /* 12px/36px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ margin-bottom: 20px; padding-bottom: 2em; }
 
 h2 { font-size: 2.3em; /* 24px/16px */ line-height: 1.8em; /* 24px/24px */ padding: 1em 0 0 0; /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */ }
 
-h3, h4, h5, h6 { font-size: 1.325em; /* 18px/16px */ color: #659cd5; line-height: 1.1em; /* 24px/18px */ margin-top: 14px; margin-bottom: 14px; padding-bottom: 2px; border-bottom: dashed 1px; border-bottom-color: linear-gradient(90deg, #659cd5, white, white); padding: 0.66667em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
+h3, h4, h5, h6 { font-size: 1.325em; /* 18px/16px */ color: #659cd5; line-height: 1.1em; /* 24px/18px */ margin-top: 32px; margin-bottom: 14px; padding-bottom: 2px; border-bottom: dashed 1px; border-bottom-color: linear-gradient(90deg, #659cd5, white, white); padding: 0.66667em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
 
-blockquote { font-style: italic; margin: 1.5em; /* 24px/18px */ -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; background-color: #f2f2f2; padding: 0 1.5em; /* 24px/18px */ }
+blockquote { font-style: italic; margin: 1.5em; /* 24px/18px */ -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; background-color: #eef1f3; padding: 0 1.5em; /* 24px/18px */ }
 blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 
 /*- Typography for big screen, based on 18px font-size -*/
@@ -37,7 +37,7 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
   h1 { font-size: 2.6667em; /* 48px/18px */ line-height: 1em; /* 48px/48px */ padding: 0.25em 0; /* 12px/48px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
   h2 { font-size: 2em; /* 36px/18px */ line-height: 1.3334em; /* 48px/36px */ padding: 0.66667em 0 0 0; /* 12px/36px * 2, pnly top (Use padding instead of margin to maintain proximity with paragraph) */ }
   h3, h4, h5, h6 { font-size: 1.3334em; /* 24px/18px */ line-height: 1em; /* 24px/24px */ padding: 0.5em 0; /* 12px/24px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
-  blockquote { font-style: italic; margin: 1.3334em; /* 24px/18px */ -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; background-color: #f2f2f2; padding: 0 1.33334em; /* 24px/18px */ }
+  blockquote { font-style: italic; font-size: 16px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; border-left: 3px solid; border-image: linear-gradient(#FFFFFF, #659cd5, #0073aa, #659cd5, #FFFFFF) 10; border-left-width: 3px; border-right: none; height: auto; background-color: #eef1f3; padding: 0 1.33334em; /* 24px/18px */ }
   blockquote p, blockquote ul, blockquote ol { padding: 1.33334em 0; /* 24px/18px */ } }
 /* -- General Layout -- */
 /* Navigation */
@@ -85,8 +85,12 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 #header h1 { font-family: 'Signika', sans-serif; font-weight: 600; }
 #header:after { display: block; content: ''; width: 5rem; height: 1px; margin: 23px auto; background-color: #d5d5d5; }
 
+.index-img { width: 100%; min-height: 60px; max-height: 100px; object-fit: cover; }
+
+.index-content { font-family: 'Signika', sans-serif; font-size: 22px; }
+
 /* Posts */
-#posts li { list-style-type: none; }
+#posts li { list-style-type: none; border-bottom: #eef1f3 1.5px solid; padding-bottom: 1.7em; }
 
 #post-page { margin-bottom: 1.5em; }
 @media (min-width: 940px) { #post-page { margin-bottom: 2.3334em; } }
@@ -103,12 +107,10 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 
 #disqus_thread { margin: 0.5em; padding: 1.33em; margin-top: 4.2em; border-top-style: ridge; border-top-color: #659cd5; background: linear-gradient(70deg, #FFFFFF, #9babbb, #659cd5, #9babbb, #FFFFFF); }
 
-.post-div { box-shadow: 3px, 3px, 3px, #222222; }
-
-.post + .post:before { display: block; content: ''; width: 5rem; height: 1px; margin: 23px auto; background-color: #d5d5d5; }
-
 .by-line { display: inline; color: #626262; line-height: 0.3em; /* 24px/16px */ margin-bottom: 0em; /* 24px/16px */ font-weight: 200; }
 @media (min-width: 940px) { .by-line { display: block; color: #626262; line-height: 1.3334em; /* 24px/18px */ margin-bottom: 1.3334em; /* 24px/18px */ font-weight: 200; } }
+
+.tag-title { font-weight: bold; color: #6977a1; background-color: #eef1f3; border-radius: 3px 3px 3px; font-family: "Gill Sans", sans-serif; }
 
 .card-header-title { color: #699fd6; line-height: 1.5em; /* 24px/16px */ margin-bottom: 1.5em; /* 24px/16px */ font-weight: 200; display: inline; margin-top: 0; border-top: 0; }
 
@@ -163,7 +165,7 @@ section#contact .text-danger { color: #e74c3c; }
 .btn-contact:hover { background: #0073aa; }
 
 /*btn*/
-.btn-default { color: #FFFFFF; background-color: #b6b6b7; border-color: #ccc; border: 1px solid; border-radius: 6px; border-style: groove; padding: 0.3em; font-weight: lighter; }
+.btn-default { color: #FFFFFF; background-color: #c66161; border-color: #ccc; border: 1px solid; border-radius: 6px; border-style: groove; padding: 0.3em; font-weight: lighter; }
 
 .btn-default:hover { background-color: #0073aa; }
 
@@ -172,9 +174,9 @@ section#contact .text-danger { color: #e74c3c; }
 @media (max-width: 650px) { .btn-default-in-Tags { font-size: 17px; padding: 2.5px; border: 1px solid; } }
 .avatar { fill: #fff; width: 50px; height: auto; margin-top: 20px; }
 
-.item-title a { font-size: 20px; word-break: break-all; margin-top: 10px; margin-left: 10px; color: grey; line-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.item-title a { font-size: 21px; font-weight: bold; word-break: break-all; margin-top: 10px; margin-left: 10px; color: grey; line-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 
-.item-title a:hover { font-size: 20px; word-break: break-all; color: red; line-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.item-title a:hover { font-size: 21px; word-break: break-all; color: red; line-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 
 .item-title a::before { color: #659cd5; content: attr(data-hover); position: absolute; outline: 0; white-space: nowrap; opacity: 0; text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); -webkit-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg); -moz-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg); transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg); -webkit-transition: -webkit-transform 0.3s, opacity 0.3s; -moz-transition: -moz-transform 0.3s, opacity 0.3s; transition: transform 0.3s, opacity 0.3s; }
 
@@ -184,7 +186,7 @@ section#contact .text-danger { color: #e74c3c; }
 
 .archive-page { padding: 20px 20px 40px; }
 
-.archive-page .categorys-title { font-size: 21px; position: relative; margin-top: 43px; color: #0073aa; text-decoration: underline; text-transform: uppercase; }
+.archive-page .categorys-title { font-size: 24px; position: relative; margin-top: 43px; font-weight: bold; color: #0073aa; text-decoration: underline; text-transform: uppercase; }
 
 .archive-page .post-list-item-container { margin-top: 16px; border: 1px solid rgba(184, 197, 214, 0.5); border-radius: 3px; background: #eef1f3; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); border-radius: .6rem; }
 

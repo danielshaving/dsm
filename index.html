@@ -1,13 +1,12 @@
 ---
 layout: default
 ---
+
+
 <style>
 .card-header-avatar{
 		margin-right: 12px;
 }
-
-
-
 </style>
 
 <!-- Posts -->
@@ -18,18 +17,22 @@ layout: default
 	  <li class="post">
 	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
       <!-- <a class="post-categories" href="{{ "/category" | prepend: site.baseurl }}/{{post.categories}}.html">{{post.categories}}</a> -->
-<div style="display:inline">
+			<div style="display:inline">
 			<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> Posted on {{ post.date | date_to_string }}&nbsp;&nbsp;by
-      <a class="card-header-title" href="/dsm/about">&nbsp;{{site.author.name}}</a><span>&nbsp;&nbsp;in&nbsp;</span>
-			<a class="card-header-title" href="{{ site.tagurl | prepend: site.baseurl }}">{{post.categories[0]}}</a>
+      <a class="tag-title" href="/dsm/about">&nbsp;{{site.author.name}}</a><span>&nbsp;&nbsp;in&nbsp;</span>
+			<span class="tag-title" >{{post.tag}}</a>
 
 		</time>
 
 
-</div>
+		</div>
 
 			<!-- <img class="card-header-avatar" src="{{site.author.avatar}}" /> -->
-			<p class="content">{{ post.content | strip_html | truncatewords:50 }}</p>
+			{% if post.titleimg and post.abstract %}
+				<img class="index-img" src="{{post.titleimg}}" />
+				<p class="index-content">{{ post.abstract | strip_html | truncatewords:50 }}<a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" data-hover="{{ post.title }}">【read】</a></p>
+			{% endif %}
+
 	  </li>
 
     {% endfor %}

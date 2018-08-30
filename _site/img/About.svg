@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="960px" height="960px" viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
+	 viewBox="0 0 960 960" style="enable-background:new 0 0 960 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#BAD9F9;stroke:#000000;stroke-width:20;stroke-miterlimit:10;}
+	.st1{fill:#C66161;}
+	.st2{font-family:'TamilMN';}
+	.st3{font-size:247.0266px;}
+</style>
 <g>
 	<g>
-		<path fill="#ab3d3d" d="M480,343.092c79.311,0,143.611-75.258,143.611-168.093C623.611,46.262,559.313,6.907,480,6.907
-			c-79.317,0-143.613,39.355-143.613,168.092C336.389,267.833,400.685,343.092,480,343.092z"/>
-		<path fill="#ab3d3d" d="M797.129,590.504l-72.458-163.218c-3.31-7.468-9.137-13.663-16.381-17.436l-112.445-58.537
-			c-2.481-1.287-5.482-1.035-7.712,0.65c-31.804,24.055-69.197,36.77-108.133,36.77c-38.944,0-76.333-12.714-108.137-36.77
-			c-2.235-1.688-5.238-1.937-7.716-0.65l-112.438,58.537c-7.249,3.772-13.065,9.964-16.382,17.436l-72.455,163.218
-			c-4.995,11.252-3.971,24.125,2.74,34.446c6.708,10.32,18.06,16.479,30.368,16.479h568.036c12.308,0,23.664-6.161,30.373-16.48
-			S802.124,601.75,797.129,590.504z"/>
+		<path class="st0" d="M480,343.1c79.3,0,143.6-75.3,143.6-168.1C623.6,46.3,559.3,6.9,480,6.9c-79.3,0-143.6,39.4-143.6,168.1
+			C336.4,267.8,400.7,343.1,480,343.1z"/>
+		<path class="st0" d="M797.1,590.5l-72.5-163.2c-3.3-7.5-9.1-13.7-16.4-17.4l-112.4-58.5c-2.5-1.3-5.5-1-7.7,0.6
+			c-31.8,24.1-69.2,36.8-108.1,36.8c-38.9,0-76.3-12.7-108.1-36.8c-2.2-1.7-5.2-1.9-7.7-0.6l-112.4,58.5c-7.2,3.8-13.1,10-16.4,17.4
+			l-72.5,163.2c-5,11.3-4,24.1,2.7,34.4c6.7,10.3,18.1,16.5,30.4,16.5h568c12.3,0,23.7-6.2,30.4-16.5S802.1,601.8,797.1,590.5z"/>
 	</g>
 </g>
-<text transform="matrix(1 0 0 1 123.501 875.4971)" fill="#ab3d3d" font-family="'TamilMN'" font-size="247.0266">About</text>
+<text transform="matrix(1 0 0 1 123.501 875.4971)" class="st1 st2 st3">About</text>
 </svg>

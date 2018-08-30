@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="/dsm/css/highlight/styles/gruvbox-dark.css">
 	<script src="/dsm/css/highlight/highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
-
+	<script src="/dsm/js/main.js"></script>
 
 	<!-- RSS -->
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
@@ -162,9 +162,6 @@
 .card-header-avatar{
 		margin-right: 12px;
 }
-
-
-
 </style>
 
 <!-- Posts -->
@@ -175,37 +172,42 @@
 	  <li class="post">
 	  	<h2><a href="/dsm/typography">插入排序</a></h2>
       <!-- <a class="post-categories" href="/dsm/category/machine_learningmath.html">machine_learningmath</a> -->
-<div style="display:inline">
+			<div style="display:inline">
 			<time datetime="2015-03-19T00:00:00+01:00" class="by-line"> Posted on 19 Mar 2015&nbsp;&nbsp;by
-      <a class="card-header-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-			<a class="card-header-title" href="/dsm/tags.html">machine_learning</a>
+      <a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
+			<span class="tag-title" ></a>
 
 		</time>
 
 
-</div>
+		</div>
 
 			<!-- <img class="card-header-avatar" src="https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" /> -->
-			<p class="content">首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格： 对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。 知识点小记3 使用sizeof(nums)/sizeof(nums[0])获得数组的长度； 数组作为参数有两种方法，一种是以数组名本身，一种是以指针； 如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小； 简单插入排序 直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。 实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。 设数组为a[0…n-1]。 初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1 将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。 i++，并重复第二步直到i==n-1。 简单插入排序方法实现： //insert sort void insertSort(int nums[], int n){ for(int i=1;i&lt;n;i++){ int temp = nums[i]; int j=i-1; while(nums[j]&gt;temp &amp;&amp; j&gt;=0){ nums[j+1] = nums[j]; j--; } nums[j+1] = temp; } } 下面是一个完整的例子： 简单插入排序最坏和平均时间复杂度都为O(n2),空间复杂度为O(1)，最好的时间复杂度为O(n).属于稳定的排序算法。 希尔排序 希尔排序思路：先将整个待排元素序列分割成若干个子序列（由相隔某个“增量”的元素组成的）分别进行直接插入排序，然后依次缩减增量再进行排序，待整个序列中的元素基本有序（增量足够小）时，再对全体元素进行一次直接插入排序。因为直接插入排序在元素基本有序的情况下（接近最好情况），效率是很高的，因此希尔排序在时间效率上比前两种方法有较大提高。 希尔排序方法： void shellSort(int...</p>
+			
+
 	  </li>
 
     
 
 	  <li class="post">
-	  	<h2><a href="/dsm/code-syntax">Code Syntax</a></h2>
-      <!-- <a class="post-categories" href="/dsm/category/aaappo.html">aaappo</a> -->
-<div style="display:inline">
+	  	<h2><a href="/dsm/code-syntax">Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</a></h2>
+      <!-- <a class="post-categories" href="/dsm/category/SSLCrawlerPythonurllib.html">SSLCrawlerPythonurllib</a> -->
+			<div style="display:inline">
 			<time datetime="2015-03-01T00:00:00+01:00" class="by-line"> Posted on 01 Mar 2015&nbsp;&nbsp;by
-      <a class="card-header-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-			<a class="card-header-title" href="/dsm/tags.html">aaa</a>
+      <a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
+			<span class="tag-title" >SSL of Python</a>
 
 		</time>
 
 
-</div>
+		</div>
 
 			<!-- <img class="card-header-avatar" src="https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" /> -->
-			<p class="content">To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the Jekyll documentation. In this way the code will be included into a .highlight CSS class and will be highlight according to the syntax.scss file. This is the standard style adopted...</p>
+			
+				<img class="index-img" src="/dsm/img/20150301/SSL-Certificate-Image.jpeg" />
+				<p class="index-content">This article is to solve an SSL CERTIFICATE_VERIFY_FAILED Error when you tried to read a peer content from another website.<a href="/dsm/code-syntax" data-hover="Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error">【read】</a></p>
+			
+
 	  </li>
 
     
@@ -213,18 +215,19 @@
 	  <li class="post">
 	  	<h2><a href="/dsm/example-9">Example 8</a></h2>
       <!-- <a class="post-categories" href="/dsm/category/ls.html">ls</a> -->
-<div style="display:inline">
+			<div style="display:inline">
 			<time datetime="2015-02-15T00:00:00+01:00" class="by-line"> Posted on 15 Feb 2015&nbsp;&nbsp;by
-      <a class="card-header-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-			<a class="card-header-title" href="/dsm/tags.html">ls</a>
+      <a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
+			<span class="tag-title" ></a>
 
 		</time>
 
 
-</div>
+		</div>
 
 			<!-- <img class="card-header-avatar" src="https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" /> -->
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</p>
+			
+
 	  </li>
 
     
@@ -232,18 +235,19 @@
 	  <li class="post">
 	  	<h2><a href="/dsm/example-8">Example 8</a></h2>
       <!-- <a class="post-categories" href="/dsm/category/pppppo.html">pppppo</a> -->
-<div style="display:inline">
+			<div style="display:inline">
 			<time datetime="2015-02-15T00:00:00+01:00" class="by-line"> Posted on 15 Feb 2015&nbsp;&nbsp;by
-      <a class="card-header-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-			<a class="card-header-title" href="/dsm/tags.html">ppp</a>
+      <a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
+			<span class="tag-title" ></a>
 
 		</time>
 
 
-</div>
+		</div>
 
 			<!-- <img class="card-header-avatar" src="https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" /> -->
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</p>
+			
+
 	  </li>
 
     
@@ -251,18 +255,19 @@
 	  <li class="post">
 	  	<h2><a href="/dsm/example-7">Example 7</a></h2>
       <!-- <a class="post-categories" href="/dsm/category/math.html">math</a> -->
-<div style="display:inline">
+			<div style="display:inline">
 			<time datetime="2015-02-15T00:00:00+01:00" class="by-line"> Posted on 15 Feb 2015&nbsp;&nbsp;by
-      <a class="card-header-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-			<a class="card-header-title" href="/dsm/tags.html">math</a>
+      <a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
+			<span class="tag-title" ></a>
 
 		</time>
 
 
-</div>
+		</div>
 
 			<!-- <img class="card-header-avatar" src="https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" /> -->
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</p>
+			
+
 	  </li>
 
     
@@ -270,18 +275,19 @@
 	  <li class="post">
 	  	<h2><a href="/dsm/example-6">Example 6</a></h2>
       <!-- <a class="post-categories" href="/dsm/category/ppp.html">ppp</a> -->
-<div style="display:inline">
+			<div style="display:inline">
 			<time datetime="2015-02-15T00:00:00+01:00" class="by-line"> Posted on 15 Feb 2015&nbsp;&nbsp;by
-      <a class="card-header-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-			<a class="card-header-title" href="/dsm/tags.html">ppp</a>
+      <a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
+			<span class="tag-title" ></a>
 
 		</time>
 
 
-</div>
+		</div>
 
 			<!-- <img class="card-header-avatar" src="https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" /> -->
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</p>
+			
+
 	  </li>
 
     
@@ -289,18 +295,19 @@
 	  <li class="post">
 	  	<h2><a href="/dsm/example-5">Example 5</a></h2>
       <!-- <a class="post-categories" href="/dsm/category/aaa.html">aaa</a> -->
-<div style="display:inline">
+			<div style="display:inline">
 			<time datetime="2015-02-15T00:00:00+01:00" class="by-line"> Posted on 15 Feb 2015&nbsp;&nbsp;by
-      <a class="card-header-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-			<a class="card-header-title" href="/dsm/tags.html">aaa</a>
+      <a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
+			<span class="tag-title" ></a>
 
 		</time>
 
 
-</div>
+		</div>
 
 			<!-- <img class="card-header-avatar" src="https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" /> -->
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</p>
+			
+
 	  </li>
 
     
@@ -308,18 +315,19 @@
 	  <li class="post">
 	  	<h2><a href="/dsm/example-4">Example 4</a></h2>
       <!-- <a class="post-categories" href="/dsm/category/lsmath.html">lsmath</a> -->
-<div style="display:inline">
+			<div style="display:inline">
 			<time datetime="2015-02-15T00:00:00+01:00" class="by-line"> Posted on 15 Feb 2015&nbsp;&nbsp;by
-      <a class="card-header-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-			<a class="card-header-title" href="/dsm/tags.html">ls</a>
+      <a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
+			<span class="tag-title" ></a>
 
 		</time>
 
 
-</div>
+		</div>
 
 			<!-- <img class="card-header-avatar" src="https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" /> -->
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</p>
+			
+
 	  </li>
 
     
@@ -401,7 +409,7 @@
 
     
 
-      <span class="feed"><a href="/code-syntax" title="访问 Code Syntax" data-hover="Code Syntax">Code Syntax</a></span>
+      <span class="feed"><a href="/code-syntax" title="访问 Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error" data-hover="Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error">Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</a></span>
 
     
 

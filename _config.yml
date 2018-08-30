@@ -21,6 +21,7 @@ permalink: /:title
 paginate: 8
 paginate_path: /page:num/
 avatar: /dsm/img/dsm.svg
+altimg: /dsm/img/alt-img.jpg
 
 # Default values
 defaults:

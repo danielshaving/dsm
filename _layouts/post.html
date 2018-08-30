@@ -1,18 +1,29 @@
 ---
 layout: default
 ---
-{% include svg-icons.html %}
-{% include head.html %}
+
 
 <script src="//cdn.bootcss.com/highlightjs-line-numbers.js/1.1.0/highlightjs-line-numbers.min.js"></script>
 <script>hljs.initLineNumbersOnLoad();</script>
 
 <article id="post-page">
-	<h2>{{ page.title }}</h2>
+	<h1>{{ page.title }}</h1>
+	<div></div>
 	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}
-		<a class="card-header-title" href="/dsm/about">&nbsp;{{site.author.name}}</a><span>&nbsp;&nbsp;in&nbsp;</span>
-		<a class="card-header-title" href="{{ "/category" | prepend: site.baseurl }}/{{page.categories}}.html">{{page.categories[0]}}</a>
+		<a class="tag-title" href="/dsm/about">&nbsp;{{site.author.name}}</a><span>&nbsp;&nbsp;in&nbsp;</span>
+		<span class="tag-title">{{page.tag}}</span>
 	</time>
+
+	<div class="tags">
+			{% if page.categories != null %}
+			<a href = "{{ site.tagurl | prepend: site.baseurl}}"><b> Tags: </b></a>
+	   {% for tag in page.categories %}
+			<a href="{{ site.tagurl | prepend: site.baseurl | append: '#' | append: tag}}" class="btn-default">{{tag}}</a>
+	    {% endfor %}
+			{% endif %}
+	</div>
+
+
 	<div class="content">
 
 		{{ content }}
@@ -31,6 +42,7 @@ layout: default
     {% endfor %}
 		{% endif %}
 </div>
+
 
 <div class="PageNavigation">
 

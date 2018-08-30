@@ -38,6 +38,8 @@ function menuClick() {
 	}
 }
 
+
+
 // $(document).ready(function(){
 // 	var verticalLine = $(".vertical-line");
 // 	var height = $(".row-fluid").height();
