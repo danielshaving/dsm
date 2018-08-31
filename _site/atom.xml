@@ -4,7 +4,7 @@
  <title>Dsm | A simple blog of ml technical sharings</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-08-30T21:20:39+02:00</updated>
+ <updated>2018-08-31T20:58:11+02:00</updated>
  <author>
    <name>Daniel Liu</name>
    <uri>http://www.danielshaving.com</uri>
@@ -34,36 +34,6 @@
  
 
  <entry>
-   <title>Example 8</title>
-   <link href="http://localhost:4000/example-9"/>
-   <id>http://localhost:4000/example-9</id>
-   <updated>2015-02-15T00:00:00+01:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Example 8</title>
-   <link href="http://localhost:4000/example-8"/>
-   <id>http://localhost:4000/example-8</id>
-   <updated>2015-02-15T00:00:00+01:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Example 7</title>
-   <link href="http://localhost:4000/example-7"/>
-   <id>http://localhost:4000/example-7</id>
-   <updated>2015-02-15T00:00:00+01:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
    <title>Example 6</title>
    <link href="http://localhost:4000/example-6"/>
    <id>http://localhost:4000/example-6</id>
@@ -74,41 +44,11 @@
  
 
  <entry>
-   <title>Example 5</title>
-   <link href="http://localhost:4000/example-5"/>
-   <id>http://localhost:4000/example-5</id>
-   <updated>2015-02-15T00:00:00+01:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Example 4</title>
-   <link href="http://localhost:4000/example-4"/>
-   <id>http://localhost:4000/example-4</id>
-   <updated>2015-02-15T00:00:00+01:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Example 3</title>
-   <link href="http://localhost:4000/example-3"/>
-   <id>http://localhost:4000/example-3</id>
-   <updated>2015-02-15T00:00:00+01:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Example 2</title>
-   <link href="http://localhost:4000/example-2"/>
-   <id>http://localhost:4000/example-2</id>
-   <updated>2015-02-15T00:00:00+01:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
+   <title>Using iOS CoreMotion to call gyroscope and accelerometer</title>
+   <link href="http://localhost:4000/Using-iOS-CoreMotion-to-call-gyroscope-and-accelerometer"/>
+   <id>http://localhost:4000/Using iOS CoreMotion to call gyroscope and accelerometer</id>
+   <updated>2014-10-19T00:00:00+02:00</updated>
+   <content type="html">&lt;h3 id=&quot;1-coremotion-framework&quot;&gt;1. CoreMotion Framework&lt;/h3&gt; &lt;p&gt;Core Motion reports motion- and environment-related data from the onboard hardware of iOS devices, including from the accelerometers and gyroscopes, and from the pedometer, magnetometer, and barometer. You use this framework to access hardware-generated data so that you can use it in your app. For example,...</content>
  </entry>
 
  

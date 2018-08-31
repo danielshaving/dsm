@@ -90,7 +90,7 @@ blockquote p, blockquote ul, blockquote ol { padding: 1.5em 0; /* 24px/18px */ }
 .index-content { font-family: 'Signika', sans-serif; font-size: 22px; }
 
 /* Posts */
-#posts li { list-style-type: none; border-bottom: #eef1f3 1.5px solid; padding-bottom: 1.7em; }
+#posts li { list-style-type: none; border-bottom: #eef1f3 2.9px solid; padding-bottom: 1.7em; }
 
 #post-page { margin-bottom: 1.5em; }
 @media (min-width: 940px) { #post-page { margin-bottom: 2.3334em; } }
@@ -171,7 +171,8 @@ section#contact .text-danger { color: #e74c3c; }
 
 .btn-default-in-Tags { color: #FFFFFF; background-color: #659cd5; font-size: 21px; padding: 7px; margin: auto; border-color: #ccc; height: auto; border: 2px solid; border-radius: 6px; border-style: groove; font-weight: lighter; }
 
-@media (max-width: 650px) { .btn-default-in-Tags { font-size: 17px; padding: 2.5px; border: 1px solid; } }
+@media (max-width: 650px) { .btn-default-in-Tags { font-size: 17px; padding: 2.5px; border: 1px solid; }
+  h2 { font-size: 1.6em; line-height: auto; } }
 .avatar { fill: #fff; width: 50px; height: auto; margin-top: 20px; }
 
 .item-title a { font-size: 21px; font-weight: bold; word-break: break-all; margin-top: 10px; margin-left: 10px; color: grey; line-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
@@ -204,7 +205,7 @@ section#contact .text-danger { color: #e74c3c; }
 
 .post-list-item-container:hover { -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07); border-radius: .6rem; }
 
-.verticalLine { border: 3px solid; border-image: linear-gradient(#FFFFFF, #659cd5, #0073aa, #659cd5, #FFFFFF) 10; border-left-width: 3px; border-right: none; height: auto; }
+.verticalLine { border: 3px solid; border-image: linear-gradient(#FFFFFF, #659cd5, #0073aa, #659cd5, #FFFFFF) 10; border-left-width: 3px; border-right: none; border-top: none; border-bottom: none; height: auto; }
 
 /* ========================================================================== #reponse ========================================================================== */
 /* A Github stylesheet to highlight code snippet https://github.com/mojombo/tpw/blob/master/css/syntax.css */

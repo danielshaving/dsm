@@ -170,7 +170,7 @@
 #posts {
   li {
     list-style-type: none;
-    border-bottom: $grey-background-color 1.5px solid;
+    border-bottom: $grey-background-color 2.9px solid;
     padding-bottom: 1.7em;
 
   }
@@ -568,8 +568,10 @@ section#contact .text-danger {
 
 @media(max-width:650px){
   .btn-default-in-Tags {font-size: 17px;padding: 2.5px;border: 1px solid;}
-}
 
+h2 { font-size: 1.6em; line-height: auto; }
+
+}
 
 
 .avatar{
@@ -629,7 +631,7 @@ section#contact .text-danger {
 .post-title{font-size:21px;}
 .post-list-item-container:hover{-webkit-box-shadow: 0 15px 30px rgba(0,0,0,.07);box-shadow:0 15px 30px rgba(0,0,0,.07);border-radius: .6rem;}
 
-.verticalLine {border: 3px solid; border-image: linear-gradient($background-color, $main-color, $highlight-color,$main-color,$background-color) 10; border-left-width: 3px; border-right: none; height: auto;}
+.verticalLine {border: 3px solid; border-image: linear-gradient($background-color, $main-color, $highlight-color,$main-color,$background-color) 10; border-left-width: 3px; border-right: none; border-top: none;border-bottom: none;height: auto;}
 
 
 // .post-list-item-container .item-thumb{position:relative;display:inherit;min-height:250px;-webkit-transition:-webkit-transform 500ms ease,filter 500ms ease;-moz-transition:-moz-transform 500ms ease,filter 500ms ease;transition:transform 500ms ease,filter 500ms ease;background-position:50% 50%;background-size:cover;}
