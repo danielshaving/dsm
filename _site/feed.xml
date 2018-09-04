@@ -5,8 +5,8 @@
     <description>A simple blog of ml technical sharings</description>
     <link>http://localhost:4000/dsm/</link>
     <atom:link href="http://localhost:4000/dsm/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 31 Aug 2018 21:01:11 +0200</pubDate>
-    <lastBuildDate>Fri, 31 Aug 2018 21:01:11 +0200</lastBuildDate>
+    <pubDate>Tue, 04 Sep 2018 22:07:35 +0200</pubDate>
+    <lastBuildDate>Tue, 04 Sep 2018 22:07:35 +0200</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
