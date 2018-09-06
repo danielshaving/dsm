@@ -1,6 +1,26 @@
 ---
 layout: default
 ---
+<style>
+
+
+</style>
+<div style="margin-top: 45px">
+
+  {% assign tags = site.categories | sort %}
+  {% for tag in tags %}
+
+   <span class="site-tag">
+      <a href="#{{tag[0]}}"
+          style="font-size: {{ tag | last | size  |  times: 30 | plus: 55  }}%">
+
+              {{ tag[0] | replace:'_', ' ' }}({{ tag | last | size }})
+
+
+      </a>
+  </span>
+  {% endfor %}
+</div>
 
 
 
@@ -10,11 +30,7 @@ layout: default
 
 <!-- make tags -->
 
-{% for item in (0..tags_list.size)%}{%unless forloop.last %}
-{% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-	<a class="btn-default-in-Tags" href="#{{ this_word }}"><span>{{ this_word }} <b>({{ site.categories[this_word].size }})</b></span></a>
 
-{% endunless %}{% endfor %}
 
 
 
@@ -64,6 +80,14 @@ layout: default
  {% endunless %}{% endfor %}
 
 
+
+<div style="margin-top: 50px">
+  {% for item in (0..tags_list.size)%}{%unless forloop.last %}
+  {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+	   <a class="btn-default-in-Tags" href="#{{ this_word }}"><span>{{ this_word }} <b>({{ site.categories[this_word].size }})</b></span></a>
+
+  {% endunless %}{% endfor %}
+</div>
 
     <!-- <h3 class="post-title" itemprop="name headline">标签分类的博文--点击自动查找相应`Tags`</h3>
 											 <div class="post-data">

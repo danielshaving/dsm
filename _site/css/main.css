@@ -207,6 +207,8 @@ section#contact .text-danger { color: #e74c3c; }
 
 .verticalLine { border: 3px solid; border-image: linear-gradient(#FFFFFF, #659cd5, #0073aa, #659cd5, #FFFFFF) 10; border-left-width: 3px; border-right: none; border-top: none; border-bottom: none; height: auto; }
 
+.site-tag a { display: inline-block; margin-right: 2px; font-weight: bold; margin-top: 0px; line-height: 0; font-family: 'Comic Sans MS'; color: #0073aa; }
+
 /* ========================================================================== #reponse ========================================================================== */
 /* A Github stylesheet to highlight code snippet https://github.com/mojombo/tpw/blob/master/css/syntax.css */
 .lineno { color: #bfbfbf; margin-right: 1em; }
