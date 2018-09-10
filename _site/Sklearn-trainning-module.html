@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>插入排序</title>
+	<title>Sklearn trainning module</title>
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/dsm/css/main.css">
@@ -160,20 +160,20 @@
 <script>hljs.initLineNumbersOnLoad();</script>
 
 <article id="post-page">
-	<h1>插入排序</h1>
+	<h1>Sklearn trainning module</h1>
 	<div></div>
 	<time datetime="2015-03-19T00:00:00+01:00" class="by-line">19 Mar 2015
 		<a class="tag-title" href="/dsm/about">&nbsp;Daniel Liu</a><span>&nbsp;&nbsp;in&nbsp;</span>
-		<span class="tag-title"></span>
+		<span class="tag-title">Scikit-learn</span>
 	</time>
 	<div style="margin: 3px"></div>
 	<div class="tags">
 			
 			<a href = "/dsm/tags.html"><b> Tags: </b></a>
 	   
-			<a href="/dsm/tags.html#machine_learning" class="btn-default">machine_learning</a>
+			<a href="/dsm/tags.html#scikit-learn" class="btn-default">scikit-learn</a>
 	    
-			<a href="/dsm/tags.html#math" class="btn-default">math</a>
+			<a href="/dsm/tags.html#Python" class="btn-default">Python</a>
 	    
 			
 	</div>
@@ -181,150 +181,40 @@
 
 	<div class="content">
 
-		<p>首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格：</p>
+		<h3 id="sklearn-module">Sklearn module</h3>
 
-<p>对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。</p>
+<p>When doing model training, especially cross-validation on the training set, we usually need to save the model and then put it on a separate test set. The following is the preservation and reuse of the training model in Python.</p>
 
-<h3 id="知识点小记3">知识点小记3</h3>
+<p>In the scikit-learn library, there is already a model persistence operation, just import joblib.</p>
 
-<ul>
-  <li>
-    <p>使用sizeof(nums)/sizeof(nums[0])获得数组的长度；</p>
-  </li>
-  <li>
-    <p>数组作为参数有两种方法，一种是以数组名本身，一种是以指针；</p>
-  </li>
-  <li>
-    <p>如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小；</p>
-
-    <p><img src="/dsm/img/dsm.jpg" alt="optional caption text2" /></p>
-  </li>
-</ul>
-
-<h3 id="简单插入排序">简单插入排序</h3>
-
-<p>直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。</p>
-
-<p>实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。</p>
-
-<p>设数组为a[0…n-1]。</p>
-
-<ul>
-  <li>初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1</li>
-  <li>将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。</li>
-  <li>i++，并重复第二步直到i==n-1。
-简单插入排序方法实现：</li>
-</ul>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//insert sort
-void insertSort(int nums[], int n){
-    for(int i=1;i&lt;n;i++){
-        int temp = nums[i];
-        int j=i-1;
-        while(nums[j]&gt;temp &amp;&amp; j&gt;=0){
-            nums[j+1] = nums[j];
-            j--;
-        }
-        nums[j+1] = temp;
-    }
-}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from sklearn.externals import joblib
 </code></pre></div></div>
-<p>下面是一个完整的例子：</p>
 
-<p>简单插入排序最坏和平均时间复杂度都为O(n2),空间复杂度为O(1)，最好的时间复杂度为O(n).属于稳定的排序算法。</p>
+<h3 id="save-the-module">Save the module</h3>
 
-<h3 id="希尔排序">希尔排序</h3>
-
-<p>希尔排序思路：先将整个待排元素序列分割成若干个子序列（由相隔某个“增量”的元素组成的）分别进行直接插入排序，然后依次缩减增量再进行排序，待整个序列中的元素基本有序（增量足够小）时，再对全体元素进行一次直接插入排序。因为直接插入排序在元素基本有序的情况下（接近最好情况），效率是很高的，因此希尔排序在时间效率上比前两种方法有较大提高。</p>
-
-<p>希尔排序方法：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void shellSort(int nums[], int n){
-    int d = n&gt;&gt;1;
-    while(d&gt;=1){
-        for(int i=0; i&lt;n-d; i++){
-            for(int j=i+d; j&lt;n; j+=d){
-                if(nums[j-d]&gt;nums[j]){
-                    int temp = nums[j-d];
-                    nums[j-d] = nums[j];
-                    nums[j] = temp;
-                }
-            }
-        }
-        d = d&gt;&gt;1;
-        print_array(nums,n);
-    }
-}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>os.chdir("workspace/model_save")
+from sklearn import svm
+  X = [[0, 0], [1, 1]]
+  y = [0, 1]
+  clf = svm.SVC()
+  clf.fit(X, y)  
+  clf.fit(train_X,train_y)
+  joblib.dump(clf, "train_model.m")
 </code></pre></div></div>
-<p>下面是一个完整的例子：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
-using namespace std;
-void shellSort(int nums[], int n);
-void print_array(int nums[], int n);
-int main()
-{
-    int nums[] = {9,2,7,4,5};
-    int n = sizeof(nums)/sizeof(nums[0]);
-    shellSort(nums, n);
-    for(int i =0; i&lt; (sizeof(nums)/sizeof(nums[0])); i++){
-        cout&lt;&lt;nums[i]&lt;&lt;" ";
-    }
-    return 0;
-}
+<p>Save the module through the dump function of joblib, within that the clf is the training classifier.</p>
 
-//希尔排序
-void shellSort(int nums[], int n){
-    int d = n&gt;&gt;1;
-    while(d&gt;=1){
-        for(int i=0; i&lt;n-d; i++){
-            for(int j=i+d; j&lt;n; j+=d){
-                if(nums[j-d]&gt;nums[j]){
-                    int temp = nums[j-d];
-                    nums[j-d] = nums[j];
-                    nums[j] = temp;
-                }
-            }
-        }
-        d = d&gt;&gt;1;
-        print_array(nums,n);
-    }
-}
+<h3 id="retrieve-the-module-from-local">retrieve the module from local</h3>
 
-void print_array(int nums[], int n){
-    for(int i = 0; i&lt;n; i++){
-        cout&lt;&lt;nums[i]&lt;&lt;" ";
-    }
-    cout&lt;&lt;endl;
-}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clf = joblib.load("train_model.m")
 </code></pre></div></div>
-<p>输出结果：</p>
 
-<p>简单插入排序平均时间复杂度为O(n1.3
-n
-1.3
-),空间复杂度为O(1)。最坏情况下的时间复杂度为O(n2
-n
-2
-),最好的时间复杂度为O(n).</p>
+<p>The use the load function of joblib, to reload the saved module</p>
 
-<h3 id="补充知识点">补充知识点</h3>
+<p>After that one can test in the testing set.</p>
 
-<p>将数组作为参数传递</p>
-
-<ul>
-  <li>两种形式：</li>
-</ul>
-
-<p>使用数组名本身,如上方的函数形式：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void insertSort(int nums[], int n)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clf.predit(test_X，test_y)
 </code></pre></div></div>
-<ul>
-  <li>用指针作为参数,这就简单了,只需将上面方法中的数组修改成指针形式:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void insertSort(int *nums, int n)
-</code></pre></div>    </div>
-  </li>
-</ul>
 
 
 
@@ -337,9 +227,9 @@ n
 		
 		<a href = "/dsm/tags.html"><b> Tags: </b></a>
    
-		<a href="/dsm/tags.html#machine_learning" class="btn-default">machine_learning</a>
+		<a href="/dsm/tags.html#scikit-learn" class="btn-default">scikit-learn</a>
     
-		<a href="/dsm/tags.html#math" class="btn-default">math</a>
+		<a href="/dsm/tags.html#Python" class="btn-default">Python</a>
     
 		
 </div>
@@ -370,7 +260,7 @@ n
 			 
 			   
 							<div class="item-title">
-								<a href="/dsm/typography" data-hover="插入排序">插入排序</a>
+								<a href="/dsm/Sklearn-trainning-module" data-hover="Sklearn trainning module">Sklearn trainning module</a>
 							</div>
 					 	 
 						 
@@ -391,7 +281,7 @@ n
 			 
 			   
 							<div class="item-title">
-								<a href="/dsm/example-6" data-hover="Example 6">Example 6</a>
+								<a href="/dsm/Solving-urlopen-and-SSL-CERTIFICATE_VERIFY_FAILED-Error" data-hover="Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error">Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</a>
 							</div>
 					 	 
 						 
@@ -487,15 +377,11 @@ s.src = 'https://danielshaving.disqus.com/embed.js';
 
     
 
-      <span class="feed"><a href="/typography" title="访问 插入排序" data-hover="插入排序">插入排序</a></span>
+      <span class="feed"><a href="/Sklearn-trainning-module" title="访问 Sklearn trainning module" data-hover="Sklearn trainning module">Sklearn trainning module</a></span>
 
     
 
       <span class="feed"><a href="/Solving-urlopen-and-SSL-CERTIFICATE_VERIFY_FAILED-Error" title="访问 Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error" data-hover="Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error">Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</a></span>
-
-    
-
-      <span class="feed"><a href="/example-6" title="访问 Example 6" data-hover="Example 6">Example 6</a></span>
 
     
 
@@ -507,8 +393,6 @@ s.src = 'https://danielshaving.disqus.com/embed.js';
             <div class="meta-item meta-comments">
                 <h3 class="meta-title">最新文章</h3>
   
-      
-    
       
     
       

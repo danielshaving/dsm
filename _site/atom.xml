@@ -4,7 +4,7 @@
  <title>Dsm | A simple blog of ml technical sharings</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-09-05T19:34:39+02:00</updated>
+ <updated>2018-09-10T18:21:42+02:00</updated>
  <author>
    <name>Daniel Liu</name>
    <uri>http://www.danielshaving.com</uri>
@@ -14,11 +14,11 @@
  
 
  <entry>
-   <title>插入排序</title>
-   <link href="http://localhost:4000/typography"/>
-   <id>http://localhost:4000/typography</id>
+   <title>Sklearn trainning module</title>
+   <link href="http://localhost:4000/Sklearn-trainning-module"/>
+   <id>http://localhost:4000/Sklearn trainning module</id>
    <updated>2015-03-19T00:00:00+01:00</updated>
-   <content type="html">&lt;p&gt;首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格：&lt;/p&gt; &lt;p&gt;对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。&lt;/p&gt; &lt;h3 id=&quot;知识点小记3&quot;&gt;知识点小记3&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;使用sizeof(nums)/sizeof(nums[0])获得数组的长度；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;数组作为参数有两种方法，一种是以数组名本身，一种是以指针；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小；&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/dsm/img/dsm.jpg&quot; alt=&quot;optional caption text2&quot; /&gt;&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;简单插入排序&quot;&gt;简单插入排序&lt;/h3&gt; &lt;p&gt;直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。&lt;/p&gt; &lt;p&gt;实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。&lt;/p&gt; &lt;p&gt;设数组为a[0…n-1]。&lt;/p&gt; &lt;ul&gt; &lt;li&gt;初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1&lt;/li&gt; &lt;li&gt;将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。&lt;/li&gt; &lt;li&gt;i++，并重复第二步直到i==n-1。 简单插入排序方法实现：&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//insert sort void insertSort(int nums[], int n){ for(int i=1;i&amp;lt;n;i++){ int temp = nums[i]; int...</content>
+   <content type="html">&lt;h3 id=&quot;sklearn-module&quot;&gt;Sklearn module&lt;/h3&gt; &lt;p&gt;When doing model training, especially cross-validation on the training set, we usually need to save the model and then put it on a separate test set. The following is the preservation and reuse of the training model in Python.&lt;/p&gt; &lt;p&gt;In the scikit-learn library, there is already a...</content>
  </entry>
 
  
@@ -29,16 +29,6 @@
    <id>http://localhost:4000/Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error</id>
    <updated>2015-03-01T00:00:00+01:00</updated>
    <content type="html">&lt;h3 id=&quot;1-a-ssl-certificate-verify-error&quot;&gt;1. A SSL Certificate Verify Error&lt;/h3&gt; &lt;p&gt;If you are the first time to create a crawler which on the way to read contents of some websites, the Python IDLE probably could alert an error, named SSL: CERTIFICATE_VERIFY_FAILED, look like this:&lt;/p&gt; &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Example 6</title>
-   <link href="http://localhost:4000/example-6"/>
-   <id>http://localhost:4000/example-6</id>
-   <updated>2015-02-15T00:00:00+01:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
  </entry>
 
  

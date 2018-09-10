@@ -5,21 +5,23 @@
     <description>A simple blog of ml technical sharings</description>
     <link>http://localhost:4000/dsm/</link>
     <atom:link href="http://localhost:4000/dsm/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Sep 2018 19:34:39 +0200</pubDate>
-    <lastBuildDate>Wed, 05 Sep 2018 19:34:39 +0200</lastBuildDate>
+    <pubDate>Mon, 10 Sep 2018 18:21:42 +0200</pubDate>
+    <lastBuildDate>Mon, 10 Sep 2018 18:21:42 +0200</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
-        <title>插入排序</title>
-        <description>&lt;p&gt;首先介绍一个常用排序算法的时间复杂度和空间复杂度的表格：&lt;/p&gt; &lt;p&gt;对于插入排序，本文简单介绍两种：简单插入排序和希尔排序。同时，会附上实现源码。&lt;/p&gt; &lt;h3 id=&quot;知识点小记3&quot;&gt;知识点小记3&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;使用sizeof(nums)/sizeof(nums[0])获得数组的长度；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;数组作为参数有两种方法，一种是以数组名本身，一种是以指针；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;如果要给一个函数传入一个数组，一般都是传入两个参数，一个数组指针或数组名，另一个是数组大小；&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/dsm/img/dsm.jpg&quot; alt=&quot;optional caption text2&quot; /&gt;&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;简单插入排序&quot;&gt;简单插入排序&lt;/h3&gt; &lt;p&gt;直接插入排序(Insertion Sort)的基本思想是：每次将一个待排序的记录，按其关键字大小插入到前面已经排好序的子序列中的适当位置，直到全部记录插入完成为止。&lt;/p&gt; &lt;p&gt;实现：从头到尾遍历数组，设置一个变量作为哨兵，记录当前元素；然后从当前位置依次往前寻找插入点，如果哨兵元素值要小，就将前面的元素往后移动一位，直到哨兵元素大于前面的元素为止。&lt;/p&gt; &lt;p&gt;设数组为a[0…n-1]。&lt;/p&gt; &lt;ul&gt; &lt;li&gt;初始时，a[0]自成1个有序区，无序区为a[1..n-1]。令i=1&lt;/li&gt; &lt;li&gt;将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。&lt;/li&gt; &lt;li&gt;i++，并重复第二步直到i==n-1。 简单插入排序方法实现：&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//insert sort void insertSort(int nums[], int n){ for(int i=1;i&amp;lt;n;i++){ int temp = nums[i]; int j=i-1; while(nums[j]&amp;gt;temp &amp;amp;&amp;amp; j&amp;gt;=0){ nums[j+1] = nums[j]; j--; } nums[j+1] = temp; } } &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;p&gt;下面是一个完整的例子：&lt;/p&gt; &lt;p&gt;简单插入排序最坏和平均时间复杂度都为O(n2),空间复杂度为O(1)，最好的时间复杂度为O(n).属于稳定的排序算法。&lt;/p&gt; &lt;h3 id=&quot;希尔排序&quot;&gt;希尔排序&lt;/h3&gt; &lt;p&gt;希尔排序思路：先将整个待排元素序列分割成若干个子序列（由相隔某个“增量”的元素组成的）分别进行直接插入排序，然后依次缩减增量再进行排序，待整个序列中的元素基本有序（增量足够小）时，再对全体元素进行一次直接插入排序。因为直接插入排序在元素基本有序的情况下（接近最好情况），效率是很高的，因此希尔排序在时间效率上比前两种方法有较大提高。&lt;/p&gt; &lt;p&gt;希尔排序方法：&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void shellSort(int nums[], int n){ int d = n&amp;gt;&amp;gt;1; while(d&amp;gt;=1){ for(int i=0; i&amp;lt;n-d; i++){ for(int j=i+d; j&amp;lt;n; j+=d){ if(nums[j-d]&amp;gt;nums[j]){ int temp = nums[j-d]; nums[j-d] = nums[j];...</description>
+        <title>Sklearn trainning module</title>
+        <description>&lt;h3 id=&quot;sklearn-module&quot;&gt;Sklearn module&lt;/h3&gt; &lt;p&gt;When doing model training, especially cross-validation on the training set, we usually need to save the model and then put it on a separate test set. The following is the preservation and reuse of the training model in Python.&lt;/p&gt; &lt;p&gt;In the scikit-learn library, there is already a model persistence operation, just import joblib.&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from sklearn.externals import joblib &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h3 id=&quot;save-the-module&quot;&gt;Save the module&lt;/h3&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;os.chdir(&quot;workspace/model_save&quot;) from sklearn import svm X = [[0, 0], [1, 1]] y = [0, 1] clf = svm.SVC() clf.fit(X, y) clf.fit(train_X,train_y) joblib.dump(clf, &quot;train_model.m&quot;) &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;p&gt;Save the module through the...</description>
         <pubDate>Thu, 19 Mar 2015 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/dsm/typography</link>
-        <guid isPermaLink="true">http://localhost:4000/dsm/typography</guid>
+        <link>http://localhost:4000/dsm/Sklearn-trainning-module</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/Sklearn-trainning-module</guid>
+        
+        <category>Scikit-learn</category>
         
         
-        <category>machine_learning</category>
+        <category>scikit-learn</category>
         
-        <category>math</category>
+        <category>Python</category>
         
       </item>
     
@@ -40,22 +42,6 @@
         <category>Python</category>
         
         <category>urllib</category>
-        
-      </item>
-    
-      <item>
-        <title>Example 6</title>
-        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt blanditiis cum dolore beatae facilis molestias ut a doloribus recusandae delectus, repudiandae, rerum quo eaque quaerat enim dolores perspiciatis voluptatum odio accusamus! Doloribus fuga provident, magni eaque consequatur quia incidunt similique. Nostrum animi facere mollitia, corrupti vitae, itaque maiores consequatur, explicabo, sapiente molestiae consequuntur! Aliquam hic dolorum atque dolorem repudiandae...</description>
-        <pubDate>Sun, 15 Feb 2015 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/dsm/example-6</link>
-        <guid isPermaLink="true">http://localhost:4000/dsm/example-6</guid>
-        
-        
-        <category>ppp</category>
-        
-        <category>math</category>
-        
-        <category>Python</category>
         
       </item>
     
