@@ -2,6 +2,7 @@
 title: Using iOS CoreMotion to call gyroscope and accelerometer
 categories: [iOS, CoreMotion, Gyroscope, Accelerometer]
 tag: Gyroscope and accelerometer of iOS
+classify: iOS
 abstract: This article is to introduce the API of gyroscope and acceleromter for developping an iOS applcation. iOS developers will know how to use these meters after reading this blog.
 titleimg: /dsm/img/201410/AcceGyro.png
 ---

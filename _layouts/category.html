@@ -1,22 +1,29 @@
 ---
 layout: default
 ---
+{% include svg-icons.html %}
+{% include head.html %}
 
 
-<style>
-.card-header-avatar{
-		margin-right: 12px;
-}
-</style>
+<!DOCTYPE html>
 
 
+		<!-- {% for post in site.posts %}
+
+        {% if page.classify contains post.classify %}
+          {{post.title}}
+        {%endif%}
+    {%endfor%}
+
+            //
+            {{page.classify}} -->
 
 
-<!-- Posts -->
 <ul id="posts">
 <div class="post-div">
 
-	{% for post in paginator.posts %}
+	{% for post in site.posts %}
+    {% if page.classify contains post.classify %}
 	  <li class="post">
 	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
       <!-- <a class="post-categories" href="{{ "/category" | prepend: site.baseurl }}/{{post.categories}}.html">{{post.categories}}</a> -->
@@ -39,7 +46,7 @@ layout: default
 			{% endif %}
 
 	  </li>
-
+    {%endif%}
   {% endfor %}
 </div>
 </ul>

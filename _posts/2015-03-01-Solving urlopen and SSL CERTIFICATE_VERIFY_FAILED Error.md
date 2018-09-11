@@ -2,6 +2,7 @@
 title: Solving urlopen and SSL CERTIFICATE_VERIFY_FAILED Error
 categories: [SSL,Crawler,Python,urllib]
 tag: SSL of Python
+classify: Python_Basic
 abstract: This article is to solve an SSL CERTIFICATE_VERIFY_FAILED Error when you tried to read a peer content from another website.
 titleimg: /dsm/img/201503/SSL-Certificate-Image.jpeg
 

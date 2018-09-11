@@ -1,5 +1,5 @@
-<footer>
-  <p>
+<footer >
+  <!-- <p>
     {% if site.github_username %}
     <a class="socialmedia"itemprop="github" href="https://github.com/{{ site.github_username }}" title="Github">
       <svg><use xlink:href="#icon-github"></use></svg>
@@ -30,7 +30,7 @@
       <svg><use xlink:href="#icon-linkedin"></use></svg>
     </a>
     {% endif %}
-  </p>
+  </p> -->
 
 
   <!-- <div class="footer-meta">
@@ -55,16 +55,11 @@
 
     </div>
     </div> -->
-<div class="feed">
-    {% for page in site.pages %}
-        <!-- {% if post.book %} -->
-    <span><a href="{{ page.url }}" title="visit {{ page.title }}" data-hover="{{ page.title }}">{{ page.title }}</a></span>
 
-        <!-- {% endif %} -->
-    {% endfor %}
 
-  <div class="feed">Total Articles：{{paginator.total_posts}}</div>
-  <span><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed.xml" title="Atom/RSS feed">Danielshaving Blog RSS</a></span> <span>&nbsp; &nbsp;&nbsp;&nbsp;@2018 - Danielshaving by <a class="feed" href="{{ site.cvurl }}">Liu Xia</a></span>
-  <a href="{{ site.cvurl }}"><img class="avatar" src="{{ site.avatar }}" alt=""/></a>
+  <div display="inline" class="feed">Total Articles：{{paginator.total_posts}}&nbsp; &nbsp;&nbsp;&nbsp;
+    <span><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed.xml" title="Atom/RSS feed">Danielshaving Blog RSS</a></span>
+    <span>&nbsp; &nbsp;&nbsp;&nbsp;@2018 - Danielshaving by <a class="feed" href="{{ site.cvurl }}">Liu Xia</a></span>
+  </div>
 
 </footer>

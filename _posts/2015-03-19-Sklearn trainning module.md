@@ -2,6 +2,7 @@
 title: Sklearn trainning module
 categories: [scikit-learn,Python]
 tag: Scikit-learn
+classify: Python_Basic
 abstract: This article is about the saving and retrive for an SKlearn module
 titleimg: /dsm/img/201503/sklearn.png
 
