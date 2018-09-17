@@ -4,12 +4,22 @@
  <title>Dsm | A simple blog of ml technical sharings</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-09-11T18:58:34+02:00</updated>
+ <updated>2018-09-16T00:00:35+02:00</updated>
  <author>
    <name>Daniel Liu</name>
    <uri>http://www.danielshaving.com</uri>
    <email>danielshaving@gmail.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>Adding header and footer to some files</title>
+   <link href="http://localhost:4000/Adding-header-and-footer-to-some-files"/>
+   <id>http://localhost:4000/Adding header and footer to some files</id>
+   <updated>2015-04-05T00:00:00+02:00</updated>
+   <content type="html">&lt;h3 id=&quot;1-prepare-the-files-to-be-inserted&quot;&gt;1. Prepare the files to be inserted&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Content.txt in a Path.&lt;/li&gt; &lt;li&gt;header.txt to be inserted in the head of content.txt.&lt;/li&gt; &lt;li&gt;footer.txt to be inserted in the foot of content.txt.&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;2-functions&quot;&gt;2. Functions&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;font color=&quot;#0073aa&quot;&gt;add_footer(infile, outfile)&lt;/font&gt; &lt;p&gt;: insert the footer content to the foot. For the...</content>
+ </entry>
 
  
 
