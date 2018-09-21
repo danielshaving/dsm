@@ -5,12 +5,64 @@
     <description>A simple blog of ml technical sharings</description>
     <link>http://localhost:4000/dsm/</link>
     <atom:link href="http://localhost:4000/dsm/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Sep 2018 00:00:35 +0200</pubDate>
-    <lastBuildDate>Sun, 16 Sep 2018 00:00:35 +0200</lastBuildDate>
+    <pubDate>Fri, 21 Sep 2018 17:49:57 +0200</pubDate>
+    <lastBuildDate>Fri, 21 Sep 2018 17:49:57 +0200</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
-        <title>Adding header and footer to some files</title>
+        <title>Summrize different sorting algorithms</title>
+        <description>&lt;p&gt;bubblesort:&lt;img src=&quot;/dsm/img/201604/videoplayback.gif&quot; alt=&quot;bubblesort&quot; /&gt; mergesort:&lt;img src=&quot;/dsm/img/201604/videoplayback-2.gif&quot; alt=&quot;merge&quot; /&gt; mergesort vs quicksort: &lt;img src=&quot;/dsm/img/201604/videoplayback-3.gif&quot; alt=&quot;mvq&quot; /&gt; mergesort vs heapsort: &lt;img src=&quot;/dsm/img/201604/videoplayback-4.gif&quot; alt=&quot;mvh&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;1-bubble-sort&quot;&gt;1. Bubble Sort&lt;/h3&gt; &lt;p&gt;Bubble insertion, with time complexity of O(n^2) is one algorithm widely used by comparing neighbour element of one set.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Step-1: Comparing two neighbour elements from the first, swap the two elements if the smaller one behind.&lt;/li&gt; &lt;li&gt;Step-2: Repeat Step-1 until sorting finished.&lt;/li&gt; &lt;/ul&gt; &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;- void bubble_sort(int arr[], int len) { for (int i = 0; i &amp;lt; len - 1; i++) { for (int j = len - 1; j &amp;gt; i;...</description>
+        <pubDate>Tue, 19 Apr 2016 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/dsm/summarize-of-different-sorting-algorithm</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/summarize-of-different-sorting-algorithm</guid>
+        
+        <category>Sorting Algorithms</category>
+        
+        
+        <category>C++</category>
+        
+        <category>data algorithm</category>
+        
+        <category>sorting</category>
+        
+      </item>
+    
+      <item>
+        <title>Installing Python and related library in the Linux environnment</title>
+        <description>&lt;h3 id=&quot;1-installing-python&quot;&gt;1. Installing Python&lt;/h3&gt; &lt;p&gt;Here one could find the Python version library &lt;a href=&quot;https://www.python.org/ftp/python/&quot;&gt;https://www.python.org/ftp/python/&lt;/a&gt;. As an example, I chose the version 2.7.5, then command by –prefix to define the installation path:&lt;/p&gt; &lt;pre&gt;&lt;code class=&quot;language-Linux&quot;&gt;wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz tar -xzf Python-2.7.5.tgz cd Python-2.7.5 mkdir -p /home/liudiwei/software/python27 ./configure --prefix=&quot;/home/liudiwei/software/python27&quot; make make install &lt;/code&gt;&lt;/pre&gt; &lt;h3 id=&quot;2-installing-setuptools&quot;&gt;2. Installing setuptools&lt;/h3&gt; &lt;p&gt;Setuptools are prepared for installing pip, the following commands used the directory of python/home/liudiwei/software/python27/bin/python:&lt;/p&gt; &lt;pre&gt;&lt;code class=&quot;language-Linux&quot;&gt;wget --no-check-certificate http://pypi.python.org/packages/source/s/setuptools/setuptools-2.0.tar.gz tar -xzvf setuptools-2.0.tar.gz cd setuptools-2.0 /home/liudiwei/software/python27/bin/python setup.py install &lt;/code&gt;&lt;/pre&gt; &lt;h3 id=&quot;3-installing-pip&quot;&gt;3. Installing pip&lt;/h3&gt; &lt;p&gt;pip is a very simple tool to install the libararies. Here I installed the setup in the...</description>
+        <pubDate>Thu, 09 Jul 2015 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/dsm/Installing-Python-and-related-library-in-the-Linux-environnment</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/Installing-Python-and-related-library-in-the-Linux-environnment</guid>
+        
+        <category>Installing_Python_in_Linux</category>
+        
+        
+        <category>Python</category>
+        
+        <category>Linux</category>
+        
+        <category>Library</category>
+        
+      </item>
+    
+      <item>
+        <title>A time counter for python functions</title>
+        <description>&lt;h3 id=&quot;1-how-to-calculate-the-running-time-of-a-function&quot;&gt;1. How to calculate the running time of a function&lt;/h3&gt; &lt;p&gt;We usually need to count the running time of a function to test and optimize our coding. I thereby wrote a simple function &lt;font color=&quot;#0073aa&quot;&gt;(fun_timer)&lt;/font&gt; below to be called before any functions.&lt;/p&gt; &lt;h3 id=&quot;2-the-code&quot;&gt;2. The code&lt;/h3&gt; &lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;import time from functools import wraps def fun_timer(function): @wraps(function) def function_timer(*args, **kwargs): t0 = time.time() result = function(*args, **kwargs) t1 = time.time() os.system(&quot; echo Total time running %s: %s seconds&quot; % (function.func_name, str(t1-t0)) + &quot; &amp;gt;&amp;gt; timecount.log&quot;) return result return function_timer &lt;/code&gt;&lt;/pre&gt; &lt;h3 id=&quot;3-call-of-time-counter&quot;&gt;3. Call of time counter&lt;/h3&gt; &lt;p&gt;To call the time...</description>
+        <pubDate>Sun, 05 Jul 2015 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/dsm/A-time-counter-for-Python-functions</link>
+        <guid isPermaLink="true">http://localhost:4000/dsm/A-time-counter-for-Python-functions</guid>
+        
+        <category>Python_Automation</category>
+        
+        
+        <category>Python</category>
+        
+        <category>automation</category>
+        
+      </item>
+    
+      <item>
+        <title>Adding header and footer to some files by Python</title>
         <description>&lt;h3 id=&quot;1-prepare-the-files-to-be-inserted&quot;&gt;1. Prepare the files to be inserted&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Content.txt in a Path.&lt;/li&gt; &lt;li&gt;header.txt to be inserted in the head of content.txt.&lt;/li&gt; &lt;li&gt;footer.txt to be inserted in the foot of content.txt.&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;2-functions&quot;&gt;2. Functions&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;font color=&quot;#0073aa&quot;&gt;add_footer(infile, outfile)&lt;/font&gt; &lt;p&gt;: insert the footer content to the foot. For the 2 parameters, ‘infile’ is the file which you want to insert (like ‘footer.txt’); ‘outfile’ is the file to be inserted (like ‘content.txt’)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;font color=&quot;#0073aa&quot;&gt;add_header(infile, outfile, auto = True)&lt;/font&gt; &lt;p&gt;: insert the header content to the head. For the 2 parameters, ‘infile’ is the file which you want to...</description>
         <pubDate>Sun, 05 Apr 2015 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/dsm/Adding-header-and-footer-to-some-files</link>

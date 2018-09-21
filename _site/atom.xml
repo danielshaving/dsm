@@ -4,7 +4,7 @@
  <title>Dsm | A simple blog of ml technical sharings</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-09-16T00:00:35+02:00</updated>
+ <updated>2018-09-21T17:49:57+02:00</updated>
  <author>
    <name>Daniel Liu</name>
    <uri>http://www.danielshaving.com</uri>
@@ -14,7 +14,37 @@
  
 
  <entry>
-   <title>Adding header and footer to some files</title>
+   <title>Summrize different sorting algorithms</title>
+   <link href="http://localhost:4000/summarize-of-different-sorting-algorithm"/>
+   <id>http://localhost:4000/summarize of different sorting algorithm</id>
+   <updated>2016-04-19T00:00:00+02:00</updated>
+   <content type="html">&lt;p&gt;bubblesort:&lt;img src=&quot;/dsm/img/201604/videoplayback.gif&quot; alt=&quot;bubblesort&quot; /&gt; mergesort:&lt;img src=&quot;/dsm/img/201604/videoplayback-2.gif&quot; alt=&quot;merge&quot; /&gt; mergesort vs quicksort: &lt;img src=&quot;/dsm/img/201604/videoplayback-3.gif&quot; alt=&quot;mvq&quot; /&gt; mergesort vs heapsort: &lt;img src=&quot;/dsm/img/201604/videoplayback-4.gif&quot; alt=&quot;mvh&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;1-bubble-sort&quot;&gt;1. Bubble Sort&lt;/h3&gt; &lt;p&gt;Bubble insertion, with time complexity of O(n^2) is one algorithm widely used by comparing neighbour element of one set.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Step-1: Comparing two neighbour...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Installing Python and related library in the Linux environnment</title>
+   <link href="http://localhost:4000/Installing-Python-and-related-library-in-the-Linux-environnment"/>
+   <id>http://localhost:4000/Installing Python and related library in the Linux environnment</id>
+   <updated>2015-07-09T00:00:00+02:00</updated>
+   <content type="html">&lt;h3 id=&quot;1-installing-python&quot;&gt;1. Installing Python&lt;/h3&gt; &lt;p&gt;Here one could find the Python version library &lt;a href=&quot;https://www.python.org/ftp/python/&quot;&gt;https://www.python.org/ftp/python/&lt;/a&gt;. As an example, I chose the version 2.7.5, then command by –prefix to define the installation path:&lt;/p&gt; &lt;pre&gt;&lt;code class=&quot;language-Linux&quot;&gt;wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz tar -xzf Python-2.7.5.tgz cd Python-2.7.5 mkdir -p /home/liudiwei/software/python27 ./configure --prefix=&quot;/home/liudiwei/software/python27&quot; make make install &lt;/code&gt;&lt;/pre&gt; &lt;h3 id=&quot;2-installing-setuptools&quot;&gt;2....</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>A time counter for python functions</title>
+   <link href="http://localhost:4000/A-time-counter-for-Python-functions"/>
+   <id>http://localhost:4000/A time counter for Python functions</id>
+   <updated>2015-07-05T00:00:00+02:00</updated>
+   <content type="html">&lt;h3 id=&quot;1-how-to-calculate-the-running-time-of-a-function&quot;&gt;1. How to calculate the running time of a function&lt;/h3&gt; &lt;p&gt;We usually need to count the running time of a function to test and optimize our coding. I thereby wrote a simple function &lt;font color=&quot;#0073aa&quot;&gt;(fun_timer)&lt;/font&gt; below to be called before any functions.&lt;/p&gt; &lt;h3 id=&quot;2-the-code&quot;&gt;2. The code&lt;/h3&gt; &lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;import time...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Adding header and footer to some files by Python</title>
    <link href="http://localhost:4000/Adding-header-and-footer-to-some-files"/>
    <id>http://localhost:4000/Adding header and footer to some files</id>
    <updated>2015-04-05T00:00:00+02:00</updated>
